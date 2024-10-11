@@ -1,2 +1,4 @@
-./.idea
-./.venv
+# file: ~/.gitignore_global
+
+.idea
+.venv
