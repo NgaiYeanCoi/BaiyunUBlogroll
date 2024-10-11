@@ -1,5 +1,5 @@
 # BaiyunUBlogroll
-广东白云学院，是一个用于聚合多个博客RSS源的Python脚本。  
+广东白云学院Blogroll，是一个用于聚合多个博客RSS源的Python脚本。  
 
 搭配Github WorkFlow每天北京时间0:30自动抓取指定博客的RSS源，解析并提取相关信息，然后将json转换成Markdown。  
 
