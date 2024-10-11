@@ -1,7 +1,9 @@
+name: Auto Update and Commit
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 0 * * *" # 每天 0：30 时运行，北京时间需要 + 8
+    - cron: "30 0 * * *" # 每天 0:30 时运行，北京时间需要 + 8
 
 jobs:
   build:
@@ -9,14 +11,16 @@ jobs:
     steps:
       - name: Check out repo # 获取代码分支
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
 
-      - name: Set up Python # python 环境
+      - name: Set up Python # 设置 Python 环境
         uses: actions/setup-python@v2
         with:
           python-version: 3.12.2
 
-      - uses: actions/cache@v2 # 依赖缓存
-        name: Configure pip caching
+      - name: Configure pip caching # 配置 pip 缓存
+        uses: actions/cache@v2
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -25,8 +29,22 @@ jobs:
 
       - name: Install Python dependencies # 安装依赖
         run: |
-          python -m pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Update # 执行脚本
-        run: |-
+      - name: Run script # 执行脚本
+        run: |
           python main.py
+
+      - name: Commit changes # 提交更改
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add . # 添加所有更改
+          git commit -m "Update files by workflow" || echo "No changes to commit"
+
+      - name: Push changes # 推送更改
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
+          branch: master # 确保这里是你想要推送的分支名
