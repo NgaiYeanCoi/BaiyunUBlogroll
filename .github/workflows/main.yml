@@ -36,10 +36,6 @@ jobs:
         run: |
           python main.py
 
-      - name: Check git status
-        run: |
-          git status
-
       - name: Commit changes # 提交更改
         run: |
           git config --local user.email "action@github.com"
@@ -48,5 +44,7 @@ jobs:
           git commit -m "Update files by workflow" || echo "No changes to commit"
 
       - name: Push changes # 推送更改
-        run: |
-          git push origin master # 确保这里是你想要推送的分支名
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
+          branch: master # 确保这里是你想要推送的分支名
