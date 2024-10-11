@@ -1,4 +1,4 @@
-name: Auto Update and Commit
+name: Auto Update
 
 on:
   workflow_dispatch:
@@ -35,17 +35,18 @@ jobs:
       - name: Run script # 执行脚本
         run: |
           python main.py
-          cat summary.md
+
+      - name: Check git status
+        run: |
+          git status
 
       - name: Commit changes # 提交更改
         run: |
-          git config --local user.email "2232047183@stayrabbit.top"
-          git config --local user.name "NgaiYeanCoi"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add . # 添加所有更改
           git commit -m "Update files by workflow" || echo "No changes to commit"
 
       - name: Push changes # 推送更改
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
-          branch: master # 确保这里是你想要推送的分支名
+        run: |
+          git push origin master # 确保这里是你想要推送的分支名
