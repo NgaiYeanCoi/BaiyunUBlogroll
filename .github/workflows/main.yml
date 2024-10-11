@@ -9,17 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo # 获取代码分支
+      - name: Check out repo 获取代码分支 # 获取代码分支
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
 
-      - name: Set up Python # 设置 Python 环境
+      - name: Set up Python 设置 Python 环境 # 设置 Python 环境
         uses: actions/setup-python@v2
         with:
           python-version: 3.12.2
 
-      - name: Configure pip caching # 配置 pip 缓存
+      - name: Configure pip caching 配置 pip 缓存 # 配置 pip 缓存
         uses: actions/cache@v2
         with:
           path: ~/.cache/pip
@@ -27,12 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install Python dependencies # 安装依赖
+      - name: Install Python dependencies安装依赖 # 安装依赖
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run script # 执行脚本
+      - name: Run main.py执行脚本 # 执行脚本
         run: |
           python main.py
 
@@ -43,7 +43,7 @@ jobs:
           git add . # 添加所有更改
           git commit -m "Update files by workflow" || echo "No changes to commit"
 
-      - name: Push changes # 推送更改
+      - name: Push changes推送更改 # 推送更改
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
