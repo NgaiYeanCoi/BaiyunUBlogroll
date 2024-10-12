@@ -6,6 +6,7 @@
 项目还在建设当中，欢迎你们提交Pull Request或Issues与我一起维护这个项目。
 
 ## 配置文件
+- `index.css` 用于存储静态网页层叠样式表
 - `config.json`用于存储博客RSS链接的JSON文件
 - `summary.md`生成的Markdown格式的博客信息文档
 - `index.html`生成的静态网页文件
