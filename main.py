@@ -49,73 +49,32 @@ def convertMDtoHTML():
     htmlFilename = "./index.html"
     with open(jsonFilename, 'r', encoding='utf-8') as f:
         entries = json.load(f)
-    css = """
+    head = """
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <style>
-           body {
-               font-family: Arial, sans-serif;
-               background-color: #f9f9f9;
-               padding: 20px;
-               border-radius: 8px;
-           }
-           .container {
-               display: flex;
-           }
-           .main-content {
-               flex: 1;
-               padding-right: 20px;
-           }
-		   .sidebar .title{
-			   font-size: large;
-    			font-weight: bolder;
-    			margin-bottom: 0;
-		   }
-		   .sidebar a{
-			font-size: 13px;
-            height: 18px;
-            line-height: 18px;
-            color: rgb(153, 153, 153);
-            word-break: break-all;
-            text-overflow: ellipsis;
-            overflow: hidden;
-		   }
-           .sidebar {
-               margin: 20px;
-               flex: 0 0 200px;
-               padding: 10px;
-               background-color: #fff;
-               border-radius: 8px;
-               box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-           }
-           .sidebar h2 {
-               margin-top: 0;
-           }
-           .sidebar ul {
-               list-style-type: none;
-               padding: 0;
-           }
-           .sidebar li {
-               margin-bottom: 5px;
-           }
-           </style>
+    <title>BaiyunU Blogroll</title>
+    <style type="text/css">
        """
-
+    with open("./index.css", 'r', encoding='utf-8') as f:
+        css = f.read()
     # 侧边栏内容
-    sidebarContent = "<div class='sidebar'><h2>BaiyunU列表</h2><ul>"
+    #sidebarContent = "<div class='sidebar' style='margin:10px;'><h2>BaiyunU们的博客列表</h2><ul>"
+    sidebarContent = "<div class='sidebar' style='margin:10px;'><ul>"
     for url in blogUrl:
         title = getUrlTitle(url)
         path = url
         path=path.split('/')
         sidebarContent += f"<p class='title'>{title}</p>"
-        sidebarContent += f"<li><a href='https://{path[2]}'>https://{path[2]}</a></li>"
+        sidebarContent += f"<li><a target='_blank' href='https://{path[2]}'>https://{path[2]}</a></li>"
     sidebarContent += "</ul></div>"
 
     # Markdown内容
     markdownContent = f"# BaiyunU Blogroll\n\n - 更新时间:{currentTime}\n\n"
     for entry in entries:
-        markdownContent += f"## [{entry['title']}]({entry['url']})\n"
+        markdownContent += f"## <a href=\"{entry['url']}\" target=\"_blank\">{entry['title']}</a>\n"
+        #markdownContent += f"## [{entry['title']}]({entry['url']})\n"
+        markdownContent += f"**摘要:** {entry['summary']}\n\n"
         markdownContent += f"**作者:** {entry['author']}\n"
         markdownContent += f"**发表时间:** {entry['published']}\n"
         if entry['updated']:
@@ -124,7 +83,7 @@ def convertMDtoHTML():
     # 转换Markdown为HTML
     htmlContent = markdown.markdown(markdownContent, extensions=[TocExtension(baselevel=2)])
     # 合并CSS样式、侧边栏和HTML内容
-    finalHtmlContent = f"{css}<div class='container'>{sidebarContent}<div class='main-content'>{htmlContent}</div></div></head>"
+    finalHtmlContent = f"{head}{css}</style><div class='container'>{sidebarContent}<div class='main-content'>{htmlContent}</div></div></head>"
 
     with open(htmlFilename, 'w', encoding='utf-8') as f:
         f.write(finalHtmlContent)
@@ -143,9 +102,10 @@ def convertMD():
     for entry in entries:
         markdownContent += f"## [{entry['title']}]({entry['url']})\n"
         markdownContent += f"**作者:** {entry['author']}\n"
-        markdownContent += f"**发表时间:** {entry['published']}\n"
+        markdownContent += f"**发表时间:** {entry['published']}\n\n"
+        markdownContent += f"**摘要:** {entry['summary']}\n"
         if entry['updated']:
-            markdownContent += f"**更新时间:** {entry['updated']}\n"
+            markdownContent += f"\n**更新时间:** {entry['updated']}\n"
             markdownContent += "\n"
     with open(markdownFilename, 'w', encoding='utf-8') as f:
         f.write(markdownContent)
@@ -172,21 +132,25 @@ def fetchBlogEntries(blogFeedUrls):
     :param: blogFeedUrls: 传入blog的网址
     :return: 按照updates时间排序好，返回entries列表
     """
-    all_entries = []
+    allEntries = []
     for blogFeedUrl in blogFeedUrls:
         print(f"正在写入{blogFeedUrl}中...")
         feedData = feedparser.parse(blogFeedUrl) #解析RSS
         authorName = feedData.feed.get('author', 'Unknown Author')  # 获取作者信息
         entries = feedparser.parse(blogFeedUrl)["entries"]
         for entry in entries:
-            all_entries.append({
+            summaryHtml = entry["summary"]
+            summaryText = BeautifulSoup(summaryHtml, 'html.parser').get_text(strip=True)  # 提取Summary摘要纯文本内容
+            allEntries.append({
                 "author": authorName,
                 "title": entry["title"],
                 "url": entry["link"].split("#")[0],
+                "summary": summaryText,
                 "published": entry["published"].split("T")[0],
                 "updated": entry["updated"].replace("T", " ").split(".")[0] if "updated" in entry else "",
             })
-    return sorted(all_entries, key=lambda x: x['updated'], reverse=True)
+    return sorted(allEntries, key=lambda x: x['updated'], reverse=True)
+
 def main():
     global blogUrl
     for check in blogUrl:
@@ -196,6 +160,7 @@ def main():
     with open(jsonFilename, "w", encoding="utf-8") as f:  #将RSS解析之后将感兴趣的内容后写入到config.json文件中
         json.dump(entries, f, ensure_ascii=False, indent=4)
         print('写入完成')
+
 if __name__ == '__main__':
     main()
     convertMD()

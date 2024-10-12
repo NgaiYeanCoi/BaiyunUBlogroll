@@ -1,0 +1,68 @@
+ body {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 0;
+            overflow-x: hidden;
+            color: #2c323c;
+            font-family: PingFang SC, Microsoft YaHei, sans-serif, Arial;
+        }
+        h3 a {
+            color: #444950;
+        }
+        h3 a:hover {
+            color: #3273dc;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* 允许容器内的元素在必要时换行 */
+        }
+        .main-content {
+            flex: 1;
+            padding-right: 20px;
+            margin-left: 20px;
+        }
+        .sidebar {
+            margin: 30px;
+            flex: 0 0 200px; /* 默认情况下，侧边栏的宽度为 200px */
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar .title{
+		   font-size: large;
+			font-weight: bolder;
+			margin-bottom: 0;
+	   }
+        .sidebar a{
+		font-size: 13px;
+        height: 18px;
+        line-height: 18px;
+        color: rgb(153, 153, 153);
+        word-break: break-all;
+        text-overflow: ellipsis;
+        overflow: hidden;
+	   }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+        /* 响应式设计：媒体查询 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* 在小屏幕上，将布局改为垂直 */
+            }
+            .sidebar {
+                flex: 0 0 100%; /* 在小屏幕上，侧边栏占满整个宽度 */
+                margin-bottom: 20px; /* 添加一些底部边距 */
+            }
+            .main-content {
+                padding-right: 0; /* 在小屏幕上，移除内边距 */
+            }
+        }
