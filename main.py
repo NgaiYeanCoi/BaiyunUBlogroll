@@ -59,7 +59,11 @@ def convertMDtoHTML():
     with open("./index.css", 'r', encoding='utf-8') as f:
         css = f.read()
     # 侧边栏内容
-    #sidebarContent = "<div class='sidebar' style='margin:10px;'><h2>BaiyunU们的博客列表</h2><ul>"
+    Github="""
+    <a id="Github" target="_blank" href="https://github.com/NgaiYeanCoi/BaiyunUBlogroll">
+    <span id="GithubText">GitHub</span><img id="logo-github" src="https://blogroll.njulug.org/assets/github.c12ec768.png" alt="Logo">
+    </a>
+    """
     sidebarContent = "<div class='sidebar' style='margin:10px;'><ul>"
     for url in blogUrl:
         title = getUrlTitle(url)
@@ -67,7 +71,7 @@ def convertMDtoHTML():
         path=path.split('/')
         sidebarContent += f"<p class='title'>{title}</p>"
         sidebarContent += f"<li><a target='_blank' href='https://{path[2]}'>https://{path[2]}</a></li>"
-    sidebarContent += "</ul></div>"
+    sidebarContent += f"{Github}</ul></div>"
 
     # Markdown内容
     markdownContent = f"# BaiyunU Blogroll\n\n - 更新时间:{currentTime}\n\n"

@@ -53,16 +53,36 @@
         .sidebar li {
             margin-bottom: 5px;
         }
-        /* 响应式设计：媒体查询 */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column; /* 在小屏幕上，将布局改为垂直 */
-            }
-            .sidebar {
-                flex: 0 0 100%; /* 在小屏幕上，侧边栏占满整个宽度 */
-                margin-bottom: 20px; /* 添加一些底部边距 */
-            }
-            .main-content {
-                padding-right: 0; /* 在小屏幕上，移除内边距 */
-            }
+        #logo-github {
+        height: 30px;
+        width: 30px;
+            margin-bottom: 5px;
         }
+        #Github {
+            margin-top: 50px;
+            display: flex;
+            height: 35px;
+            align-items: center;
+            padding-right: 0px;
+        }
+        #GithubText {
+            padding: 0 5px 0 5px;
+            color: #444950;
+            font-size: large;
+            font-weight: 700;
+        }
+            /* 响应式设计：媒体查询 */
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column; /* 在小屏幕上，将布局改为垂直 */
+                }
+
+                .sidebar {
+                    flex: 0 0 100%; /* 在小屏幕上，侧边栏占满整个宽度 */
+                    margin-bottom: 20px; /* 添加一些底部边距 */
+                }
+
+                .main-content {
+                    padding-right: 0; /* 在小屏幕上，移除内边距 */
+                }
+            }
