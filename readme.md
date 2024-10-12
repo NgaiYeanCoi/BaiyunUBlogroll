@@ -1,5 +1,3 @@
-from typing import List
-
 # BaiyunUBlogroll
 广东白云学院Blogroll，是一个用于聚合多个博客RSS源的Python脚本。  
 
