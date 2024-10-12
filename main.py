@@ -8,6 +8,60 @@ import json
 import requests
 import xml.etree.ElementTree as ET
 import time
+import markdown
+from markdown.extensions.toc import TocExtension
+
+
+def convertMDtoHTML():
+    """
+    将config.json文件转换成HTML
+    :return:
+    """
+    currentTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())  # 获取当前时间
+    jsonFilename = "./config.json"
+    htmlFilename = "./index.html"
+    with open(jsonFilename, 'r', encoding='utf-8') as f:
+        entries = json.load(f)
+    css="""
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+    </head>
+    """
+    markdownContent = f"# BaiyunU Blogroll\n\n - 更新时间:{currentTime}\n\n"
+    for entry in entries:
+        markdownContent += f"## [{entry['title']}]({entry['url']})\n"
+        markdownContent += f"**作者:** {entry['author']}\n"
+        markdownContent += f"**发表时间:** {entry['published']}\n"
+        if entry['updated']:
+            markdownContent += f"**更新时间:** {entry['updated']}\n"
+        markdownContent += "\n"
+    htmlContent = markdown.markdown(markdownContent, extensions=[TocExtension(baselevel=2)])
+    finalHtml=f"{css}{htmlContent}"
+    with open(htmlFilename, 'w', encoding='utf-8') as f:
+        f.write(finalHtml)
 
 def convertMD():
     """
@@ -83,4 +137,5 @@ def main():
 if __name__ == '__main__':
     main()
     convertMD()
+    convertMDtoHTML()
 

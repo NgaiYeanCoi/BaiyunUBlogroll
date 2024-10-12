@@ -20,7 +20,7 @@
 def main():
     blogUrl = [
         'https://blog.nyc1.xyz/atom.xml',
-        'https://blog.canyie.top/atom.xml'
+        'https://blog.canyie.top/atom.xml',
 #       'https://URL/atom.xml'
 #       在此输入可以添加更多博客的RSS链接,记得在最后加个,
         
