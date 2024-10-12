@@ -10,7 +10,34 @@ import xml.etree.ElementTree as ET
 import time
 import markdown
 from markdown.extensions.toc import TocExtension
+from bs4 import BeautifulSoup
 
+
+blogUrl = [
+        'https://blog.nyc1.xyz/atom.xml',
+        'https://blog.canyie.top/atom.xml'
+        # 在此输入可以添加更多博客的RSS链接
+    ]
+
+
+def getUrlTitle(url):
+    """
+    爬取获取网页的title
+    :param url: 网页地址
+    :return: title
+    """
+    try:
+        # 发送HTTP请求
+        response = requests.get(url)
+        # 确保请求成功
+        response.raise_for_status()
+        # 使用BeautifulSoup解析HTML
+        soup = BeautifulSoup(response.text, 'html.parser')
+        # 提取网页标题
+        title = soup.title.string if soup.title else 'No title found'
+        return title
+    except requests.RequestException as e:
+        return f"Error: {e}"
 
 def convertMDtoHTML():
     """
@@ -22,34 +49,70 @@ def convertMDtoHTML():
     htmlFilename = "./index.html"
     with open(jsonFilename, 'r', encoding='utf-8') as f:
         entries = json.load(f)
-    css="""
-    <html>
+    css = """
     <head>
     <meta charset="utf-8">
-    <style>
-    body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        h1 {
-            color: #333;
-        }
-        h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-    </style>
-    </head>
-    """
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               background-color: #f9f9f9;
+               padding: 20px;
+               border-radius: 8px;
+           }
+           .container {
+               display: flex;
+           }
+           .main-content {
+               flex: 1;
+               padding-right: 20px;
+           }
+		   .sidebar .title{
+			   font-size: large;
+    			font-weight: bolder;
+    			margin-bottom: 0;
+		   }
+		   .sidebar a{
+			font-size: 13px;
+            height: 18px;
+            line-height: 18px;
+            color: rgb(153, 153, 153);
+            word-break: break-all;
+            text-overflow: ellipsis;
+            overflow: hidden;
+		   }
+           .sidebar {
+               margin: 20px;
+               flex: 0 0 200px;
+               padding: 10px;
+               background-color: #fff;
+               border-radius: 8px;
+               box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+           }
+           .sidebar h2 {
+               margin-top: 0;
+           }
+           .sidebar ul {
+               list-style-type: none;
+               padding: 0;
+           }
+           .sidebar li {
+               margin-bottom: 5px;
+           }
+           </style>
+       """
+
+    # 侧边栏内容
+    sidebarContent = "<div class='sidebar'><h2>BaiyunU列表</h2><ul>"
+    for url in blogUrl:
+        title = getUrlTitle(url)
+        path = url
+        path=path.split('/')
+        sidebarContent += f"<p class='title'>{title}</p>"
+        sidebarContent += f"<li><a href='https://{path[2]}'>https://{path[2]}</a></li>"
+    sidebarContent += "</ul></div>"
+
+    # Markdown内容
     markdownContent = f"# BaiyunU Blogroll\n\n - 更新时间:{currentTime}\n\n"
     for entry in entries:
         markdownContent += f"## [{entry['title']}]({entry['url']})\n"
@@ -58,10 +121,13 @@ def convertMDtoHTML():
         if entry['updated']:
             markdownContent += f"**更新时间:** {entry['updated']}\n"
         markdownContent += "\n"
+    # 转换Markdown为HTML
     htmlContent = markdown.markdown(markdownContent, extensions=[TocExtension(baselevel=2)])
-    finalHtml=f"{css}{htmlContent}"
+    # 合并CSS样式、侧边栏和HTML内容
+    finalHtmlContent = f"{css}<div class='container'>{sidebarContent}<div class='main-content'>{htmlContent}</div></div></head>"
+
     with open(htmlFilename, 'w', encoding='utf-8') as f:
-        f.write(finalHtml)
+        f.write(finalHtmlContent)
 
 def convertMD():
     """
@@ -103,18 +169,18 @@ def checkWebsite(url):
 def fetchBlogEntries(blogFeedUrls):
     """
     聚合所有URL的RSS源
-    :param blogFeedUrls: 传入blog的网址
-    :return:按照updates时间排序好，返回entries列表
+    :param: blogFeedUrls: 传入blog的网址
+    :return: 按照updates时间排序好，返回entries列表
     """
     all_entries = []
     for blogFeedUrl in blogFeedUrls:
         print(f"正在写入{blogFeedUrl}中...")
         feedData = feedparser.parse(blogFeedUrl) #解析RSS
-        author_name = feedData.feed.get('author', 'Unknown Author')  # 获取作者信息
+        authorName = feedData.feed.get('author', 'Unknown Author')  # 获取作者信息
         entries = feedparser.parse(blogFeedUrl)["entries"]
         for entry in entries:
             all_entries.append({
-                "author": author_name,
+                "author": authorName,
                 "title": entry["title"],
                 "url": entry["link"].split("#")[0],
                 "published": entry["published"].split("T")[0],
@@ -122,11 +188,7 @@ def fetchBlogEntries(blogFeedUrls):
             })
     return sorted(all_entries, key=lambda x: x['updated'], reverse=True)
 def main():
-    blogUrl = [
-        'https://blog.nyc1.xyz/atom.xml',
-        'https://blog.canyie.top/atom.xml'
-        # 在此输入可以添加更多博客的RSS链接
-    ]
+    global blogUrl
     for check in blogUrl:
         checkWebsite(check)
     jsonFilename = "./config.json"
