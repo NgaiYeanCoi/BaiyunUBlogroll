@@ -1,9 +1,12 @@
 # BaiyunUBlogroll
+
 广东白云学院Blogroll，是一个用于聚合多个博客RSS源的Python脚本。  
 
+
+## 介绍
 搭配Github WorkFlow每天北京时间0:30自动抓取指定博客的RSS源，解析并提取相关信息转换成json配置文件方便处理，后将json转换成Markdown生成HTML静态网页。  
 
-项目还在建设当中，欢迎你们提交Pull Request或Issues与我一起维护这个项目。
+该项目还在建设当中，欢迎你们提交Pull Request或Issues与我一起维护这个项目。
 
 ## 配置文件
 - `index.css` 用于存储静态网页层叠样式表
@@ -28,9 +31,33 @@ blogUrl = [
     ]
 ```
 
+然后在readme.md中的列表添加你的信息。
+
+## 目前已添加的列表
+
+|         Name         |              网站               |
+|:--------------------:|:-----------------------------:|
+|  NgaiYeanCoi's blog  |    https://blog.nyc1.xyz/     |
+|        残页的小博客        |   https://blog.canyie.top/    |
+|    SMULET's BLOG     | https://simuleite.github.io/  |
+
+
+## 后续可能会添加的功能
+- 词云
+- 搜索功能
+- 美化样式
+- 留言功能
+- ...
+
 ## 第三方搭建  
 
-### 依赖  
+### 克隆仓库
+
+```bash
+git clone https://github.com/NgaiYeanCoi/BaiyunUBlogroll.git
+```
+
+### 安装依赖  
 
 - 在使用前先安装第三方依赖库 。
 
@@ -44,6 +71,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 - Markdown
 - beautifulsoup4
 - feedparser
+
 
 ## 作者
 [NgaiYeanCoi](https://github.com/NgaiYeanCoi)
