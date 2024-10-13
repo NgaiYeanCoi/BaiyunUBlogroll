@@ -16,7 +16,8 @@ from bs4 import BeautifulSoup
 blogUrl = [
         'https://blog.nyc1.xyz/atom.xml',
         'https://blog.canyie.top/atom.xml',
-        'https://simuleite.github.io/atom.xml'
+        'https://simuleite.github.io/atom.xml',
+        'https://my.toho.red/index.xml'
         # 在此输入可以添加更多博客的RSS链接
     ]
 
