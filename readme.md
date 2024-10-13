@@ -15,11 +15,12 @@
 - `index.html`生成的静态网页文件
 
 ## 添加
+**在添加之前请确保你的博客支持RSS源！** 
 
 任何广东白云学院的学子都可以欢迎你们添加进来。
 
-编辑`main.py`文件，找到blogUrl，在已有的RSS源后添加你的RSS源，最后提交 Pull Request 进行更改。  
 
+编辑`main.py`文件，找到blogUrl，在已有的RSS源后添加你的RSS源，最后提交 Pull Request 进行更改。
 格式：
 ```python
 blogUrl = [
