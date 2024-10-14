@@ -142,7 +142,7 @@ def fetchBlogEntries(blogFeedUrls):
     for blogFeedUrl in blogFeedUrls:
         print(f"正在写入{blogFeedUrl}中...")
         feedData = feedparser.parse(blogFeedUrl) #解析RSS
-        authorName = feedData.feed.get('author', 'Unknown Author')  # 获取作者信息
+        authorName = feedData.feed.get('author', getUrlTitle(blogFeedUrl))  # 获取作者信息
         entries = feedparser.parse(blogFeedUrl)["entries"]
         for entry in entries:
             summaryHtml = entry["summary"]
