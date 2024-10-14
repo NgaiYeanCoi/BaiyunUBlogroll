@@ -11,6 +11,8 @@ import time
 import markdown
 from markdown.extensions.toc import TocExtension
 from bs4 import BeautifulSoup
+from wordcloud import WordCloud
+
 
 
 blogUrl = [
@@ -20,6 +22,35 @@ blogUrl = [
         'https://my.toho.red/index.xml'
         # 在此输入可以添加更多博客的RSS链接
     ]
+
+jsonFilename="./config.json"
+
+def creatWordCloud():
+    """
+    :return:
+    """
+    #读取摘要信息
+    txt=""
+    with open (jsonFilename,'r' , encoding='utf-8') as f:
+        entries = json.load(f)
+    with open("./stopwords/cn_stopwords.txt", 'r', encoding='utf-8') as f:
+        stopwordsFile = set(f.read().splitlines())
+    #print(stopwordsFile)
+    for entry in entries:
+        txt = txt+f"{entry['summary']}\n"
+    #print(txt)
+    wordcloud=WordCloud(font_path="./Fonts/msyh.ttc", width=800, height=600, margin=10,
+          ranks_only=None, prefer_horizontal=0.95, mask=None, scale=1,
+          color_func=None, max_words=200, min_font_size=10,
+          stopwords=stopwordsFile, random_state=82, background_color='white',
+          max_font_size=100, font_step=2, mode="RGBA",
+          relative_scaling='auto', regexp=None, collocations=True,
+          colormap='viridis', normalize_plurals=True, contour_width=1,
+          contour_color='steelblue', repeat=False,
+          include_numbers=False, min_word_length=2, collocation_threshold=30) # 创建词云实例对象
+    wordcloud.generate(txt)# 加载文本内容到词云对象中
+    wordcloud.to_file("wordcloud.png")# 将图像以定义的图像文件名输出
+
 
 
 def getUrlTitle(url):
@@ -63,7 +94,7 @@ def convertMDtoHTML():
     # 侧边栏内容
     Github="""
     <a id="Github" target="_blank" href="https://github.com/NgaiYeanCoi/BaiyunUBlogroll">
-    <span id="GithubText">GitHub</span><img id="logo-github" src="https://blogroll.njulug.org/assets/github.c12ec768.png" alt="Logo">
+    <span id="GithubText">GitHub</span><img id="logo-github" src="./images/github.c12ec768.png" alt="Logo">
     </a>
     """
     sidebarContent = "<div class='sidebar' style='margin:10px;'><ul>"
@@ -100,7 +131,6 @@ def convertMD():
     :return:
     """
     currentTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) #获取当前时间
-    jsonFilename="./config.json"
     markdownFilename= "./summary.md"
     with open (jsonFilename,'r' , encoding='utf-8') as f:
         entries = json.load(f)
@@ -171,4 +201,5 @@ if __name__ == '__main__':
     main()
     convertMD()
     convertMDtoHTML()
+    creatWordCloud()
 
