@@ -1,6 +1,14 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-10-15 00:19:12
+ - 更新时间:2024-10-15 15:40:16
+
+## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
+**作者:** 残页
+**发表时间:** 2024-04-18
+
+**摘要:** 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/10/15 更新内容：更新 2024-10
+
+**更新时间:** 2024-10-15 10:26:14
 
 ## [白云学院-关于如何申请学校edu邮箱](https://blog.nyc1.xyz/2024/10/07/%E7%99%BD%E4%BA%91%E5%AD%A6%E9%99%A2-%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7%E5%AD%A6%E6%A0%A1edu%E9%82%AE%E7%AE%B1/)
 **作者:** NgaiYeanCoi
@@ -121,14 +129,6 @@
 **摘要:** Windows
 
 **更新时间:** 2024-09-10 11:25:58
-
-## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
-**作者:** 残页
-**发表时间:** 2024-04-18
-
-**摘要:** 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/09/07 更新内容：更新 2024-09
-
-**更新时间:** 2024-09-08 14:46:56
 
 ## [Spring Framework](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%20Framework/)
 **作者:** SIMULEITE
