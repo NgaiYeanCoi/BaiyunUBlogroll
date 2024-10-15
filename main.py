@@ -11,7 +11,7 @@ import time
 import markdown
 from markdown.extensions.toc import TocExtension
 from bs4 import BeautifulSoup
-from wordcloud import WordCloud
+#from wordcloud import WordCloud
 
 
 
@@ -201,5 +201,5 @@ if __name__ == '__main__':
     main()
     convertMD()
     convertMDtoHTML()
-    creatWordCloud()
+    #creatWordCloud()
 
