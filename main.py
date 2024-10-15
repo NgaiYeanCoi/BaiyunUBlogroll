@@ -211,7 +211,7 @@ def main():
 
 
 if __name__ == '__main__':
-    #main()
-    #convertMD()
+    main()
+    convertMD()
     convertMDtoHTML()
     #creatWordCloud()
