@@ -3,9 +3,9 @@
         "author": "NgaiYeanCoi",
         "title": "网络技术-二层安全",
         "url": "https://blog.nyc1.xyz/2024/10/20/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF-%E4%BA%8C%E5%B1%82%E5%AE%89%E5%85%A8/",
-        "summary": "<a href=\"#MUX-VLAN\"",
+        "summary": "广播风暴广播风暴的现象交换机指示灯疯狂闪烁.switch CPU利用率高。switch 命令行卡顿。用户上网慢获知不能上网。出现MAC地址漂移。抓包发现很多ARP、DHCP discovery广播包。广播风暴可能的原因二层环路(没启用生成树或生成树故障，设备/接口故障)。网络中存在攻击行为(某些终端持续恶意发送广播包)。",
         "published": "2024-10-20",
-        "updated": "2024-10-20 15:04:02"
+        "updated": "2024-10-21 01:45:11"
     },
     {
         "author": "NgaiYeanCoi",
