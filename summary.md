@@ -1,6 +1,22 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-10-21 16:46:31
+ - 更新时间:2024-10-22 16:46:13
+
+## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
+**作者:** SIMULEITE
+**发表时间:** 2024-09-30
+
+**摘要:** Hash字母异位词<
+
+**更新时间:** 2024-10-22 11:33:22
+
+## [动态规划学习指南](http://simuleite.github.io/ComputerScience/%E6%8C%87%E5%8D%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/)
+**作者:** SIMULEITE
+**发表时间:** 2024-10-21
+
+**摘要:** Author：aatalykOrigin: <a href="https:
+
+**更新时间:** 2024-10-22 04:51:05
 
 ## [网络技术-二层安全](https://blog.nyc1.xyz/2024/10/20/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF-%E4%BA%8C%E5%B1%82%E5%AE%89%E5%85%A8/)
 **作者:** NgaiYeanCoi
@@ -9,6 +25,14 @@
 **摘要:** 广播风暴广播风暴的现象交换机指示灯疯狂闪烁.switch CPU利用率高。switch 命令行卡顿。用户上网慢获知不能上网。出现MAC地址漂移。抓包发现很多ARP、DHCP discovery广播包。广播风暴可能的原因二层环路(没启用生成树或生成树故障，设备/接口故障)。网络中存在攻击行为(某些终端持续恶意发送广播包)。
 
 **更新时间:** 2024-10-21 01:45:11
+
+## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/SpringBoot%20%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97/)
+**作者:** SIMULEITE
+**发表时间:** 2024-10-20
+
+**摘要:** 参考资料Gitee项目<a href="https://blog.csdn.net/m0_66490875/article/de
+
+**更新时间:** 2024-10-20 06:05:57
 
 ## [白云学院维修部指南-第一章硬件性能的认识](https://blog.nyc1.xyz/2024/10/02/%E7%BB%B4%E4%BF%AE%E9%83%A8%E6%8C%87%E5%8D%97-%E7%AC%AC%E4%B8%80%E7%AB%A0/)
 **作者:** NgaiYeanCoi
@@ -25,14 +49,6 @@
 **摘要:** 前言很多同学都不知道教育邮箱、学信网认证有很多隐藏的福利可以省下很多钱，并且许多企业都有推行高校学生权益，你不单止可以免费使用正版软件，还可以以最优惠的价格购买他们的产品。就来让我打破你们的信息差吧！
 
 **更新时间:** 2024-10-19 13:54:07
-
-## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
-**作者:** SIMULEITE
-**发表时间:** 2024-09-30
-
-**摘要:** Hash字母异位词<
-
-**更新时间:** 2024-10-17 02:17:21
 
 ## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
 **作者:** 残页
@@ -234,14 +250,6 @@
 
 **更新时间:** 2024-06-29 12:56:55
 
-## [微信小程序 MiniApp](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%20MiniApp/)
-**作者:** SIMULEITE
-**发表时间:** 2024-03-29
-
-**摘要:** 说明：%%是注释%%程序设计首先写<view class="class_name"></view>来结构化设计；每个class对应一个css样式<viewclass="container"><imageclass="avatar"src="../images/avatar/avatar-1.jpg"></image><textclass="motto">Welcome, Orange Can</text><viewclass="journey-container"><textclass="journey">Start your journey of miniprogram</text></view></view>css中放样式信息，写法如下；全局样式可以放app.css/* 示范写法 */.class_name{attribute: rpx;location_attribute: center;}/* 一般网页可以这样布局 */.container{/* 最外层的<view> */display: flex;/* 布局方式 */flex-direction: column;/* 列，从上到下；reverse是从下到上；可选row */align-items: center;/* 居中 */}
-
-**更新时间:** 2024-06-08 04:37:42
-
 ## [Regular Expression 正则表达式](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Regular%20Expression%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/)
 **作者:** SIMULEITE
 **发表时间:** 2024-05-13
@@ -249,14 +257,6 @@
 **摘要:** 基本知识特殊字符</h2
 
 **更新时间:** 2024-05-14 11:12:12
-
-## [PHP ADTP后台管理](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/PHP%20ADTP%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/)
-**作者:** SIMULEITE
-**发表时间:** 2024-04-14
-
-**摘要:** 信息系统架构信息化系统：前台 + 后台 + 数据库B/S 模式前端 -> Server[Apache->PHP(TP6.0)] -> SQL DataBase运行逻辑：Client发送require请求(http协议)，包含header（length、refer信息）、body（数据）Apache接受请求，给PHP做处理PHP读取、处理数据；判断数据是否损毁、是否需要退回数据更新到前端，并返回结果(success/fail)
-
-**更新时间:** 2024-04-15 09:34:06
 
 ## [hexo的一些命令](https://blog.nyc1.xyz/2024/03/17/hexo/)
 **作者:** NgaiYeanCoi
