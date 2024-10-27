@@ -1,6 +1,14 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-10-26 16:42:27
+ - 更新时间:2024-10-27 16:43:39
+
+## [Redis使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Redis%E4%BD%BF%E7%94%A8/)
+**作者:** SIMULEITE
+**发表时间:** 2024-10-26
+
+**摘要:** General# 返回给定模式的keysKEYS patterKEYS * # 返回全部KEYS set* # 返回set开头的keysEXISTS keyTYPE keyDEL keyStringSET key valueGET key# Set Extend TimeSETEX key seconds value# Set When Key Not ExistSETNX key valueHashHSET key field valueHGET key fieldHDEL key field# Get All FieldsHKEYS key# Get All ValuesHVALS keyflowchart LRkey[key]item[field1: value1field2: value2]key --> itemListLPUSH key value1 value2# Get Key From Start To StopLRANGE key start stop# Right POPRPOP key# List LengthLLEN keySetSADD key mem1 mem2SMEMBERS key# Set SizeSCARD keySINTER key1 key2SUNION key1 key2# DeleteSREM key mem1 mem2Sorted Set / ZSetZADD key score1 mem1 score2 mem2# Show ListZRANGE key start stop (WITHSCORES)# Increse MemberZINCRBY key increment memberZREM key mem1 mem2
+
+**更新时间:** 2024-10-27 07:06:48
 
 ## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
 **作者:** SIMULEITE
@@ -209,14 +217,6 @@
 **摘要:** Task SchedulerWIN+R,taskschd.msc<br
 
 **更新时间:** 2024-07-16 08:45:20
-
-## [vscode使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/vscode%E4%BD%BF%E7%94%A8/)
-**作者:** SIMULEITE
-**发表时间:** 2024-05-01
-
-**摘要:** 全键盘操作指南
-
-**更新时间:** 2024-07-06 02:36:50
 
 ## [若人生是场大梦啊——记我人生的前19年](https://blog.canyie.top/2023/11/06/first-19-years-of-my-life/)
 **作者:** 残页
