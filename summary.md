@@ -1,6 +1,30 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-10-27 16:43:39
+ - 更新时间:2024-10-28 16:48:31
+
+## [SpringBoot 支付模块](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/SpringBoot%20%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97/)
+**作者:** SIMULEITE
+**发表时间:** 2024-10-27
+
+**摘要:** 参考资料Gitee项目<a href="https://blog.csdn.net/m0_66490875/article/de
+
+**更新时间:** 2024-10-28 12:37:27
+
+## [动态规划学习指南](http://simuleite.github.io/ComputerScience/%E6%8C%87%E5%8D%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/)
+**作者:** SIMULEITE
+**发表时间:** 2024-10-21
+
+**摘要:** Author：aatalykOrigin：LinkBefore starting the topic let me introduce myself. I am a Mobile Developer currently working in Warsaw and spending my free time for interview preparations. I started to prepare for interviews two years ago. At that time I should say I could not solve the two sum problem. Easy problems seemed to me like hard ones so most of the time I had to look at editorials and discuss section. Currently, I have solved ~800 problems and time to time participate in contests. I usually solve 3 problems in a contest and sometimes 4 problems. Ok, lets come back to the topic.Recently I have concentrated my attention on Dynamic Programming cause its one of the hardest topics in an interview prep. After solving ~140 problems in DP I have noticed that there are few patterns that can be found in different problems. So I did a research on that and find the following topics. I will not give complete ways how to solve problems but these patterns may be helpful in solving DP.PatternsMinimum (Maximum) Path to Reach a TargetDistinct WaysMerging IntervalsDP on StringsDecision Making
+
+**更新时间:** 2024-10-28 12:36:54
+
+## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
+**作者:** SIMULEITE
+**发表时间:** 2024-09-30
+
+**摘要:** Hash字母异位词排序每一个单词，就知道是不是异位词。两数之和从数组中，找到nums[i] + nums[j] == target，并返回{ i, j }。思路是双重循环，遍历每一个元素，求和是否为target。然而，双重循环需要O(N2)O(N^2)O(N2)的复杂度。因此，可以使用一张表，使用containsKey方法识别是否存在当前i的target - nums[i]，即可减少一重循环。关键思想用Map高效率查找，减少一重循环。最长连续序列从乱序数组中，找到最长连续（数组中不一定连续）的序列。要求O(N)O(N)O(N)。首先用数组的值存入哈希表，然后遍历数组，判断map.constains(curNum++)。然而，即使这样还是效率不够高。优化中间值不进入循环，序列开始值才进入，使用!contains(curNum - 1)判断是否为序列开始值去重，不要哈希表，不需要键值对，使用哈希Set，只存储值。关键思想去重；不处理中间值
+
+**更新时间:** 2024-10-27 11:07:58
 
 ## [Redis使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Redis%E4%BD%BF%E7%94%A8/)
 **作者:** SIMULEITE
@@ -10,22 +34,6 @@
 
 **更新时间:** 2024-10-27 07:06:48
 
-## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
-**作者:** SIMULEITE
-**发表时间:** 2024-09-30
-
-**摘要:** Hash字母异位词<
-
-**更新时间:** 2024-10-24 13:40:05
-
-## [动态规划学习指南](http://simuleite.github.io/ComputerScience/%E6%8C%87%E5%8D%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/)
-**作者:** SIMULEITE
-**发表时间:** 2024-10-21
-
-**摘要:** Author：aatalykOrigin: <a href="https:
-
-**更新时间:** 2024-10-24 01:44:16
-
 ## [网络技术-二层安全](https://blog.nyc1.xyz/2024/10/20/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF-%E4%BA%8C%E5%B1%82%E5%AE%89%E5%85%A8/)
 **作者:** NgaiYeanCoi
 **发表时间:** 2024-10-20
@@ -33,14 +41,6 @@
 **摘要:** 广播风暴广播风暴的现象交换机指示灯疯狂闪烁.switch CPU利用率高。switch 命令行卡顿。用户上网慢获知不能上网。出现MAC地址漂移。抓包发现很多ARP、DHCP discovery广播包。广播风暴可能的原因二层环路(没启用生成树或生成树故障，设备/接口故障)。网络中存在攻击行为(某些终端持续恶意发送广播包)。
 
 **更新时间:** 2024-10-21 01:45:11
-
-## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/SpringBoot%20%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97/)
-**作者:** SIMULEITE
-**发表时间:** 2024-10-20
-
-**摘要:** 参考资料Gitee项目<a href="https://blog.csdn.net/m0_66490875/article/de
-
-**更新时间:** 2024-10-20 06:05:57
 
 ## [白云学院维修部指南-第一章硬件性能的认识](https://blog.nyc1.xyz/2024/10/02/%E7%BB%B4%E4%BF%AE%E9%83%A8%E6%8C%87%E5%8D%97-%E7%AC%AC%E4%B8%80%E7%AB%A0/)
 **作者:** NgaiYeanCoi
