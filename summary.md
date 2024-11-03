@@ -1,6 +1,14 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-02 16:44:41
+ - 更新时间:2024-11-03 16:42:31
+
+## [DP 设计模式](http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-02
+
+**摘要:** 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。
+
+**更新时间:** 2024-11-03 06:55:29
 
 ## [白云学院-关于如何申请学校edu邮箱](https://blog.nyc1.xyz/2024/10/07/%E7%99%BD%E4%BA%91%E5%AD%A6%E9%99%A2-%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7%E5%AD%A6%E6%A0%A1edu%E9%82%AE%E7%AE%B1/)
 **作者:** NgaiYeanCoi
@@ -249,14 +257,6 @@
 **摘要:** Flowchart<a class="markdownIt-Anchor" href="#基本语法
 
 **更新时间:** 2024-06-29 12:56:55
-
-## [Regular Expression 正则表达式](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Regular%20Expression%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/)
-**作者:** SIMULEITE
-**发表时间:** 2024-05-13
-
-**摘要:** 基本知识特殊字符</h2
-
-**更新时间:** 2024-05-14 11:12:12
 
 ## [hexo的一些命令](https://blog.nyc1.xyz/2024/03/17/hexo/)
 **作者:** NgaiYeanCoi
