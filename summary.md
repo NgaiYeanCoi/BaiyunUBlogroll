@@ -1,6 +1,14 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-04 16:44:50
+ - 更新时间:2024-11-05 16:43:47
+
+## [Android 平台常见安全漏洞类型](https://blog.canyie.top/2024/11/05/android-platform-common-vulnerabilities/)
+**作者:** 残页
+**发表时间:** 2024-11-04
+
+**摘要:** 本文适用于已对 Android 开发有基础了解，希望了解 Android 系统层常见安全漏洞的人。祝大家写代码无 bug，挖洞天天挖到 Critical RCE 漏洞链。本文开始创作时间：2024-02-19 完成时间：2024-02-29 发布时间：2024-11-05
+
+**更新时间:** 2024-11-04 12:43:37
 
 ## [DP 设计模式](http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
 **作者:** SIMULEITE
