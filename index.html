@@ -114,7 +114,7 @@
 <div class="main-content">
 <h2 id="baiyunu-blogroll">BaiyunU Blogroll</h2>
 <ul>
-<li>更新时间:2024-11-08 16:44:31</li>
+<li>更新时间:2024-11-09 16:42:39</li>
 </ul>
 <h3 id="self-changing-data-type-cve-2024-40676"><a href="https://blog.canyie.top/2024/11/07/self-changing-data-type/" target="_blank">Self-changing Data Type - CVE-2024-40676 漏洞分析</a></h3>
 <p><strong>摘要:</strong> 今年 10 月份的时候，Android 安全公告用 CVE-2024-40676 的编号公布了一个很奇怪的patch。AccountManagerService checkKeyIntent() 负责检查 account authenticator 传回的 intent，确保它安全再传回给 caller，防止 launch anywhere 漏洞。这个补丁看起来很暴力也很奇怪，直接 ban 了所有带有 content URI 的 intent，似乎完全不考虑兼容性。是什么样的漏洞才要上如此暴力的修复方法？注：如下全是我的猜测，由于联系不到漏洞作者本人，无法确认这是否就是原本的问题。</p>
