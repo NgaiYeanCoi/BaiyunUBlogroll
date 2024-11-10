@@ -1,6 +1,6 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-09 16:42:39
+ - 更新时间:2024-11-10 16:41:35
 
 ## [Self-changing Data Type - CVE-2024-40676 漏洞分析](https://blog.canyie.top/2024/11/07/self-changing-data-type/)
 **作者:** 残页
