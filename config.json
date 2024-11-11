@@ -1,19 +1,19 @@
 [
     {
         "author": "残页",
+        "title": "Android 每月安全补丁分析索引",
+        "url": "https://blog.canyie.top/2024/04/18/android-security-bulletin-index/",
+        "summary": "之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/11/11 更新内容：更新 2024-11",
+        "published": "2024-04-18",
+        "updated": "2024-11-11 13:32:39"
+    },
+    {
+        "author": "残页",
         "title": "Self-changing Data Type - CVE-2024-40676 漏洞分析",
         "url": "https://blog.canyie.top/2024/11/07/self-changing-data-type/",
         "summary": "今年 10 月份的时候，Android 安全公告用 CVE-2024-40676 的编号公布了一个很奇怪的patch。AccountManagerService checkKeyIntent() 负责检查 account authenticator 传回的 intent，确保它安全再传回给 caller，防止 launch anywhere 漏洞。这个补丁看起来很暴力也很奇怪，直接 ban 了所有带有 content URI 的 intent，似乎完全不考虑兼容性。是什么样的漏洞才要上如此暴力的修复方法？注：如下全是我的猜测，由于联系不到漏洞作者本人，无法确认这是否就是原本的问题。",
         "published": "2024-11-07",
         "updated": "2024-11-07 03:34:02"
-    },
-    {
-        "author": "残页",
-        "title": "Android 每月安全补丁分析索引",
-        "url": "https://blog.canyie.top/2024/04/18/android-security-bulletin-index/",
-        "summary": "之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/11/07 更新内容：更新 CVE-2024-40676",
-        "published": "2024-04-18",
-        "updated": "2024-11-07 03:28:14"
     },
     {
         "author": "残页",
