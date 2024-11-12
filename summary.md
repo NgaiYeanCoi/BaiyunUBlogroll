@@ -1,6 +1,22 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-11 16:49:51
+ - 更新时间:2024-11-12 16:45:21
+
+## [Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044](https://blog.canyie.top/2024/10/08/CVE-2024-0044/)
+**作者:** 残页
+**发表时间:** 2024-10-08
+
+**摘要:** This is a bypass of the initial patch of CVE-2024-0044, a High severity vulnerability in the Android framework that allows attackers with adb access to execute arbitrary code under the UID of arbitrary app.The following is copied from my repohttps://github.com/canyie/CVE-2024-0044for backup purposes. For more info such as PoC code, please check the original repo.
+
+**更新时间:** 2024-11-12 10:00:51
+
+## [MagiskEoP (CVE-2024-48336)： Magisk App Arbitrary Code Execution Vulnerability](https://blog.canyie.top/2024/08/24/CVE-2024-48336/)
+**作者:** 残页
+**发表时间:** 2024-08-24
+
+**摘要:** Magisk App before Canary version 27007 contains a vulnerability CVE-2024-48336, which allows a local untrusted app with no additional privileges to silently execute arbitrary code in the Magisk app and escalate privileges to root via a crafted package without user interaction.The following is copied from my repohttps://github.com/canyie/MagiskEoPfor backup purposes. For more info such as PoC code, please check the original repo.
+
+**更新时间:** 2024-11-12 09:57:26
 
 ## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
 **作者:** 残页
@@ -8,7 +24,7 @@
 
 **摘要:** 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/11/11 更新内容：更新 2024-11
 
-**更新时间:** 2024-11-11 13:32:39
+**更新时间:** 2024-11-12 09:10:44
 
 ## [Self-changing Data Type - CVE-2024-40676 漏洞分析](https://blog.canyie.top/2024/11/07/self-changing-data-type/)
 **作者:** 残页
