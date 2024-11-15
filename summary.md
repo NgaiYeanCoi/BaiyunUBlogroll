@@ -1,6 +1,6 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-14 16:46:34
+ - 更新时间:2024-11-15 16:46:43
 
 ## [Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044](https://blog.canyie.top/2024/10/08/CVE-2024-0044/)
 **作者:** 残页
@@ -26,6 +26,14 @@
 
 **更新时间:** 2024-11-12 09:10:44
 
+## [Spring Framework](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%20Framework/)
+**作者:** SIMULEITE
+**发表时间:** 2024-08-10
+
+**摘要:** 所有的Java云平台都能够使用基于JAR的打包方式，WAR文件只在一些云平台上能够运行。Pom.xml 更换 Maven 源<?xml version="1.0"encoding="UTF-8"?><projectxmlns="http://maven.apache.org/POM/4.0.0"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"><modelVersion>4.0.0</modelVersion><groupId>org.springframework.quoters</groupId><artifactId>quoters-incorporated</artifactId><version>0.0.1-SNAPSHOT</version><packaging>jar</packaging><name>quoters-incorporated</name><description>REST service to support the guides</description><developers><developer><id>gturnquist</id><name>Greg Turnquist</name><email>gturnquist at vmware.com</email><organization>VMware, Inc.</organization><roles><role>Project Lead</role></roles></developer></developers><organization><name>VMware, Inc.</name><url>https://spring.io</url></organization><licenses><license><name>Apache License, Version 2.0</name><url>https://www.apache.org/licenses/LICENSE-2.0</url><comments>Copyright 2011 the original author or authors.Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License athttps://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express orimplied.See the License for the specific language governing permissions andlimitations under the License.</comments></license></licenses><parent><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-parent</artifactId><version>2.7.5</version><relativePath/><!-- lookup parent from repository --></parent><properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><java.version>1.8</java.version></properties><dependencies><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-data-jpa</artifactId></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-web</artifactId></dependency><dependency><groupId>com.h2database</groupId><artifactId>h2</artifactId><scope>runtime</scope></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency></dependencies><!-- 配置阿里云仓库 --><repositories><repository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></pluginRepository></pluginRepositories><build><plugins><plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin></plugins></build></project>Tight Coupling 紧耦合在Spring框架以前，使用排序算法需要将算法实例化publicclassComplexBusinessService{SortAlgorithmsortAlgorithm=newBubbleSortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Good code has loose coupling.移除依赖项的实例化可以移除紧耦合publicclassComplexBusinessService{SortAlgorithm sortAlgorithm;// = new BubbleSortAlgorithm();publicComplexBusinessService(SortAlgorithm sortAlgorithm){// 创建构造函数this.sortAlgorithm = sortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Spring Framework instantiates objects and populates the dependencies.
+
+**更新时间:** 2024-11-08 02:20:22
+
 ## [Self-changing Data Type - CVE-2024-40676 漏洞分析](https://blog.canyie.top/2024/11/07/self-changing-data-type/)
 **作者:** 残页
 **发表时间:** 2024-11-07
@@ -33,6 +41,14 @@
 **摘要:** 今年 10 月份的时候，Android 安全公告用 CVE-2024-40676 的编号公布了一个很奇怪的patch。AccountManagerService checkKeyIntent() 负责检查 account authenticator 传回的 intent，确保它安全再传回给 caller，防止 launch anywhere 漏洞。这个补丁看起来很暴力也很奇怪，直接 ban 了所有带有 content URI 的 intent，似乎完全不考虑兼容性。是什么样的漏洞才要上如此暴力的修复方法？注：如下全是我的猜测，由于联系不到漏洞作者本人，无法确认这是否就是原本的问题。
 
 **更新时间:** 2024-11-07 03:34:02
+
+## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
+**作者:** SIMULEITE
+**发表时间:** 2024-09-30
+
+**摘要:** Hash字母异位词排序每一个单词，就知道是不是异位词。两数之和从数组中，找到nums[i] + nums[j] == target，并返回{ i, j }。思路是双重循环，遍历每一个元素，求和是否为target。然而，双重循环需要O(N2)O(N^2)O(N2)的复杂度。因此，可以使用一张表，使用containsKey方法识别是否存在当前i的target - nums[i]，即可减少一重循环。关键思想用Map高效率查找，减少一重循环。最长连续序列从乱序数组中，找到最长连续（数组中不一定连续）的序列。要求O(N)O(N)O(N)。首先用数组的值存入哈希表，然后遍历数组，判断map.constains(curNum++)。然而，即使这样还是效率不够高。优化中间值不进入循环，序列开始值才进入，使用!contains(curNum - 1)判断是否为序列开始值去重，不要哈希表，不需要键值对，使用哈希Set，只存储值。关键思想去重；不处理中间值
+
+**更新时间:** 2024-11-05 03:27:07
 
 ## [Android 平台常见安全漏洞类型](https://blog.canyie.top/2024/11/05/android-platform-common-vulnerabilities/)
 **作者:** 残页
@@ -48,7 +64,7 @@
 
 **摘要:** 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。
 
-**更新时间:** 2024-11-03 06:55:29
+**更新时间:** 2024-11-03 07:05:46
 
 ## [白云学院-关于如何申请学校edu邮箱](https://blog.nyc1.xyz/2024/10/07/%E7%99%BD%E4%BA%91%E5%AD%A6%E9%99%A2-%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7%E5%AD%A6%E6%A0%A1edu%E9%82%AE%E7%AE%B1/)
 **作者:** NgaiYeanCoi
@@ -73,14 +89,6 @@
 **摘要:** Author：aatalykOrigin：LinkBefore starting the topic let me introduce myself. I am a Mobile Developer currently working in Warsaw and spending my free time for interview preparations. I started to prepare for interviews two years ago. At that time I should say I could not solve the two sum problem. Easy problems seemed to me like hard ones so most of the time I had to look at editorials and discuss section. Currently, I have solved ~800 problems and time to time participate in contests. I usually solve 3 problems in a contest and sometimes 4 problems. Ok, lets come back to the topic.Recently I have concentrated my attention on Dynamic Programming cause its one of the hardest topics in an interview prep. After solving ~140 problems in DP I have noticed that there are few patterns that can be found in different problems. So I did a research on that and find the following topics. I will not give complete ways how to solve problems but these patterns may be helpful in solving DP.PatternsMinimum (Maximum) Path to Reach a TargetDistinct WaysMerging IntervalsDP on StringsDecision Making
 
 **更新时间:** 2024-10-28 12:36:54
-
-## [LeetCode100 错题本](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LeetCode100%20%E9%94%99%E9%A2%98%E6%9C%AC/)
-**作者:** SIMULEITE
-**发表时间:** 2024-09-30
-
-**摘要:** Hash字母异位词排序每一个单词，就知道是不是异位词。两数之和从数组中，找到nums[i] + nums[j] == target，并返回{ i, j }。思路是双重循环，遍历每一个元素，求和是否为target。然而，双重循环需要O(N2)O(N^2)O(N2)的复杂度。因此，可以使用一张表，使用containsKey方法识别是否存在当前i的target - nums[i]，即可减少一重循环。关键思想用Map高效率查找，减少一重循环。最长连续序列从乱序数组中，找到最长连续（数组中不一定连续）的序列。要求O(N)O(N)O(N)。首先用数组的值存入哈希表，然后遍历数组，判断map.constains(curNum++)。然而，即使这样还是效率不够高。优化中间值不进入循环，序列开始值才进入，使用!contains(curNum - 1)判断是否为序列开始值去重，不要哈希表，不需要键值对，使用哈希Set，只存储值。关键思想去重；不处理中间值
-
-**更新时间:** 2024-10-27 11:07:58
 
 ## [Redis使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Redis%E4%BD%BF%E7%94%A8/)
 **作者:** SIMULEITE
@@ -201,14 +209,6 @@
 **摘要:** Windows
 
 **更新时间:** 2024-09-10 11:25:58
-
-## [Spring Framework](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%20Framework/)
-**作者:** SIMULEITE
-**发表时间:** 2024-08-10
-
-**摘要:** Pom.xml 更换 Maven 源<?xml version="1.0"encoding="UTF-8"?><projectxmlns="http://maven.apache.org/POM/4.0.0"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"><modelVersion>4.0.0</modelVersion><groupId>org.springframework.quoters</groupId><artifactId>quoters-incorporated</artifactId><version>0.0.1-SNAPSHOT</version><packaging>jar</packaging><name>quoters-incorporated</name><description>REST service to support the guides</description><developers><developer><id>gturnquist</id><name>Greg Turnquist</name><email>gturnquist at vmware.com</email><organization>VMware, Inc.</organization><roles><role>Project Lead</role></roles></developer></developers><organization><name>VMware, Inc.</name><url>https://spring.io</url></organization><licenses><license><name>Apache License, Version 2.0</name><url>https://www.apache.org/licenses/LICENSE-2.0</url><comments>Copyright 2011 the original author or authors.Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License athttps://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express orimplied.See the License for the specific language governing permissions andlimitations under the License.</comments></license></licenses><parent><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-parent</artifactId><version>2.7.5</version><relativePath/><!-- lookup parent from repository --></parent><properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><java.version>1.8</java.version></properties><dependencies><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-data-jpa</artifactId></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-web</artifactId></dependency><dependency><groupId>com.h2database</groupId><artifactId>h2</artifactId><scope>runtime</scope></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency></dependencies><!-- 配置阿里云仓库 --><repositories><repository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></pluginRepository></pluginRepositories><build><plugins><plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin></plugins></build></project>Tight Coupling 紧耦合在Spring框架以前，使用排序算法需要将算法实例化publicclassComplexBusinessService{SortAlgorithmsortAlgorithm=newBubbleSortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Good code has loose coupling.移除依赖项的实例化可以移除紧耦合publicclassComplexBusinessService{SortAlgorithm sortAlgorithm;// = new BubbleSortAlgorithm();publicComplexBusinessService(SortAlgorithm sortAlgorithm){// 创建构造函数this.sortAlgorithm = sortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Spring Framework instantiates objects and populates the dependencies.
-
-**更新时间:** 2024-09-07 03:17:23
 
 ## [ICS5 PA](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/ICS5%20PA/)
 **作者:** SIMULEITE
