@@ -1,6 +1,6 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-16 16:45:32
+ - 更新时间:2024-11-17 16:43:27
 
 ## [Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044](https://blog.canyie.top/2024/10/08/CVE-2024-0044/)
 **作者:** 残页
