@@ -1,6 +1,14 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-18 16:48:30
+ - 更新时间:2024-11-19 16:47:10
+
+## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/%E5%9B%BE%E4%B9%A6%E9%A6%86%20Maven/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-19
+
+**摘要:** 总体思路设计数据库创建Entity创建Mapper定义增删查改
+
+**更新时间:** 2024-11-19 10:57:07
 
 ## [Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044](https://blog.canyie.top/2024/10/08/CVE-2024-0044/)
 **作者:** 残页
@@ -209,14 +217,6 @@
 **摘要:** Windows
 
 **更新时间:** 2024-09-10 11:25:58
-
-## [ICS5 PA](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/ICS5%20PA/)
-**作者:** SIMULEITE
-**发表时间:** 2024-05-29
-
-**摘要:** PA1-1 24.5.30又开始了ICS之旅，这次又给自己下了一个难度，找到了汪亮老师讲解的ICS 5！target第一课的目标是修正一个register错误声明insteresting中途网易源Bad Gateway 502了，更换清华源，学会了:%s/163/tuna/g非常爽！又学了几个终端快捷键想到了用ccache加速我的PAproblemsunion和struct的区别？unioin在同一个内存空间中存储不同的数据类型。struct则是同时存储不同的数据类型。为什么要用union？阅读i386手册2.3.1 General RegistersAsFigure 2-5shows, the low-order word of each of these eight registers has a separate name and can be treated as a unit. This feature is useful for handling 16-bit data items and for compatibility with the 8086 and 80286 processors. The word registers are named AX, BX, CX, DX, BP, SP, SI, and DI.对于CPU来说，可以把AH AX AL看成单独的单元，拆分成小块。所以它们是共用关系。PA1-2 ALU 24.6.5target实现ALU中的各类运算，包括设置标志位knowledgeAppendix CNameFunctionCFCarry Flag ── Set on high-order bit carry or borrow; cleared otherwise.PFParity Flag ── Set if low-order eight bits of result contain an even number of 1 bits; cleared otherwise.ZFZero Flag ── Set if result is zero; cleared otherwise.SFSign Flag ── Set equal to high-order bit of result (0 is positive, 1 if negative).OFOverflow Flag ── Set if result is too large a positive number or too small a negative number (excluding sign-bit) to fit in destination operand; cleared otherwise.
-
-**更新时间:** 2024-08-21 09:20:40
 
 ## [Listary使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Listary%E4%BD%BF%E7%94%A8/)
 **作者:** SIMULEITE
