@@ -1,6 +1,22 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-22 16:47:46
+ - 更新时间:2024-11-23 16:44:35
+
+## [Mybatis使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mybatis%E4%BD%BF%E7%94%A8/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-22
+
+**摘要:** mybatis-config.xml<figure class="highlight xml"
+
+**更新时间:** 2024-11-23 09:21:00
+
+## [Maven使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Maven%E4%BD%BF%E7%94%A8/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-22
+
+**摘要:** 基本命令mvn package测试并打包到target/，使用java -
+
+**更新时间:** 2024-11-23 06:40:42
 
 ## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/%E5%9B%BE%E4%B9%A6%E9%A6%86%20Maven/)
 **作者:** SIMULEITE
@@ -265,22 +281,6 @@
 **摘要:** 上次发年终总结还是 2022 年发 2021 年的，2022 年的年终总结缺失了。今年发生了好多好多的事情，一直想写今年的年终总结但是却总没到年终，干脆写成前 19 年纪念吧。
 
 **更新时间:** 2024-07-03 23:19:21
-
-## [Computer Organization&Design学习记录](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Computer%20Organization&Design%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/)
-**作者:** SIMULEITE
-**发表时间:** 2024-06-07
-
-**摘要:** Chapter2 指令：计算机的语言本章将介绍MIPS汇编语言指令。三条设计原则简单源于规整 Simplicity favors regularity.越小越快 Smaller is faster.优秀的设计需要适宜的折中方案 Good design demands good compromises.2.2 硬件的操作与操作数规整add a, b, c // a = b + cMIPS汇编语言使用这样的固定记法。每条MIPS算术指令只执行1个操作，仅有3个变量。操作数必须来自寄存器变量f、g、h、i、j依次分配给$s0~$s4，编译下面的C语句f = (g + h) - (i + j);---add $t0, $s1, $s2// t0 = s1 + s2add $t1, $s3, $s4sub $s0, $t0, $t1// s0 = t0 + t1数据传输只有少量数据存在寄存器中，因此需要在存储器和寄存器间传输数据A的基址是存在$s3，编译下面的C语句A[12] = h + A[8]---lw  $t0,32($s3)// 先读数，再相加；32为偏移量，8*4byteadd $t0, $s2, $t0sw  $t0,48($s3)// 存数立即数addi $t0, $t1,4// t0 = t1 + 4；无需读取4，作为立即数相加subi $t0, $t1,4
-
-**更新时间:** 2024-07-03 04:38:44
-
-## [Huorong使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Huorong%E4%BD%BF%E7%94%A8/)
-**作者:** SIMULEITE
-**发表时间:** 2024-06-17
-
-**摘要:** 保护文件防护中心 - 高级防护 - 自定义防护 - 锁定文件读取、创建、修改、删除权限
-
-**更新时间:** 2024-06-30 09:16:13
 
 ## [Mermaid使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mermaid%E4%BD%BF%E7%94%A8/)
 **作者:** SIMULEITE
