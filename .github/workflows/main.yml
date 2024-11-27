@@ -43,12 +43,18 @@ jobs:
           git config --local user.name "NgaiYeanCoi"
           git add . # 添加所有更改
           git commit -m "Update files by workflow" || echo "No changes to commit"
+          
+      - name: Force Push changes # 强制推送更改
+        run: |
+          git push origin gh-pages --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push changes推送更改 # 推送更改
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
-          branch: gh-pages # 确保这里是你想要推送的分支名
+      #- name: Push changes推送更改 # 推送更改
+       # uses: ad-m/github-push-action@master
+        #with:
+        #  github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
+         # branch: gh-pages # 确保这里是你想要推送的分支名
           
       - name: Deploy #产生page
         uses: peaceiris/actions-gh-pages@v3
