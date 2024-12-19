@@ -114,8 +114,43 @@
 <div class="main-content">
 <h2 id="baiyunu-blogroll">BaiyunU Blogroll</h2>
 <ul>
-<li>更新时间:2024-11-26 16:48:53</li>
+<li>更新时间:2024-12-19 16:44:35</li>
 </ul>
+<h3 id="_1"><a href="http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/SSM%20%E9%A1%B9%E7%9B%AE%20%E5%9B%BE%E4%B9%A6%E9%A6%86/" target="_blank"></a></h3>
+<p><strong>摘要:</strong> 导入依赖Sl4jSpringMVCSpringSecurityJDBC、MyBatis</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-12-06
+<strong>更新时间:</strong> 2024-12-11 03:20:24</p>
+<h3 id="android"><a href="https://blog.canyie.top/2024/04/18/android-security-bulletin-index/" target="_blank">Android 每月安全补丁分析索引</a></h3>
+<p><strong>摘要:</strong> 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/12/08 更新内容：更新 2024-12</p>
+<p><strong>作者:</strong> 残页
+<strong>发表时间:</strong> 2024-04-18
+<strong>更新时间:</strong> 2024-12-08 11:00:46</p>
+<h3 id="springsecurity"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/SpringSecurity%E7%AC%94%E8%AE%B0/" target="_blank">SpringSecurity笔记</a></h3>
+<p><strong>摘要:</strong> Spring Security 初始化导入依赖</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-12-04
+<strong>更新时间:</strong> 2024-12-06 06:05:28</p>
+<h3 id="springmvc"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/SpringMVC%E7%AC%94%E8%AE%B0/" target="_blank">SpringMVC笔记</a></h3>
+<p><strong>摘要:</strong> MVC&lt;span cla</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-12-03
+<strong>更新时间:</strong> 2024-12-05 05:55:20</p>
+<h3 id="web"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Web%E7%AC%94%E8%AE%B0/" target="_blank">Web笔记</a></h3>
+<p><strong>摘要:</strong> TomcatJRE报错一般教程会让我们配置JAVA_HOME和JRE_HOME，然后启动Tomcat；然而，在JDK9以后，就不默认包含JRE了。此时，我们使用命令jlink --module-path jmods --add-modules java.desktop --output jre生成一个JRE后，启动Tomcat，就会报错：WARNING: Unknown module: java.rmi specified to --add-opensException in thread "main" java.lang.NoClassDefFoundError: java/util/logging/Loggerat org.apache.juli.logging.DirectJDKLog.<init>(DirectJDKLog.java:61)at org.apache.juli.logging.DirectJDKLog.getInstance(DirectJDKLog.java:181)at org.apache.juli.logging.LogFactory.getInstance(LogFactory.java:133)at org.apache.juli.logging.LogFactory.getInstance(LogFactory.java:156)at org.apache.juli.logging.LogFactory.getLog(LogFactory.java:211)at org.apache.catalina.startup.Bootstrap.<clinit>(Bootstrap.java:49)Caused by: java.lang.ClassNotFoundException: java.util.logging.Loggerat java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)... 6 more这时候，只需要把jre文件和JRE_HOME环境变量删除，Tomcat就能正常启动</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-11-27
+<strong>更新时间:</strong> 2024-12-04 07:07:41</p>
+<h3 id="spring"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring核心技术</a></h3>
+<p><strong>摘要:</strong> Maven依赖&lt;p</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-11-29
+<strong>更新时间:</strong> 2024-11-30 07:37:45</p>
+<h3 id="dp"><a href="http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">DP 设计模式</a></h3>
+<p><strong>摘要:</strong> 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。</p>
+<p><strong>作者:</strong> SIMULEITE
+<strong>发表时间:</strong> 2024-11-02
+<strong>更新时间:</strong> 2024-11-29 03:06:01</p>
 <h3 id="mybatis"><a href="http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mybatis%E4%BD%BF%E7%94%A8/" target="_blank">Mybatis使用</a></h3>
 <p><strong>摘要:</strong> mybatis-config.xml&lt;figure class="highlight xml"</p>
 <p><strong>作者:</strong> SIMULEITE
@@ -126,11 +161,6 @@
 <p><strong>作者:</strong> SIMULEITE
 <strong>发表时间:</strong> 2024-11-22
 <strong>更新时间:</strong> 2024-11-23 06:40:42</p>
-<h3 id="_1"><a href="http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/%E5%9B%BE%E4%B9%A6%E9%A6%86%20Maven/" target="_blank"></a></h3>
-<p><strong>摘要:</strong> 总体思路设计数据库创建Entity创建Mapper定义增删查改</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-11-19
-<strong>更新时间:</strong> 2024-11-19 10:57:07</p>
 <h3 id="reviving-an-already-patched-vulnerability-for-half-a-year-the-second-spring-of-cve-2024-0044"><a href="https://blog.canyie.top/2024/10/08/CVE-2024-0044/" target="_blank">Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044</a></h3>
 <p><strong>摘要:</strong> This is a bypass of the initial patch of CVE-2024-0044, a High severity vulnerability in the Android framework that allows attackers with adb access to execute arbitrary code under the UID of arbitrary app.The following is copied from my repohttps://github.com/canyie/CVE-2024-0044for backup purposes. For more info such as PoC code, please check the original repo.</p>
 <p><strong>作者:</strong> 残页
@@ -141,11 +171,6 @@
 <p><strong>作者:</strong> 残页
 <strong>发表时间:</strong> 2024-08-24
 <strong>更新时间:</strong> 2024-11-12 09:57:26</p>
-<h3 id="android"><a href="https://blog.canyie.top/2024/04/18/android-security-bulletin-index/" target="_blank">Android 每月安全补丁分析索引</a></h3>
-<p><strong>摘要:</strong> 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/11/11 更新内容：更新 2024-11</p>
-<p><strong>作者:</strong> 残页
-<strong>发表时间:</strong> 2024-04-18
-<strong>更新时间:</strong> 2024-11-12 09:10:44</p>
 <h3 id="spring-framework"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%20Framework/" target="_blank">Spring Framework</a></h3>
 <p><strong>摘要:</strong> 所有的Java云平台都能够使用基于JAR的打包方式，WAR文件只在一些云平台上能够运行。Pom.xml 更换 Maven 源&lt;?xml version="1.0"encoding="UTF-8"?&gt;<projectxmlns="http://maven.apache.org/POM/4.0.0"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"><modelVersion>4.0.0</modelVersion><groupId>org.springframework.quoters</groupId><artifactId>quoters-incorporated</artifactId><version>0.0.1-SNAPSHOT</version><packaging>jar</packaging><name>quoters-incorporated</name><description>REST service to support the guides</description><developers><developer><id>gturnquist</id><name>Greg Turnquist</name><email>gturnquist at vmware.com</email><organization>VMware, Inc.</organization><roles><role>Project Lead</role></roles></developer></developers><organization><name>VMware, Inc.</name><url>https://spring.io</url></organization><licenses><license><name>Apache License, Version 2.0</name><url>https://www.apache.org/licenses/LICENSE-2.0</url><comments>Copyright 2011 the original author or authors.Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License athttps://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express orimplied.See the License for the specific language governing permissions andlimitations under the License.</comments></license></licenses><parent><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-parent</artifactId><version>2.7.5</version><relativePath/><!-- lookup parent from repository --></parent><properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><java.version>1.8</java.version></properties><dependencies><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-data-jpa</artifactId></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-web</artifactId></dependency><dependency><groupId>com.h2database</groupId><artifactId>h2</artifactId><scope>runtime</scope></dependency><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-test</artifactId><scope>test</scope></dependency></dependencies><!-- 配置阿里云仓库 --><repositories><repository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>aliyun-repos</id><url>https://maven.aliyun.com/repository/public</url><releases><enabled>true</enabled></releases><snapshots><enabled>false</enabled></snapshots></pluginRepository></pluginRepositories><build><plugins><plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin></plugins></build></project>Tight Coupling 紧耦合在Spring框架以前，使用排序算法需要将算法实例化publicclassComplexBusinessService{SortAlgorithmsortAlgorithm=newBubbleSortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Good code has loose coupling.移除依赖项的实例化可以移除紧耦合publicclassComplexBusinessService{SortAlgorithm sortAlgorithm;// = new BubbleSortAlgorithm();publicComplexBusinessService(SortAlgorithm sortAlgorithm){// 创建构造函数this.sortAlgorithm = sortAlgorithm;}publicclassBubbleSortAlgorithmimplementsSortAlgorithm{...}Spring Framework instantiates objects and populates the dependencies.</p>
 <p><strong>作者:</strong> SIMULEITE
@@ -166,11 +191,6 @@
 <p><strong>作者:</strong> 残页
 <strong>发表时间:</strong> 2024-11-04
 <strong>更新时间:</strong> 2024-11-04 12:43:37</p>
-<h3 id="dp"><a href="http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">DP 设计模式</a></h3>
-<p><strong>摘要:</strong> 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-11-02
-<strong>更新时间:</strong> 2024-11-03 07:05:46</p>
 <h3 id="-edu"><a href="https://blog.nyc1.xyz/2024/10/07/%E7%99%BD%E4%BA%91%E5%AD%A6%E9%99%A2-%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7%E5%AD%A6%E6%A0%A1edu%E9%82%AE%E7%AE%B1/" target="_blank">白云学院-关于如何申请学校edu邮箱</a></h3>
 <p><strong>摘要:</strong> 前言很多同学都不知道教育邮箱、学信网认证有很多隐藏的福利可以省下很多钱，并且许多企业都有推行高校学生权益，你不单止可以免费使用正版软件，还可以以最优惠的价格购买他们的产品。就来让我打破你们的信息差吧！</p>
 <p><strong>作者:</strong> NgaiYeanCoi
@@ -266,36 +286,16 @@
 <p><strong>作者:</strong> SIMULEITE
 <strong>发表时间:</strong> 2024-08-15
 <strong>更新时间:</strong> 2024-08-16 12:08:33</p>
-<h3 id="spring-boot"><a href="http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/Spring%20Boot/" target="_blank">Spring Boot</a></h3>
-<p><strong>摘要:</strong> Spring CLI可以用Spring Init</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-07-23
-<strong>更新时间:</strong> 2024-07-25 07:50:44</p>
 <h3 id="_3"><a href="http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%9E%E6%8E%A5%E7%9A%84/" target="_blank">网络是怎样连接的</a></h3>
 <p><strong>摘要:</strong> Web浏览器网址就是请求服务器上对应的文件DNS从顶级域名开始根据网址查IP。DNS服务器通过缓存查过的IP来加快服务</p>
 <p><strong>作者:</strong> SIMULEITE
 <strong>发表时间:</strong> 2024-07-24
 <strong>更新时间:</strong> 2024-07-25 00:33:01</p>
-<h3 id="thinkphp-6"><a href="http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/ThinkPHP%206/" target="_blank">ThinkPHP 6</a></h3>
-<p><strong>摘要:</strong> ThinkPHP 6.0文档&lt;a class="markdownIt-Anchor" href</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-07-18
-<strong>更新时间:</strong> 2024-07-23 07:29:59</p>
-<h3 id="windows-scripts"><a href="http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Windows%20scripts%E4%BD%BF%E7%94%A8/" target="_blank">Windows scripts使用</a></h3>
-<p><strong>摘要:</strong> Task SchedulerWIN+R,taskschd.msc&lt;br</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-07-15
-<strong>更新时间:</strong> 2024-07-16 08:45:20</p>
 <h3 id="19"><a href="https://blog.canyie.top/2023/11/06/first-19-years-of-my-life/" target="_blank">若人生是场大梦啊——记我人生的前19年</a></h3>
 <p><strong>摘要:</strong> 上次发年终总结还是 2022 年发 2021 年的，2022 年的年终总结缺失了。今年发生了好多好多的事情，一直想写今年的年终总结但是却总没到年终，干脆写成前 19 年纪念吧。</p>
 <p><strong>作者:</strong> 残页
 <strong>发表时间:</strong> 2023-11-06
 <strong>更新时间:</strong> 2024-07-03 23:19:21</p>
-<h3 id="mermaid"><a href="http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mermaid%E4%BD%BF%E7%94%A8/" target="_blank">Mermaid使用</a></h3>
-<p><strong>摘要:</strong> Flowchart&lt;a class="markdownIt-Anchor" href="#基本语法</p>
-<p><strong>作者:</strong> SIMULEITE
-<strong>发表时间:</strong> 2024-06-28
-<strong>更新时间:</strong> 2024-06-29 12:56:55</p>
 <h3 id="hexo"><a href="https://blog.nyc1.xyz/2024/03/17/hexo/" target="_blank">hexo的一些命令</a></h3>
 <p><strong>摘要:</strong> 常用命令创建和发布文章123hexo new “postName” 新建文章hexo new page “pageName” 新建页面一键部署命令1hexo clean &amp;&amp; hexo g &amp;&amp; hexo dhexo clean == hexo c清除缓存 网页正常情况下可以忽略此条命令hexo generate == hexo g生效新增、修改、更新的文件hexo deploy == hexo dhexo的一键部署功能，执行此命令即可将网站发布到配置中的仓库地址，执行此命令前需要配置站点配置文件_config.yml</p>
 <p><strong>作者:</strong> NgaiYeanCoi

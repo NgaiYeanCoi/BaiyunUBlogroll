@@ -1,6 +1,62 @@
 # BaiyunU Blogroll
 
- - 更新时间:2024-11-26 16:48:53
+ - 更新时间:2024-12-19 16:44:35
+
+## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/SSM%20%E9%A1%B9%E7%9B%AE%20%E5%9B%BE%E4%B9%A6%E9%A6%86/)
+**作者:** SIMULEITE
+**发表时间:** 2024-12-06
+
+**摘要:** 导入依赖Sl4jSpringMVCSpringSecurityJDBC、MyBatis
+
+**更新时间:** 2024-12-11 03:20:24
+
+## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
+**作者:** 残页
+**发表时间:** 2024-04-18
+
+**摘要:** 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/12/08 更新内容：更新 2024-12
+
+**更新时间:** 2024-12-08 11:00:46
+
+## [SpringSecurity笔记](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/SpringSecurity%E7%AC%94%E8%AE%B0/)
+**作者:** SIMULEITE
+**发表时间:** 2024-12-04
+
+**摘要:** Spring Security 初始化导入依赖
+
+**更新时间:** 2024-12-06 06:05:28
+
+## [SpringMVC笔记](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/SpringMVC%E7%AC%94%E8%AE%B0/)
+**作者:** SIMULEITE
+**发表时间:** 2024-12-03
+
+**摘要:** MVC<span cla
+
+**更新时间:** 2024-12-05 05:55:20
+
+## [Web笔记](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Web%E7%AC%94%E8%AE%B0/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-27
+
+**摘要:** TomcatJRE报错一般教程会让我们配置JAVA_HOME和JRE_HOME，然后启动Tomcat；然而，在JDK9以后，就不默认包含JRE了。此时，我们使用命令jlink --module-path jmods --add-modules java.desktop --output jre生成一个JRE后，启动Tomcat，就会报错：WARNING: Unknown module: java.rmi specified to --add-opensException in thread "main" java.lang.NoClassDefFoundError: java/util/logging/Loggerat org.apache.juli.logging.DirectJDKLog.<init>(DirectJDKLog.java:61)at org.apache.juli.logging.DirectJDKLog.getInstance(DirectJDKLog.java:181)at org.apache.juli.logging.LogFactory.getInstance(LogFactory.java:133)at org.apache.juli.logging.LogFactory.getInstance(LogFactory.java:156)at org.apache.juli.logging.LogFactory.getLog(LogFactory.java:211)at org.apache.catalina.startup.Bootstrap.<clinit>(Bootstrap.java:49)Caused by: java.lang.ClassNotFoundException: java.util.logging.Loggerat java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)... 6 more这时候，只需要把jre文件和JRE_HOME环境变量删除，Tomcat就能正常启动
+
+**更新时间:** 2024-12-04 07:07:41
+
+## [Spring核心技术](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-29
+
+**摘要:** Maven依赖<p
+
+**更新时间:** 2024-11-30 07:37:45
+
+## [DP 设计模式](http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
+**作者:** SIMULEITE
+**发表时间:** 2024-11-02
+
+**摘要:** 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。
+
+**更新时间:** 2024-11-29 03:06:01
 
 ## [Mybatis使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mybatis%E4%BD%BF%E7%94%A8/)
 **作者:** SIMULEITE
@@ -18,14 +74,6 @@
 
 **更新时间:** 2024-11-23 06:40:42
 
-## [](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/%E5%9B%BE%E4%B9%A6%E9%A6%86%20Maven/)
-**作者:** SIMULEITE
-**发表时间:** 2024-11-19
-
-**摘要:** 总体思路设计数据库创建Entity创建Mapper定义增删查改
-
-**更新时间:** 2024-11-19 10:57:07
-
 ## [Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044](https://blog.canyie.top/2024/10/08/CVE-2024-0044/)
 **作者:** 残页
 **发表时间:** 2024-10-08
@@ -41,14 +89,6 @@
 **摘要:** Magisk App before Canary version 27007 contains a vulnerability CVE-2024-48336, which allows a local untrusted app with no additional privileges to silently execute arbitrary code in the Magisk app and escalate privileges to root via a crafted package without user interaction.The following is copied from my repohttps://github.com/canyie/MagiskEoPfor backup purposes. For more info such as PoC code, please check the original repo.
 
 **更新时间:** 2024-11-12 09:57:26
-
-## [Android 每月安全补丁分析索引](https://blog.canyie.top/2024/04/18/android-security-bulletin-index/)
-**作者:** 残页
-**发表时间:** 2024-04-18
-
-**摘要:** 之前一直在看的每月补丁分析的博客https://wrlus.com/看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ最初发表在我的 telegram 频道。每月补丁都会在此文中更新。最后更新时间：2024/11/11 更新内容：更新 2024-11
-
-**更新时间:** 2024-11-12 09:10:44
 
 ## [Spring Framework](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/Spring%20Framework/)
 **作者:** SIMULEITE
@@ -81,14 +121,6 @@
 **摘要:** 本文适用于已对 Android 开发有基础了解，希望了解 Android 系统层常见安全漏洞的人。祝大家写代码无 bug，挖洞天天挖到 Critical RCE 漏洞链。本文开始创作时间：2024-02-19 完成时间：2024-02-29 发布时间：2024-11-05
 
 **更新时间:** 2024-11-04 12:43:37
-
-## [DP 设计模式](http://simuleite.github.io/ComputerScience/%E8%AF%BE%E7%A8%8B/DP%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
-**作者:** SIMULEITE
-**发表时间:** 2024-11-02
-
-**摘要:** 策略模式classMallardDuckextendsDuck{publicMallardDuck(){quackBehavior =newQuack();flyBehavior =newFlyWithWings();}}classModelDuckextendsDuck{publicModelDuck(){quackBehavior =newQuack();flyBehavior =newFlyNoWay();// 组合不同的方法}}classMain{publicstaticvoidmain(String[] args){Duckreal=newMallardDuck();Duckmodel=newModelDuck();real.fly();model.fly();// 调用同样的接口}}识别应用中变化的方面，把它们和不变的方面分开。针对接口编程，而不是针对实现编程。// ImplementDogd=newDog();d.bark();// InterfaceAnimaldog=newDog();dog.makeSound();// abstract优先使用组合而不是继承。summary策略模式定义了算法族并分别封装。策略让算法变化独立于使用它的客户。
-
-**更新时间:** 2024-11-03 07:05:46
 
 ## [白云学院-关于如何申请学校edu邮箱](https://blog.nyc1.xyz/2024/10/07/%E7%99%BD%E4%BA%91%E5%AD%A6%E9%99%A2-%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7%E5%AD%A6%E6%A0%A1edu%E9%82%AE%E7%AE%B1/)
 **作者:** NgaiYeanCoi
@@ -242,14 +274,6 @@
 
 **更新时间:** 2024-08-16 12:08:33
 
-## [Spring Boot](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/Spring%20Boot/)
-**作者:** SIMULEITE
-**发表时间:** 2024-07-23
-
-**摘要:** Spring CLI可以用Spring Init
-
-**更新时间:** 2024-07-25 07:50:44
-
 ## [网络是怎样连接的](http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%9E%E6%8E%A5%E7%9A%84/)
 **作者:** SIMULEITE
 **发表时间:** 2024-07-24
@@ -258,22 +282,6 @@
 
 **更新时间:** 2024-07-25 00:33:01
 
-## [ThinkPHP 6](http://simuleite.github.io/ComputerScience/%E9%A1%B9%E7%9B%AE/ThinkPHP%206/)
-**作者:** SIMULEITE
-**发表时间:** 2024-07-18
-
-**摘要:** ThinkPHP 6.0文档<a class="markdownIt-Anchor" href
-
-**更新时间:** 2024-07-23 07:29:59
-
-## [Windows scripts使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Windows%20scripts%E4%BD%BF%E7%94%A8/)
-**作者:** SIMULEITE
-**发表时间:** 2024-07-15
-
-**摘要:** Task SchedulerWIN+R,taskschd.msc<br
-
-**更新时间:** 2024-07-16 08:45:20
-
 ## [若人生是场大梦啊——记我人生的前19年](https://blog.canyie.top/2023/11/06/first-19-years-of-my-life/)
 **作者:** 残页
 **发表时间:** 2023-11-06
@@ -281,14 +289,6 @@
 **摘要:** 上次发年终总结还是 2022 年发 2021 年的，2022 年的年终总结缺失了。今年发生了好多好多的事情，一直想写今年的年终总结但是却总没到年终，干脆写成前 19 年纪念吧。
 
 **更新时间:** 2024-07-03 23:19:21
-
-## [Mermaid使用](http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Mermaid%E4%BD%BF%E7%94%A8/)
-**作者:** SIMULEITE
-**发表时间:** 2024-06-28
-
-**摘要:** Flowchart<a class="markdownIt-Anchor" href="#基本语法
-
-**更新时间:** 2024-06-29 12:56:55
 
 ## [hexo的一些命令](https://blog.nyc1.xyz/2024/03/17/hexo/)
 **作者:** NgaiYeanCoi
