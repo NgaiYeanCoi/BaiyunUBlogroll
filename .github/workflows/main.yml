@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit changes # 提交更改
         run: |
-          git config --local user.email "2232047183@stayrabbit.top"
+          git config --local user.email "m@nyc1.xyz"
           git config --local user.name "NgaiYeanCoi"
           git add . # 添加所有更改
           git commit -m "Update files by workflow" || echo "No changes to commit"
