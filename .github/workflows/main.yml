@@ -1,11 +1,11 @@
 name: Auto Update
  
- on:
+on:
    workflow_dispatch:
    schedule:
      - cron: "30 16 * * *" # 每天 0:30 时运行，北京时间需要 + 8
  
- jobs:
+jobs:
    build:
      runs-on: ubuntu-latest
      steps:
