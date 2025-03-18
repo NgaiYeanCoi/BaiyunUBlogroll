@@ -9,52 +9,62 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo 获取代码分支 # 获取代码分支
-        uses: actions/checkout@v2
+      - name: Check out repo 获取代码分支
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
 
-      - name: Set up Python 设置 Python 环境 # 设置 Python 环境
-        uses: actions/setup-python@v2
+      - name: Set up Python 设置 Python 环境
+        uses: actions/setup-python@v4
         with:
           python-version: 3.12.2
 
-      - name: Configure pip caching 配置 pip 缓存 # 配置 pip 缓存
-        uses: actions/cache@v2
+      - name: Configure pip caching 配置 pip 缓存
+        uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install Python dependencies安装依赖 # 安装依赖
+      - name: Install Python dependencies 安装依赖
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+        env:
+          PIP_DISABLE_PIP_VERSION_CHECK: 1
 
-      - name: Run main.py执行脚本 # 执行脚本
+      - name: Run main.py 执行脚本
         run: |
           python main.py
 
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Commit changes # 提交更改
+      - name: Commit changes
+        if: steps.check-changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "m@nyc1.xyz"
           git config --local user.name "NgaiYeanCoi"
-          git add . # 添加所有更改
-          git commit -m "Update files by workflow" || echo "No changes to commit"
-          
-  
+          git add .
+          git commit -m "Update files by workflow"
 
-      - name: Push changes推送更改 # 推送更改
+      - name: Push changes 推送更改
+        if: steps.check-changes.outputs.has_changes == 'true'
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置的 GITHUB_TOKEN
-          branch: gh-pages # 确保这里是你想要推送的分支名
-          force: true # 强制推送
-          
-      - name: Deploy #产生page
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+
+      - name: Deploy 产生 page
+        if: steps.check-changes.outputs.has_changes == 'true'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # 指定根目录
+          publish_dir: ./    
