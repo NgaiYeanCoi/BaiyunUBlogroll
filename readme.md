@@ -36,12 +36,13 @@ blogUrl = [
 
 ## 目前已添加的列表
 
-|        Name        |              网站              |
-|:------------------:|:----------------------------:|
+|        Name        |             网站             |
+| :----------------: | :--------------------------: |
 | NgaiYeanCoi's blog |    https://blog.nyc1.xyz/    |
-|       残页的小博客       |   https://blog.canyie.top/   |
+|    残页的小博客    |   https://blog.canyie.top/   |
 |   SMULET's BLOG    | https://simuleite.github.io/ |
-|        西行妖         |     https://my.toho.red      |
+|       西行妖       |     https://my.toho.red      |
+|  Lathezero‘s blog  | https://Lathezero.github.io  |
 
 
 ## 后续可能会添加的功能
@@ -65,7 +66,7 @@ git clone https://github.com/NgaiYeanCoi/BaiyunUBlogroll.git
 
 ```bash
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-```  
+```
 
 - json
 - requests
