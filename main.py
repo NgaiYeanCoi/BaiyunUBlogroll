@@ -19,7 +19,9 @@ blogUrl = [
         'https://blog.nyc1.xyz/atom.xml',
         'https://blog.canyie.top/atom.xml',
         'https://simuleite.github.io/atom.xml',
-        'https://my.toho.red/index.xml'
+        'https://my.toho.red/index.xml',
+        'https://lathezero.github.io/atom.xml'
+
         # 在此输入可以添加更多博客的RSS链接
     ]
 
