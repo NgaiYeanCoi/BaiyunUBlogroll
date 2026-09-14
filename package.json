@@ -1,0 +1,37 @@
+{
+  "name": "baiyun-blogroll",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "test": "vitest run",
+    "refresh": "tsx scripts/refresh.ts",
+    "data:promote": "tsx scripts/promote-data.ts",
+    "check:dist": "tsx scripts/check-dist.ts",
+    "verify": "npm run test && npm run check && npm run build && npm run check:dist",
+    "format": "prettier --write src scripts tests config .github astro.config.mjs tsconfig.json package.json .prettierrc.mjs readme.md",
+    "format:check": "prettier --check src scripts tests config .github astro.config.mjs tsconfig.json package.json .prettierrc.mjs readme.md"
+  },
+  "dependencies": {
+    "astro": "7.3.2",
+    "entities": "8.1.0",
+    "rss-parser": "3.13.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@types/node": "^24.0.0",
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "1.0.0",
+    "tsx": "4.23.13",
+    "typescript": "~5.9.3",
+    "vitest": "5.0.0"
+  }
+}

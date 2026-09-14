@@ -1,0 +1,26 @@
+---
+import site from '../../../config/site.json';
+import PageLayout from '../../layouts/PageLayout.astro';
+const issueUrl = `${site.repository}/issues/new/choose`;
+---
+
+<PageLayout active="join" title="加入我们" canonicalPath="join/">
+  <section class="page-content join-content" aria-labelledby="join-heading">
+    <h2 id="join-heading">让你的博客，也被看见</h2>
+    <p class="section-lead">欢迎白云学子分享自己的独立博客。</p>
+    <ol class="join-steps">
+      <li>
+        准备博客信息<p>博客名称、主页地址，以及可以访问的 RSS 或 Atom 订阅地址。</p>
+      </li>
+      <li>
+        提交收录申请<p>在项目 GitHub 提交 Issue，也可以通过 Pull Request 补充博客配置。</p>
+      </li>
+      <li>
+        审核后加入<p>维护者确认信息后，你的文章将出现在博客聚合中。</p>
+      </li>
+    </ol>
+    <a class="primary-link" href={issueUrl} target="_blank" rel="noopener noreferrer">
+      提交收录申请 ↗
+    </a>
+  </section>
+</PageLayout>

@@ -1,0 +1,40 @@
+name: 申请加入博客目录
+description: 提交广东白云学院同学的博客与 RSS/Atom 地址
+title: '[加入申请] '
+body:
+  - type: markdown
+    attributes:
+      value: 请确认博客可以公开访问，并提供可解析的 RSS 或 Atom 地址。维护者会人工审核申请。
+  - type: input
+    id: name
+    attributes:
+      label: 博客名称
+      placeholder: 示例博客
+    validations:
+      required: true
+  - type: input
+    id: site-url
+    attributes:
+      label: 博客主页
+      placeholder: https://example.com/
+    validations:
+      required: true
+  - type: input
+    id: feed-url
+    attributes:
+      label: RSS 或 Atom 地址
+      placeholder: https://example.com/atom.xml
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 简介（可选）
+      description: 可填写希望展示在博客目录中的简短介绍。
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认以上地址可以公开收录，且 Feed 内容属于该博客。
+          required: true

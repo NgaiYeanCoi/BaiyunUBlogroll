@@ -1,0 +1,45 @@
+---
+import type { Article, Source } from '../lib/types';
+import { displayDate } from '../lib/catalog/dates';
+import { summaryExcerpt } from '../client/text';
+
+interface Props {
+  article: Article;
+  source?: Source;
+}
+const { article, source } = Astro.props;
+const selectedDate = article.updated ?? article.published;
+const date = displayDate(selectedDate);
+const dateKind = article.updated ? '更新日期' : article.published ? '发表日期' : '日期未知';
+const accessibleDate = date ? `${dateKind}：${date}` : dateKind;
+---
+
+<article class="post-card">
+  <div class="post-meta">
+    <span class="meta-dot" aria-hidden="true"></span>
+    <span>{source?.name ?? article.author ?? '未知博客'}</span>
+    {article.author && article.author !== source?.name && <span>· {article.author}</span>}
+    <time
+      class="post-date"
+      datetime={selectedDate?.value}
+      title={accessibleDate}
+      aria-label={accessibleDate}
+    >
+      {date || '日期未知'}
+    </time>
+  </div>
+  <h3>
+    <a href={article.url} target="_blank" rel="noopener noreferrer">
+      {article.title}
+    </a>
+  </h3>
+  {article.summary && <p class="post-summary">{summaryExcerpt(article.summary)}</p>}
+  <div class="post-bottom">
+    <a class="text-link" href={article.url} target="_blank" rel="noopener noreferrer">
+      阅读原文
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M7 17 17 7M8 7h9v9" />
+      </svg>
+    </a>
+  </div>
+</article>

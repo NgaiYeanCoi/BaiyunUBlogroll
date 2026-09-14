@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nyc",
+    "name": "NgaiYeanCoi's blog",
+    "siteUrl": "https://blog.nyc1.xyz/",
+    "feedUrl": "https://blog.nyc1.xyz/atom.xml",
+    "enabled": true
+  },
+  {
+    "id": "canyie",
+    "name": "残页的小博客",
+    "siteUrl": "https://blog.canyie.top/",
+    "feedUrl": "https://blog.canyie.top/atom.xml",
+    "enabled": true
+  },
+  {
+    "id": "simuleite",
+    "name": "SMULET's BLOG",
+    "siteUrl": "https://simuleite.github.io/",
+    "feedUrl": "https://simuleite.github.io/atom.xml",
+    "enabled": true
+  },
+  {
+    "id": "toho",
+    "name": "西行妖",
+    "siteUrl": "https://my.toho.red/",
+    "feedUrl": "https://my.toho.red/index.xml",
+    "enabled": true
+  }
+]

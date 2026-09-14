@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "simuleite",
+  "contentChangedAt": "2026-09-14T10:47:25.151Z",
+  "articles": [
+    {
+      "id": "simuleite-004371bd1c958462cc58db27",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/nginx%E4%BD%BF%E7%94%A8/",
+      "title": "nginx使用",
+      "summary": "新增配置 <spa",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/nginx%E4%BD%BF%E7%94%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-04-13T16:00:00.000Z",
+        "raw": "2025-04-13T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-28T07:09:14.843Z",
+        "raw": "2025-04-28T07:09:14.843Z"
+      }
+    },
+    {
+      "id": "simuleite-083ee46cc673967a560d41f6",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Advanced%20Java/",
+      "title": "Advanced Java",
+      "summary": "代理 代理对象通过 invoke ，实现类与非核心功能的解耦。 public static void main (String[] args) { Payment payment = new Payment ( \"AliPay\" ); Pay proxy = ProxyUtil.createProxy(payment); proxy.pay(amount); } class Payment implements Pay { @Overide public payResp pay (BigDecimal payAmount) { // Payment Business... } } interface Pay { abstract payResp pay (BigDecimal payAmount) ; } class ProxyUtils { public static Pay createProxy (Payment payment) { return (Pay) Proxy.newProxyInstance( ProxyUtil.class.getClassLoader(), new Class []{ Pay.class }, new InvocationHandler () { @Overide public Object invoke (Object proxy, Method method, Object[] args) throws Throwable { // Payment Environment Init... // Payment Safe Guard... return method.invoke(payment, args); } } ); } } 反射 反射允许对成员变量、成员方法、构造方法信息进行编程访问。 例如，IDE的智能补全、参数提示，就是使用反射实现。 Class字节码获取 Class clazz; clazz = Class.forName( \"com.yourpackage.TargetClass\" ); // 参数 clazz = TargetClass.class; // 有实例时 clazz = instance.getClass(); 场景 反射可以与配置文件结合，从而动态地创建对象。例如 application.yml 里数据库的配置、端口号等。 Properties prop = new Properties (); FileInputStream fis = new FileInputStream (ROOT + \"src/main/resources/application.properties\" ); String dataSourceUrl = (String) perp.get( \"dataSource\" ); String dbName = (String) extractDbName(dataSourceUrl); Class clazz = Class.forName(dbName); Constructor con = clazz.getDeclaredConstructor(); Object o = con.newInstance(); ... HashMap jdk1.7 jdk1.7的HashMap数据结构是：数组 + 单向链表 当哈希后，得到的数组槽位已经存放了其他元素，这时候就需要运用指针在同一个槽位存放多个元素。 头插法 jdk1.7使用的方法是头插法，这样就不需要遍历到链表尾部再插入，性能高。 void createEntry ( int hash, K key, V value, int bucketIdx) { Entry<K, V> e = table[bucketIdx]; // 这里使用头插法，在槽位头部插入新元素，并指向e，成为新的槽位引用 table[bucketIdx] = new Entry <>(hash, key, value, e); size++; } public Entry ( int h, K k, V v, Entry<K, V> n) { this .value = v; this .next = n; this .key = k; this .hash = h; } 这种方法需要最终更新槽位指向新插入的节点，否则单向链表找不到新插入的元素。 利用2次方机器特性",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Advanced%20Java/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-04-27T16:00:00.000Z",
+        "raw": "2025-04-27T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-05-22T07:39:00.056Z",
+        "raw": "2025-05-22T07:39:00.056Z"
+      }
+    },
+    {
+      "id": "simuleite-0e230170cde61e71b2a63b3f",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Multi-Agents/",
+      "title": "Multi-Agents",
+      "summary": "Don’t Build Multi-Agents <a href=",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Multi-Agents/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-06-26T16:00:00.000Z",
+        "raw": "2025-06-26T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-06-28T02:02:41.763Z",
+        "raw": "2025-06-28T02:02:41.763Z"
+      }
+    },
+    {
+      "id": "simuleite-561a81ac76702e577ed31999",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Redis%E5%8E%9F%E7%90%86/",
+      "title": "Redis原理",
+      "summary": "跳表 ZSet的实现方式有跳表、压缩列表。 压缩列表：比较方便地搜索头节点和尾节点。数量<128，所有元素长度<",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Redis%E5%8E%9F%E7%90%86/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-19T16:00:00.000Z",
+        "raw": "2025-05-19T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-07-10T00:52:55.587Z",
+        "raw": "2025-07-10T00:52:55.587Z"
+      }
+    },
+    {
+      "id": "simuleite-5c317dd7e8a03938a7cb8657",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/AI%E4%B8%93%E6%A0%8F/",
+      "title": "AI专栏",
+      "summary": "MCP RAG的局限性 对于AI来说，RAG仅仅是外部知识库，AI只起到一个总结效果。而总结的效果取决于向量相似度匹配，可能遗漏关键信息。 direction: right 结构化数据 -> 文本块 非结构化数据 -> 文本块 文本块 -> 向量数据库 -> 检索文本块 -> 生成最终响应 生成内容不完整：RAG处理的是文本的切片，因此无法看到整篇文档信息。 RAG无法判断需要多少切片才能解决问题。 多轮检索能力弱。 MCP基础 Function Calling Coze的Agent就是基于Function Calling思路封装的。 不过Function Calling成本比较高，需要模型经过专门训练微调才能稳定支持。 这导致有些模型不支持某些插件的调用（例如Trae只有选择Sonnet、GPT等模型才可以处理图片）。 另外，Function Calling不是一项标准，许多模型的实现细节不一样。 Model Context Protocol MCP是一项标准 协议 ，简单来说就是通用的接口，使AI-外部工具/数据源交互标准化、可复用。 Claude Desktop、Cursor这样的工具在内部实现MCP Client，这个Client通过MCP协议与MCP Server（由服务提供公司自己开发，实现访问数据、浏览器、本地文件等功能，最终通过MCP返回标准格式）交互，最终在MCP Host上展示。 MCP 传输方式 STDIO，本地环境 SSE，并发量不高，单向通信 Streamable HTTP，高并发，需要维护长连接 指标 Function Calling Model Context Portocol 协议 私有协议 开放协议 场景 单次函数调用 多工具协同 + 数据交互 接入方式 函数直接接入 需要MCP Server + MCP Client 耦合度 工具与模型绑定 工具开发与Agent开发解耦 调用方式 API Stdio/SSE",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/AI%E4%B8%93%E6%A0%8F/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-19T16:00:00.000Z",
+        "raw": "2025-05-19T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-05-29T03:06:41.629Z",
+        "raw": "2025-05-29T03:06:41.629Z"
+      }
+    },
+    {
+      "id": "simuleite-6f7a881fb4fc636ee451a9b0",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/ssh%E4%BD%BF%E7%94%A8/",
+      "title": "ssh使用",
+      "summary": "ssh登录 <",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/ssh%E4%BD%BF%E7%94%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-04-13T16:00:00.000Z",
+        "raw": "2025-04-13T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-25T06:34:47.753Z",
+        "raw": "2025-04-25T06:34:47.753Z"
+      }
+    },
+    {
+      "id": "simuleite-85ab2cb06679690be3442beb",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/%E6%85%A2sql%E4%BC%98%E5%8C%96/",
+      "title": "慢sql优化",
+      "summary": "数据分页优化",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/%E6%85%A2sql%E4%BC%98%E5%8C%96/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-06-12T16:00:00.000Z",
+        "raw": "2025-06-12T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-06-13T01:59:27.006Z",
+        "raw": "2025-06-13T01:59:27.006Z"
+      }
+    },
+    {
+      "id": "simuleite-910e074019d64bd8857b8140",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Hertz%E4%BD%BF%E7%94%A8/",
+      "title": "Hertz使用",
+      "summary": "Hello World <td clas",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/Hertz%E4%BD%BF%E7%94%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-19T16:00:00.000Z",
+        "raw": "2025-05-19T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-05-31T02:21:11.841Z",
+        "raw": "2025-05-31T02:21:11.841Z"
+      }
+    },
+    {
+      "id": "simuleite-92231339cafb9b0d16f7bf24",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E9%94%99%E9%A2%98%E6%9C%AC/%E6%B4%9B%E8%B0%B7%20%E9%94%99%E9%A2%98%E6%9C%AC/",
+      "title": "洛谷 错题本",
+      "summary": "P1004 [NOIP 2000 提高组] 方格取数 #走两次dp 如果只走一次，这题是非常经典的DP。但是要走两次，就变得非常有难度。 首先，可以简单地推广：要走两次，dp就存四个下标： int [][][][] dp = new int [N][N][N][N]; 我们只需要遍历所有可能，并且比较四种走法（同下、同右、一下一右），取最大值就可以了。 注意，一个数只能取一次，需要一个判断防止重复取数。 for ( int i1 = 1 ; i1 < N; i1 += 1 ) { for ( int i2 = 1 ; i2 < N; i2 += 1 ) { for ( int j1 = 1 ; j1 < N; j1 += 1 ) { for ( int j2 = 1 ; j2 < N; j2 += 1 ) { int step = map[i1][j1]; if (i2 != i1 && j2 != j1) step += map[i2][j2]; dp[i1][j1][i2][j2] = Math.max(dp[i1- 1 ][j1][i2- 1 ][j2], Math.max(dp[i1- 1 ][j1][i2][j2- 1 ], Math.max(dp[i1][j1- 1 ][i2- 1 ][j2], dp[i1][j1- 1 ][i2][j2- 1 ]))) + step; } } } } System.out.println(dp[N- 1 ][N- 1 ][N- 1 ][N- 1 ]); 当然，4个循环时间复杂度太高了。我们可以用一个 k == i1 + j1 == i2 + j2 来减少一重循环。 这个k利用得很巧妙，因为每次要么向下走，要么向右走，所以 k-1 == i-1 + j == i + j-1 ，全程使用 k-1 就能代表所有情况。",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E9%94%99%E9%A2%98%E6%9C%AC/%E6%B4%9B%E8%B0%B7%20%E9%94%99%E9%A2%98%E6%9C%AC/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-28T16:00:00.000Z",
+        "raw": "2025-02-28T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-03-12T01:32:05.118Z",
+        "raw": "2025-03-12T01:32:05.118Z"
+      }
+    },
+    {
+      "id": "simuleite-9d6b23ede0237d5a63e934ea",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/",
+      "title": "JUC并发编程",
+      "summary": "Java多线程 回顾：操作系统的<a href=\"obsidian://open?vault=Obsidian%20Vault&a",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-21T16:00:00.000Z",
+        "raw": "2025-03-21T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-03-25T12:12:16.682Z",
+        "raw": "2025-03-25T12:12:16.682Z"
+      }
+    },
+    {
+      "id": "simuleite-9e20b7246afce14367fbfd7f",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Advanced%20Go/",
+      "title": "Advanced Go",
+      "summary": "GMP 协程 协程是用户态的概念。多个协程实际上映射为1个线程。 协程是用户态概念，因此创建、销毁、调度都在用户态完成，不需要切换内核态。 由于协程从属于同一个内核级线程，因此实际上无法并行；而一个协程的阻塞最终也会导致整个线程下的所有协程阻塞。 Goroutine Go解耦了协程和线程的绑定关系，从而使线程变为一个中间层，协程可以灵活地映射到不同的线程上，相当于“虚拟线程”。 好处如下： 可以利用多个线程，实现并行 通过调度器，实现灵活的映射 栈空间动态扩展（线程大小固定，会产生内存浪费） GMP Goroutine Machine Processor GMP就是协程调度器。 GMP有一个全局队列存储Goroutine；不过实际上Processor都会优先在自己的本地队列调度Goroutine（没有则向全局队列获取），并映射Goroutine到Machine上执行。 如果全局队列没有Goroutine，那么会尝试获取就绪态（正在IO）的协程。 如果仍然失败，那么会从其他Processor中窃取一半的Goroutine，实现负载均衡。 全局队列是互斥的，获取Goroutine要防止获取多次。 type schedt struct { ... lock mutex runq gQueue runqsize int32 }",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Advanced%20Go/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-25T16:00:00.000Z",
+        "raw": "2025-05-25T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-06-02T06:49:22.251Z",
+        "raw": "2025-06-02T06:49:22.251Z"
+      }
+    },
+    {
+      "id": "simuleite-a204f9186655b4c7df7e0fc1",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/LangGraph/",
+      "title": "LangGraph",
+      "summary": "source venv/bin/activate pi",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/LangGraph/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-08-05T16:00:00.000Z",
+        "raw": "2025-08-05T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-09-08T01:06:31.055Z",
+        "raw": "2025-09-08T01:06:31.055Z"
+      }
+    },
+    {
+      "id": "simuleite-a351dffcc58df7a81c93e96f",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E9%94%99%E9%A2%98%E6%9C%AC/%E8%93%9D%E6%A1%A5%E6%9D%AF%20%E9%94%99%E9%A2%98%E6%9C%AC/",
+      "title": "蓝桥杯 错题本",
+      "summary": "3513 岛屿个数 #外岛数量 #bfs 杰克船长算法 杰克船长在公海上游荡，每发现一处岛屿，他就会绕着岛走一圈，并把这个岛标记到地图上。 这个问题的解决方法就在这里：我们 一定 要有一片完全连通的公海，只有在公海上遇到岛屿，才标记岛屿数量；绝不踏入内海。 可是测试用例是这样的： 5 5 01111 11001 10101 10001 11111 这个测试用例，只有 (0, 0) 是公海，怎么办呢？ 我们用一圈公海把测试用例包围起来： private static void processInput (Scanner sc) { M = sc.nextInt(); N = sc.nextInt(); sc.nextLine(); map = new int [M + 2 ][N + 2 ]; // 注意+2，多一圈'0'表示公海 visitedSea = new boolean [M + 2 ][N + 2 ]; visitedIsland = new boolean [M + 2 ][N + 2 ]; cnt = 0 ; for ( int x = 1 ; x <= M; x += 1 ) { String line = sc.nextLine(); for ( int y = 1 ; y <= N; y += 1 ) { map[x][y] = line.charAt(y - 1 ) - '0' ; } } }",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/%E9%94%99%E9%A2%98%E6%9C%AC/%E8%93%9D%E6%A1%A5%E6%9D%AF%20%E9%94%99%E9%A2%98%E6%9C%AC/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-18T16:00:00.000Z",
+        "raw": "2025-03-18T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-03-19T10:48:35.665Z",
+        "raw": "2025-03-19T10:48:35.665Z"
+      }
+    },
+    {
+      "id": "simuleite-ae9024a2614d3fef4bea7a2e",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Spring%E6%A0%B8%E5%BF%83/",
+      "title": "Spring核心",
+      "summary": "Spring核心思想 Spring的核心是为Class创建代理对象实现一些AOP切面操作，从而支持方便的注解、事务、自",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/Spring%E6%A0%B8%E5%BF%83/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-14T16:00:00.000Z",
+        "raw": "2025-03-14T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-05-11T08:53:23.195Z",
+        "raw": "2025-05-11T08:53:23.195Z"
+      }
+    },
+    {
+      "id": "simuleite-bbec3a34c22bdccba0b54682",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/JVM%E5%8E%9F%E7%90%86/",
+      "title": "JVM原理",
+      "summary": "程序如何装载 Main\\.java, Minor\\.java -> jar包.java Main\\.main(): 编译打包 jar包.java Main\\.main() -> 验证: 加载 jar包.java Main\\.main() -> Minor\\.class: 使用 Minor\\.class -> JVM: 加载 验证 -> 准备 -> 解析 -> 初始化 -> JVM 加载：从磁盘加载到内存。（懒加载，用到类才加载，如main方法或new对象） 验证：验证字节码是否正确、是否可识别。 准备：初始化静态（static，不包括常量）变量、赋初值（默认值）。 解析：符号引用 -> 直接引用。静态方法（如main） -> 指向数据所在内存的指针。这是静态链接，在类加载期间完成；而动态链接在程序运行期间完成。 初始化：为静态变量赋值，执行静态代码块。 类加载器 加载过程由类加载器实现，有几种类加载器： 引导类加载器（C++）：JRE核心lib的jar类包 扩展类加载器：JRE拓展lib(ext)jar类包 应用程序类加载器：ClassPath路径下的类包（自己编写的类） 其他加载器：加载自定义路径下的类包 java com\\.site\\.jvm\\.Math\\.class -> java\\.exe调用底层jvm\\.dll创建Java虚拟机 -> 创建引导类加载器实例 创建引导类加载器实例 -> sum\\.misc\\.Launcher\\.getLauncher(): C++调用Java代码，创建JVM启动器实例，这个实例负责创建其他类加载器 sum\\.misc\\.Launcher\\.getLauncher() -> launcher\\.getClassLoader(): 获取运行类自己的加载器ClassLoader（AppClassLoader实例） launcher\\.getClassLoader() -> classLoader\\.loadClass(\"com\\.site\\.jvm\\.Math\"):调用loadClass加载即将要运行的类 classLoader\\.loadClass(\"com\\.site\\.jvm\\.Math\") -> Math\\.main(): 加载完成后，JVM执行Math.main() 创建引导类加载器实例 -> Math\\.main(): C++发起调用 Math\\.main()-> JVM销毁: Java程序运行结束",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/JVM%E5%8E%9F%E7%90%86/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-01T16:00:00.000Z",
+        "raw": "2025-03-01T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-25T14:32:31.642Z",
+        "raw": "2025-04-25T14:32:31.642Z"
+      }
+    },
+    {
+      "id": "simuleite-befb1ecbac45c928e52b0b5c",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/MQ%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/",
+      "title": "MQ消息队列",
+      "summary": "消息队列3大目标",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/MQ%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-11T16:00:00.000Z",
+        "raw": "2025-05-11T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-08-06T14:15:06.326Z",
+        "raw": "2025-08-06T14:15:06.326Z"
+      }
+    },
+    {
+      "id": "simuleite-c069a63fdb7e156aee536cc5",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/ThreadPool%E7%BA%BF%E7%A8%8B%E6%B1%A0/",
+      "title": "ThreadPool线程池",
+      "summary": "线程资源通过线程池提供 线程池可以减少创建、销毁线程的开销，解决资源不足问题。 如果手动创建线程，容易",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/ThreadPool%E7%BA%BF%E7%A8%8B%E6%B1%A0/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-04-09T16:00:00.000Z",
+        "raw": "2025-04-09T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T08:58:31.862Z",
+        "raw": "2025-04-24T08:58:31.862Z"
+      }
+    },
+    {
+      "id": "simuleite-e4619ae019524511e02da2ce",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/RPC/",
+      "title": "RPC",
+      "summary": "Remote Procedure Call 本地函数放到服务器运行，会出现若干问题： 我怎么知道是哪个函数？Call Id 本地函数调用，可以直接用指针找到函数；但是远程过程调用不行。 因此我们需要分别在Client和Server维护一个“函数 <-> Call Id”的映射来确定所调用的函数。 Client如何将参数传送到Server？序列化与反序列化 本地函数调用，参数会压入栈；然而在远程过程调用中，Client与Server是不同的进程、处理器、操作系统、大小端，而且链表、对象这样的数据内存不分配在一处，加上网络传输必须要有容错机制，不能通过内存传递参数。 因此我们需要使用网络传输，Client要将参数转换为字节流，传输到Server后，再反序列化还原为参数。 这里还会涉及到数据格式的问题，JSON（性能不高）、XML、Protobuf、Thrift都是数据格式。 不使用内存，如何传输？网络传输 网络传输层需要将Call Id与字节流传输给Server，因此RPC基于传输层TCP协议，gRPC基于HTTP2协议（同样基于TCP）。 早期的RPC不使用HTTP，是因为当时HTTP不能建立长连接，并且HTTP头部过长且不能压缩。HTTP2解决了上述问题。 一个HTTP请求 http://localhost:8080/add?a=1&b=2 \"Content-Type\": \"application/json\" 这个请求指定了方法add、协议http、数据格式JSON",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%9F%A5%E8%AF%86/RPC/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-06-09T16:00:00.000Z",
+        "raw": "2025-06-09T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-06-20T09:07:55.548Z",
+        "raw": "2025-06-20T09:07:55.548Z"
+      }
+    },
+    {
+      "id": "simuleite-f16d7662f54a07b3614b7170",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LLM/MoE/",
+      "title": "MoE",
+      "summary": "什么是MoE Mixture of Experts MoE使用Sparse，MLP替换FFN <h1 id=\"为什",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E7%AC%94%E8%AE%B0/LLM/MoE/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-10-03T16:00:00.000Z",
+        "raw": "2025-10-03T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-10-04T01:30:04.357Z",
+        "raw": "2025-10-04T01:30:04.357Z"
+      }
+    },
+    {
+      "id": "simuleite-fcd3267cd2e6309bc79348a7",
+      "sourceId": "simuleite",
+      "url": "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/pandoc%E4%BD%BF%E7%94%A8/",
+      "title": "pandoc使用",
+      "summary": "文本格式转换 <pr",
+      "guids": [
+        "http://simuleite.github.io/ComputerScience/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/pandoc%E4%BD%BF%E7%94%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-04-22T16:00:00.000Z",
+        "raw": "2025-04-22T16:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-05-27T02:47:21.445Z",
+        "raw": "2025-05-27T02:47:21.445Z"
+      }
+    }
+  ]
+}

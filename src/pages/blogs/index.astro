@@ -1,0 +1,58 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { loadCatalog } from '../../lib/catalog/index';
+import { displayDate } from '../../lib/catalog/dates';
+
+const catalog = await loadCatalog();
+const articlesBySource = new Map(
+  catalog.sources.map((source) => [
+    source.id,
+    catalog.articles.filter((article) => article.sourceId === source.id),
+  ]),
+);
+const mark = (name: string) => Array.from(name.trim())[0]?.toUpperCase() ?? '云';
+---
+
+<PageLayout active="blogs" title="博客目录" canonicalPath="blogs/">
+  <section class="page-content" aria-labelledby="directory-heading">
+    <div class="section-heading">
+      <h2 id="directory-heading">博客目录</h2>
+      <span class="result-count">{catalog.sources.length} 个博客</span>
+    </div>
+    <p class="section-lead">从一个名字开始，发现另一种视角。</p>
+    <div class="directory">
+      {catalog.sources.map((source) => {
+        const articles = articlesBySource.get(source.id) ?? [];
+        const latest = articles.find((article) =>
+          displayDate(article.updated ?? article.published),
+        );
+        const latestDate = latest ? displayDate(latest.updated ?? latest.published) : '';
+        return (
+          <article class="blog-card">
+            <div class="blog-card-header">
+              <span class="avatar" aria-hidden="true">
+                {mark(source.name)}
+              </span>
+              <h3>{source.name}</h3>
+            </div>
+            {source.description && <p>{source.description}</p>}
+            <div class="blog-card-meta">
+              <span>已收录 {articles.length} 篇</span>
+              <span>
+                {latestDate
+                  ? `最近文章 ${latestDate}`
+                  : articles.length
+                    ? '文章日期未知'
+                    : '暂无文章'}
+              </span>
+              {!source.enabled && <span class="paused">已暂停更新</span>}
+            </div>
+            <a class="text-link" href={source.siteUrl} target="_blank" rel="noopener noreferrer">
+              访问博客 ↗
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+</PageLayout>

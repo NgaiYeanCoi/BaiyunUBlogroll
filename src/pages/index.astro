@@ -1,0 +1,19 @@
+---
+import FeedPage from '../components/FeedPage.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import { loadCatalog } from '../lib/catalog/index';
+
+const catalog = await loadCatalog();
+const pageSize = 20;
+const pageCount = Math.max(1, Math.ceil(catalog.articles.length / pageSize));
+---
+
+<PageLayout active="feed">
+  <FeedPage
+    articles={catalog.articles.slice(0, pageSize)}
+    sources={catalog.sources}
+    total={catalog.articles.length}
+    currentPage={1}
+    pageCount={pageCount}
+  />
+</PageLayout>

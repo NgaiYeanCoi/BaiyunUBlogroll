@@ -1,0 +1,47 @@
+name: Pull request checks
+
+on:
+  pull_request:
+
+# PR code is untrusted and only needs repository read access for offline checks.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Test and build offline
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Check source formatting
+        run: npm run format:check
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run Astro checks
+        run: npm run check
+
+      - name: Build from repository snapshots
+        run: npm run build
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+
+      - name: Check the static artifact
+        run: npm run check:dist
+        env:
+          SOURCE_SHA: ${{ github.sha }}

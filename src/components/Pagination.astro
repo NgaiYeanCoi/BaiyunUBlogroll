@@ -1,0 +1,27 @@
+---
+import { withBase } from '../client/paths';
+interface Props {
+  currentPage: number;
+  pageCount: number;
+}
+const { currentPage, pageCount } = Astro.props;
+const pageHref = (page: number) => (page === 1 ? withBase() : withBase(`page/${page}/`));
+---
+
+{pageCount > 1 && (
+  <nav class="pagination" aria-label="文章分页" data-pagination>
+    {currentPage > 1 && (
+      <a href={pageHref(currentPage - 1)} rel="prev">
+        上一页
+      </a>
+    )}
+    <span>
+      第 {currentPage} / {pageCount} 页
+    </span>
+    {currentPage < pageCount && (
+      <a href={pageHref(currentPage + 1)} rel="next">
+        下一页
+      </a>
+    )}
+  </nav>
+)}

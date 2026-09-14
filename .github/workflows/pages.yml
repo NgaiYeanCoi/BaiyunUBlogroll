@@ -1,0 +1,311 @@
+name: Build and deploy Pages
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # 16:30 UTC is 00:30 the following day in Asia/Shanghai.
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Fetch feeds before building; clear this for an offline rebuild
+        required: true
+        default: true
+        type: boolean
+
+# Keep one active publication; GitHub retains the latest queued run while branch guards reject stale work.
+concurrency:
+  group: pages-publication
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate publication
+    # A manual run must use the reviewed workflow definition from the actual default branch.
+    if: github.event_name != 'workflow_dispatch' || github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      refresh_mode: ${{ steps.mode.outputs.refresh }}
+      site_base: ${{ steps.site.outputs.base }}
+      site_url: ${{ steps.pages.outputs.origin }}
+      source_sha: ${{ steps.source.outputs.sha }}
+    steps:
+      - name: Check out the current default branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Record build mode
+        id: mode
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REQUESTED_REFRESH: ${{ inputs.refresh }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$REQUESTED_REFRESH" == "true" ) ]]; then
+            echo "refresh=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "refresh=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record source revision
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Check source formatting
+        run: npm run format:check
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run Astro checks
+        run: npm run check
+
+      - name: Refresh candidate snapshots
+        if: steps.mode.outputs.refresh == 'true'
+        run: npm run refresh
+
+      - name: Summarize feed refresh
+        if: always() && steps.mode.outputs.refresh == 'true'
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync, existsSync, readFileSync } from 'node:fs';
+
+          const destination = process.env.GITHUB_STEP_SUMMARY;
+          if (!destination) throw new Error('GITHUB_STEP_SUMMARY is unavailable');
+          const reportFile = '.cache/refresh/report.json';
+          if (!existsSync(reportFile)) {
+            appendFileSync(destination, '## Feed refresh\n\nRefresh did not produce a report.\n');
+            process.exit(0);
+          }
+
+          // Diagnostics may contain feed-controlled text, so keep them short and escape Markdown/HTML syntax.
+          const safe = (value, limit = 160) => String(value ?? '')
+            .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+            .replaceAll('|', '\\|').replace(/[\r\n\t]+/gu, ' ').slice(0, limit);
+          const report = JSON.parse(readFileSync(reportFile, 'utf8'));
+          const rows = Array.isArray(report.sources) ? report.sources.map((source) => {
+            const diagnostics = Array.isArray(source.diagnostics) ? source.diagnostics.slice(0, 2).join('; ') : '';
+            return `| ${safe(source.sourceId)} | ${safe(source.status)} | ${Number(source.articleCount) || 0} | ${safe(diagnostics)} |`;
+          }) : [];
+          const summary = [
+            '## Feed refresh', '',
+            `- Result: ${safe(report.status)}`,
+            `- Checked at: ${safe(report.checkedAt)}`, '',
+            '| Source | Status | Articles | Diagnostics |',
+            '| --- | --- | ---: | --- |',
+            ...rows, '',
+          ].join('\n');
+          appendFileSync(destination, summary);
+          NODE
+
+      - name: Read GitHub Pages configuration
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Normalize the Pages base path
+        id: site
+        shell: bash
+        env:
+          PAGES_BASE: ${{ steps.pages.outputs.base_path }}
+        run: echo "base=${PAGES_BASE:-/}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and check refreshed candidate
+        if: steps.mode.outputs.refresh == 'true'
+        run: |
+          npm run build
+          npm run check:dist
+        env:
+          BLOGROLL_DATA_DIR: .cache/refresh/feeds
+          BLOGROLL_REPORT_FILE: .cache/refresh/report.json
+          SITE_BASE: ${{ steps.site.outputs.base }}
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+
+      - name: Build and check saved snapshots
+        if: steps.mode.outputs.refresh != 'true'
+        run: |
+          npm run build
+          npm run check:dist
+        env:
+          SITE_BASE: ${{ steps.site.outputs.base }}
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+
+      - name: Transfer validated refresh internally
+        if: steps.mode.outputs.refresh == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: validated-refresh-${{ github.run_id }}
+          path: |
+            .cache/refresh/
+            dist/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Upload checked Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dist
+          retention-days: 1
+
+  persist:
+    name: Persist validated feed snapshots
+    needs: validate
+    if: needs.validate.outputs.refresh_mode == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      branch_sha: ${{ steps.result.outputs.branch_sha }}
+    steps:
+      - name: Check out the current default branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Guard the candidate base revision
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          EXPECTED_SHA: ${{ needs.validate.outputs.source_sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          git fetch --no-tags origin "$DEFAULT_BRANCH"
+          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$EXPECTED_SHA"
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Download validated refresh
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: validated-refresh-${{ github.run_id }}
+          path: .
+
+      - name: Promote the checked candidate
+        run: npm run data:promote
+        env:
+          BLOGROLL_DATA_DIR: .cache/refresh/feeds
+          BLOGROLL_REPORT_FILE: .cache/refresh/report.json
+          SITE_BASE: ${{ needs.validate.outputs.site_base }}
+          SITE_URL: ${{ needs.validate.outputs.site_url }}
+          SOURCE_SHA: ${{ needs.validate.outputs.source_sha }}
+
+      - name: Validate the promotion allowlist
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from 'node:fs';
+
+          const promotedFile = '.cache/promoted-files.txt';
+          if (!existsSync(promotedFile)) throw new Error(`${promotedFile} was not created`);
+          const promoted = readFileSync(promotedFile, 'utf8').split(/\r?\n/u).filter(Boolean);
+          const sources = JSON.parse(readFileSync('config/sources.json', 'utf8'));
+          const allowed = new Set(sources.map(({ id }) => `data/feeds/${id}.json`));
+          if (new Set(promoted).size !== promoted.length) throw new Error('Promotion list contains duplicate paths');
+          for (const file of promoted) {
+            if (!allowed.has(file)) throw new Error(`Refusing non-feed promotion path: ${file}`);
+            if (!existsSync(file)) throw new Error(`Promoted file is missing: ${file}`);
+          }
+          NODE
+
+      - name: Commit and push only changed snapshots
+        id: result
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          EXPECTED_SHA: ${{ needs.validate.outputs.source_sha }}
+        run: |
+          if [[ ! -s .cache/promoted-files.txt ]]; then
+            echo "branch_sha=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git add --pathspec-from-file=.cache/promoted-files.txt
+
+          node --input-type=module <<'NODE'
+          import { execFileSync } from 'node:child_process';
+          import { readFileSync } from 'node:fs';
+
+          const listed = readFileSync('.cache/promoted-files.txt', 'utf8').split(/\r?\n/u).filter(Boolean).sort();
+          const staged = execFileSync('git', ['diff', '--cached', '--name-only'], { encoding: 'utf8' })
+            .split(/\r?\n/u).filter(Boolean).sort();
+          if (JSON.stringify(staged) !== JSON.stringify(listed)) {
+            throw new Error(`Staged paths differ from promotion list: ${staged.join(', ')}`);
+          }
+          NODE
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: refresh feed snapshots"
+
+          # A normal fast-forward push rejects any branch advance; never overwrite newer work.
+          git fetch --no-tags origin "$DEFAULT_BRANCH"
+          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$EXPECTED_SHA"
+          git push origin "HEAD:$DEFAULT_BRANCH"
+          echo "branch_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    name: Deploy checked artifact
+    needs:
+      - validate
+      - persist
+    if: >-
+      always() &&
+      needs.validate.result == 'success' &&
+      (needs.persist.result == 'success' || needs.persist.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Guard the deployed default-branch revision
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          EXPECTED_SHA: ${{ needs.persist.outputs.branch_sha || needs.validate.outputs.source_sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          current_sha="$(gh api "repos/$GITHUB_REPOSITORY/commits/$DEFAULT_BRANCH" --jq .sha)"
+          test "$current_sha" = "$EXPECTED_SHA"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
