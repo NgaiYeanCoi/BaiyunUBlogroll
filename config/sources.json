@@ -38,5 +38,13 @@
     "feedUrl": "https://Lathezero.github.io/atom.xml",
     "avatarUrl": "https://lathezero.github.io/img/avatar.jpeg",
     "enabled": true
+  },
+  {
+    "id": "houguo",
+    "name": "后果‘",
+    "siteUrl": "https://taciturn-hg.github.io",
+    "feedUrl": "https://taciturn-hg.github.io/feed.xml",
+    "avatarUrl": "https://taciturn-hg.github.io/assets/images/avatar.png",
+    "enabled": true
   }
 ]

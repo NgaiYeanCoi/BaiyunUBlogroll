@@ -6,6 +6,13 @@ body:
     attributes:
       value: 请确认博客可以公开访问，并提供可解析的 RSS 或 Atom 地址。维护者会人工审核申请。
   - type: input
+    id: id
+    attributes:
+      label: 博客ID（唯一标识）
+      placeholder: 英文或数字组成的唯一标识符，例如：nyc
+    validations:
+      required: true
+  - type: input
     id: name
     attributes:
       label: 博客名称
