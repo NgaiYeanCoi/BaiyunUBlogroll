@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from 'astro';
+import FeedPage from '../../components/FeedPage.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
+import { loadCatalog } from '../../lib/catalog/index';
+import type { Article, Source } from '../../lib/types';
+
+interface Props {
+  articles: Article[];
+  sources: Source[];
+  total: number;
+  currentPage: number;
+  pageCount: number;
+}
+
+export const getStaticPaths = (async () => {
+  const catalog = await loadCatalog();
+  const pageSize = 20;
+  const pageCount = Math.max(1, Math.ceil(catalog.articles.length / pageSize));
+  return Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
+    const currentPage = index + 2;
+    return {
+      params: { page: String(currentPage) },
+      props: {
+        articles: catalog.articles.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+        sources: catalog.sources,
+        total: catalog.articles.length,
+        currentPage,
+        pageCount,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { articles, sources, total, currentPage, pageCount } = Astro.props as Props;
+---
+
+<PageLayout
+  active="feed"
+  title={`文章动态 · 第 ${currentPage} 页`}
+  canonicalPath={`page/${currentPage}/`}
+>
+  <FeedPage {articles} {sources} {total} {currentPage} {pageCount} />
+</PageLayout>

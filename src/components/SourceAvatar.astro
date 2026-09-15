@@ -1,0 +1,36 @@
+---
+import type { Source } from '../lib/types';
+
+interface Props {
+  source: Pick<Source, 'name' | 'avatarUrl'>;
+}
+const { source } = Astro.props;
+const initial = Array.from(source.name.trim())[0]?.toUpperCase() ?? '云';
+---
+
+<span class="avatar" aria-hidden="true">
+  <span>{initial}</span>
+  {source.avatarUrl && (
+    <img
+      src={source.avatarUrl}
+      alt=""
+      width="32"
+      height="32"
+      loading="lazy"
+      decoding="async"
+      referrerpolicy="no-referrer"
+      data-source-avatar
+    />
+  )}
+</span>
+
+<script>
+  document.querySelectorAll<HTMLImageElement>('[data-source-avatar]').forEach((image) => {
+    const showFallback = () => {
+      image.hidden = true;
+    };
+    image.addEventListener('error', showFallback, { once: true });
+    // Cached failures can finish before this script runs; retain the name initial in that case too.
+    if (image.complete && image.naturalWidth === 0) showFallback();
+  });
+</script>

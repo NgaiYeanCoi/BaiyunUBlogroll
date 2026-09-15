@@ -1,0 +1,43 @@
+---
+import site from '../../config/site.json';
+import { withBase } from '../client/paths';
+import { Image } from 'astro:assets';
+import universityLogo from '../../images/guangdong-baiyun-university-logo-1024px.png';
+
+interface Props {
+  active: 'feed' | 'blogs' | 'join';
+}
+const { active } = Astro.props;
+const items = [
+  { id: 'feed', label: '文章动态', href: withBase() },
+  { id: 'blogs', label: '博客目录', href: withBase('blogs/') },
+  { id: 'join', label: '加入我们', href: withBase('join/') },
+] as const;
+---
+
+<header class="site-header">
+  <a class="brand" href={withBase()} aria-label={`${site.name} 首页`}>
+    <span class="brand-logo" aria-hidden="true">
+      <Image
+        src={universityLogo}
+        alt=""
+        width={40}
+        height={40}
+        densities={[1, 2]}
+        format="webp"
+        loading="eager"
+      />
+    </span>
+    <span>
+      <span class="brand-name">{site.name}</span>
+      <span class="brand-subtitle">{site.subtitle}</span>
+    </span>
+  </a>
+  <nav class="site-nav" aria-label="主导航">
+    {items.map((item) => (
+      <a href={item.href} aria-current={active === item.id ? 'page' : undefined}>
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</header>

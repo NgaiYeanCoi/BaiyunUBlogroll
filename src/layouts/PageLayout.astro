@@ -1,0 +1,47 @@
+---
+import site from '../../config/site.json';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import { withBase } from '../client/paths';
+import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import universityLogo from '../../images/guangdong-baiyun-university-logo-1024px.png';
+
+interface Props {
+  active: 'feed' | 'blogs' | 'join';
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+}
+const { active, title, description = site.description, canonicalPath = '' } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : site.name;
+const canonical = new URL(withBase(canonicalPath), Astro.site ?? site.url);
+// Astro emits the imported logo and icon beneath the configured Pages base path.
+const favicon = await getImage({ src: universityLogo, width: 64, height: 64, format: 'png' });
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href={favicon.src} sizes="64x64" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <Header active={active} />
+      <Hero />
+      <main class="site-main">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <span>{site.name} · 每一份表达都值得被看见</span>
+        <span>GitHub Pages</span>
+      </footer>
+    </div>
+  </body>
+</html>

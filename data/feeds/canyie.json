@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "canyie",
+  "contentChangedAt": "2026-09-14T10:47:25.151Z",
+  "articles": [
+    {
+      "id": "canyie-119641f393c4cc7b4fcb5740",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2025/02/04/CVE-2024-49721/",
+      "title": "CVE-2024-49721 InputMethodSubtypeArray 反序列化漏洞分析",
+      "summary": "神马，都 2025 年啦，还有 Parcel Mismatch 漏洞？！？对！你没听错！最经典最被广泛利用的 Parcel Mismatch 漏洞，它又双叒叕来了！怕了吗？！？ 去年我和 Cxxsheng 对整个 Parcelable IPC 机制进行了一些研究，并开发了一个扫描器用以扫描相关漏洞。此漏洞就是我们研究过程中发现的漏洞之一。我们于 2024 年 12 月 3 日提交漏洞报告，后被告知与另一份漏洞报告重复。以下记录了我们当时的分析。部分敏感信息已被移除或脱敏以保证安全。",
+      "guids": [
+        "https://blog.canyie.top/2025/02/04/CVE-2024-49721/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-04T14:00:00.000Z",
+        "raw": "2025-02-04T14:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-09-13T11:38:25.320Z",
+        "raw": "2025-09-13T11:38:25.320Z"
+      }
+    },
+    {
+      "id": "canyie-1f0470a31265f8c7770e2c53",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2023/11/06/first-19-years-of-my-life/",
+      "title": "若人生是场大梦啊——记我人生的前19年",
+      "summary": "上次发年终总结还是 2022 年发 2021 年的，2022 年的年终总结缺失了。今年发生了好多好多的事情，一直想写今年的年终总结但是却总没到年终，干脆写成前 19 年纪念吧。",
+      "guids": [
+        "https://blog.canyie.top/2023/11/06/first-19-years-of-my-life/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2023-11-06T11:16:26.000Z",
+        "raw": "2023-11-06T11:16:26.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.819Z",
+        "raw": "2025-04-24T10:33:02.819Z"
+      }
+    },
+    {
+      "id": "canyie-21729bc69f33380621605370",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2026/03/17/telegram-channel-backup/",
+      "title": "频道内容备份",
+      "summary": "由于频道被封，整理一下还算有用的内容发到这里来。偏技术向闲聊，发布一些随谈、碎碎念或短篇/价值密度不高等我觉得不适合专门写一篇博客但仍然有留下来的价值的内容，包括但不限于编程想法、系统内部解构、人生感悟等。 有挺多人好奇我的人生经历（见 #303），比如我在我的领域是怎么起步的，还有我作为一个厌学、走职业教育路的差生的故事（#88 #303），这里一并留下来。 部分我觉得现在没什么用的内容比如纯情感发泄和线下贴贴就不再留着了。另外考虑到这里偏正式，部分条目有修改。 本频道任何消息均不构成医学建议。",
+      "guids": [
+        "https://blog.canyie.top/2026/03/17/telegram-channel-backup/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-03-17T14:00:00.000Z",
+        "raw": "2026-03-17T14:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-05-28T11:05:54.023Z",
+        "raw": "2026-05-28T11:05:54.023Z"
+      }
+    },
+    {
+      "id": "canyie-50cc96ffc4a10cd437950c1f",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2025/01/29/android-security-bulletin-index-2025/",
+      "title": "Android 2025 年每月安全补丁分析索引",
+      "summary": "2024 年度补丁分析： 点我 2026 年度补丁分析： 点我 给大家分享一个好消息，经过一年的研究，我现在在 Google BugHunters 平台上总排名 24，2024 年度第 6 名，Android Program 第 4 名！感谢各位一年陪伴！ 最后更新时间：2026/03/18 更新内容：更新 2026",
+      "guids": [
+        "https://blog.canyie.top/2025/01/29/android-security-bulletin-index-2025/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-29T06:00:00.000Z",
+        "raw": "2025-01-29T06:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-07T04:35:00.255Z",
+        "raw": "2026-08-07T04:35:00.255Z"
+      }
+    },
+    {
+      "id": "canyie-546b82d8f65a452e775c1dcc",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2021/05/01/anti-magisk-xposed/",
+      "title": "检测Magisk与Xposed",
+      "summary": "不久前，开发者Rikka & vvb2060上架了一款环境检测应用 Momo ，把大家一直以来信任的各种反检测手段击得粉碎。下面我会通过部分已公开的源码，分析这个可能是史上最强的环境检测应用。",
+      "guids": [
+        "https://blog.canyie.top/2021/05/01/anti-magisk-xposed/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2021-05-01T05:23:44.000Z",
+        "raw": "2021-05-01T05:23:44.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.812Z",
+        "raw": "2025-04-24T10:33:02.812Z"
+      }
+    },
+    {
+      "id": "canyie-5d5fa721bf42517fa73e57d0",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2026/07/08/CVE-2026-0091/",
+      "title": "CVE-2026-0091： An issue in android window management to Arbitrary Code Execution in Launcher process",
+      "summary": "This issue CVE-2026-0091 has been fixed for Android 14+ in June 2026 Android Security Bulletin . Click here to see the patch The following is copied from my repo https://github.com/canyie/TransitionPlayer for backup purposes. For more info such as PoC code, please check the original repo.",
+      "guids": [
+        "https://blog.canyie.top/2026/07/08/CVE-2026-0091/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-08T09:40:00.000Z",
+        "raw": "2026-07-08T09:40:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-08T09:51:33.030Z",
+        "raw": "2026-07-08T09:51:33.030Z"
+      }
+    },
+    {
+      "id": "canyie-5f91bac72f92d4b13bcc21c8",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2026/06/09/android-security-tricks/",
+      "title": "Android 安全 常用技巧合集",
+      "summary": "一些自己写 PoC 的时候的常用技巧。",
+      "guids": [
+        "https://blog.canyie.top/2026/06/09/android-security-tricks/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-06-09T00:00:00.000Z",
+        "raw": "2026-06-09T00:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-31T06:28:53.814Z",
+        "raw": "2026-08-31T06:28:53.814Z"
+      }
+    },
+    {
+      "id": "canyie-65c1a8af5327d786214252db",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2022/04/09/property-implementation-and-isolation/",
+      "title": "Android Property 实现解析与黑魔法",
+      "summary": "Android Property （属性系统）可谓是 Android 中使用最广泛的进程间信息共享机制了，如 app 获取系统版本号，就是通过属性系统传递的信息；对于如此常用的底层机制，你可能知道 getprop SystemProperties __system_property_get 这些 API，但是，你真的了解它吗？这次，我们不但要会遵守规则用这些 API，我们还要成为规则的缔造者，让系统为我们服务！Let’s go！",
+      "guids": [
+        "https://blog.canyie.top/2022/04/09/property-implementation-and-isolation/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2022-04-09T09:30:00.000Z",
+        "raw": "2022-04-09T09:30:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.823Z",
+        "raw": "2025-04-24T10:33:02.823Z"
+      }
+    },
+    {
+      "id": "canyie-6603010759e1225082dc8149",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2024/11/07/self-changing-data-type/",
+      "title": "Self-changing Data Type - CVE-2024-40676 漏洞分析",
+      "summary": "今年 10 月份的时候，Android 安全公告用 CVE-2024-40676 的编号公布了一个很奇怪的 patch 。 AccountManagerService checkKeyIntent() 负责检查 account authenticator 传回的 intent，确保它安全再传回给 caller，防止 launch anywhere 漏洞。这个补丁看起来很暴力也很奇怪，直接 ban 了所有带有 content URI 的 intent，似乎完全不考虑兼容性。是什么样的漏洞才要上如此暴力的修复方法？ 注：如下全是我的猜测，由于联系不到漏洞作者本人，无法确认这是否就是原本的问题。",
+      "guids": [
+        "https://blog.canyie.top/2024/11/07/self-changing-data-type/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-07T02:00:00.000Z",
+        "raw": "2024-11-07T02:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.825Z",
+        "raw": "2025-04-24T10:33:02.825Z"
+      }
+    },
+    {
+      "id": "canyie-6e0748f58ab679b5b04cb17e",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2022/01/09/end-of-2021/",
+      "title": "从电子厂逃离的 17 岁 - 2021 年终总结",
+      "summary": "当我写下这段文字时，时间是 2022 年 1 月 9 日，这个时候发上一年年终总结似乎晚了点；老实说，在这个博客刚创建的时候，我没有打算写这种记录性的内容，我的目标一直都是像 Weishu’s Notes 的高质量内容；但是昨晚看 weishu 直播写代码，他说了一句让我很触动的话：“人生不需要有意义，有意思就够了。”我的 2021 可能没什么意义，但如果我不做点什么纪念一下，它很有可能就消逝在时间的长河里，连我自己都回忆不起来，更别提有意思了。",
+      "guids": [
+        "https://blog.canyie.top/2022/01/09/end-of-2021/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2022-01-09T06:19:46.000Z",
+        "raw": "2022-01-09T06:19:46.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.819Z",
+        "raw": "2025-04-24T10:33:02.819Z"
+      }
+    },
+    {
+      "id": "canyie-8128383556b2ed6fc0d964b2",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2026/09/09/LSPromise/",
+      "title": "LSPromise: Android 17 Local App To Root/Kernel Privilege Escalation Exploit Chain",
+      "summary": "A complete exploit chain that enables privilege escalation from a local untrusted app to root/kernel. It does not involve memory corruptions or race conditions, so attackers don’t need to perform complex heap spraying or bypass mitigations against memory corruption vulnerabilities such as KASLR, MTE or CFI, making this exploit chain a 100% success rate on vulnerable devices. Tested on Pixel 10 running the initial Android 17 official release. Note that it does not work on Pixel 6a and this issue may also occur on other devices running 6.1.xxx-android14 kernel trees due to another bug in these kernels. The following is copied from our repo https://github.com/LSPosed/LSPromise for backup purposes. For more info such as PoC code, please check the original repo.",
+      "guids": [
+        "https://blog.canyie.top/2026/09/09/LSPromise/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-09-09T00:00:00.000Z",
+        "raw": "2026-09-09T00:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-09-09T02:11:47.011Z",
+        "raw": "2026-09-09T02:11:47.011Z"
+      }
+    },
+    {
+      "id": "canyie-88c8270c1ed620edc8452058",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2024/10/08/CVE-2024-0044/",
+      "title": "Reviving an already patched vulnerability for half a year? The second spring of CVE-2024-0044",
+      "summary": "This is a bypass of the initial patch of CVE-2024-0044, a High severity vulnerability in the Android framework that allows attackers with adb access to execute arbitrary code under the UID of arbitrary app. The following is copied from my repo https://github.com/canyie/CVE-2024-0044 for backup purposes. For more info such as PoC code, please check the original repo.",
+      "guids": [
+        "https://blog.canyie.top/2024/10/08/CVE-2024-0044/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-10-08T00:00:00.000Z",
+        "raw": "2024-10-08T00:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.808Z",
+        "raw": "2025-04-24T10:33:02.808Z"
+      }
+    },
+    {
+      "id": "canyie-95ac402c59f25c46e863bab4",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2023/11/12/android-booting-shenanigans-and-magiskinit-analysing/",
+      "title": "在故事开始之前的故事：Android 启动过程与 magiskinit 分析",
+      "summary": "终于开了一直想写的这篇文章，再不写点东西就真的是年更博客了…… 本文可以认为是 Android Booting Shenanigans 的中文补充说明，同时添加了 magiskinit 的一些处理细节。即使你对 magiskinit 没兴趣也可以看看，说不定就有一些你平时从来没注意到的细节呢 :)",
+      "guids": [
+        "https://blog.canyie.top/2023/11/12/android-booting-shenanigans-and-magiskinit-analysing/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2023-11-12T07:00:00.000Z",
+        "raw": "2023-11-12T07:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.812Z",
+        "raw": "2025-04-24T10:33:02.812Z"
+      }
+    },
+    {
+      "id": "canyie-a0bf5621a38692016f407d4c",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2023/03/28/system-foundation-for-android-devs/",
+      "title": "写给 Android 开发者的系统基础知识科普",
+      "summary": "与我以往的风格不同，本文为科普类文章，因此不会涉及到太过高深难懂的知识。但这些内容可能 Android 应用层开发者甚至部分 framework 层开发者都不了解，因此仍旧高能预警。 另外广东这两天好冷啊，大家注意保暖~",
+      "guids": [
+        "https://blog.canyie.top/2023/03/28/system-foundation-for-android-devs/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2023-03-28T08:03:06.000Z",
+        "raw": "2023-03-28T08:03:06.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.825Z",
+        "raw": "2025-04-24T10:33:02.825Z"
+      }
+    },
+    {
+      "id": "canyie-a7d62c28d28662199b132705",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2024/11/05/android-platform-common-vulnerabilities/",
+      "title": "Android 平台常见安全漏洞类型",
+      "summary": "本文适用于已对 Android 开发有基础了解，希望了解 Android 系统层常见安全漏洞的人。祝大家写代码无 bug，挖洞天天挖到 Critical RCE 漏洞链。 本文开始创作时间：2024-02-19 完成时间：2024-02-29 发布时间：2024-11-05 2026/07/30 警告：本文创作于 2026 年评级规则修改之前，部分内容已经失去参考价值。为避免破坏内容完整性，这些内容仍被保留。若您在 2026 年 5 月 1 日之后仍然报告本文中提到的漏洞类型，可能会被认定超出 VRP 范围。请读者自行判断。",
+      "guids": [
+        "https://blog.canyie.top/2024/11/05/android-platform-common-vulnerabilities/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-04T22:00:00.000Z",
+        "raw": "2024-11-04T22:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-30T11:49:03.008Z",
+        "raw": "2026-07-30T11:49:03.008Z"
+      }
+    },
+    {
+      "id": "canyie-ae01401d9de7b268633812ba",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2024/04/18/android-security-bulletin-index/",
+      "title": "Android 2023-12 ~ 2024 每月安全补丁分析索引",
+      "summary": "之前一直在看的每月补丁分析的博客 https://wrlus.com/ 看起来是不再更新了，想了想反正自己每个月也要去追着看，干脆写一下分析得了，方便自己后面找。 本人很菜，分析的大部分都是 Java 层漏洞，大佬别骂我 QAQ 最初发表在我的 telegram 频道。每月补丁都会在此文中更新。 2025 年度补丁分析： 点我 2026 年度补丁分析： 点我 最后更新时间：2026/03/18 更新内容：添加 2026 年度链接",
+      "guids": [
+        "https://blog.canyie.top/2024/04/18/android-security-bulletin-index/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-04-18T11:27:12.000Z",
+        "raw": "2024-04-18T11:27:12.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-05-07T01:49:28.844Z",
+        "raw": "2026-05-07T01:49:28.844Z"
+      }
+    },
+    {
+      "id": "canyie-be227c647c9d7f0435320925",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2020/08/20/af447-in-aci/",
+      "title": "《空中浩劫》里的法航447",
+      "summary": "2009年6月1日（UTC时间），法国航空447号班机（机型空中客车A330-203、注册号F-GZCP）在大西洋中部雷达盲区神秘失踪，后被证实坠毁，机上228人（乘客216人、机组成员12人）全数罹难。著名空难文献剧《Air Crash Investigation》（中文一般译为《空中浩劫》，以下简称ACI）在S12E13中收录了此事故，揭露了所谓的“空难真相”，将矛头直指副驾驶皮埃尔-塞德里克·博南（Pierre Cédric Bonin）；同时，由于该片的知名度，让许多航空爱好者乃至真正的航空从业者认为该片所述即为事实。然而，真的是这样吗？",
+      "guids": [
+        "https://blog.canyie.top/2020/08/20/af447-in-aci/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2020-08-20T03:08:17.000Z",
+        "raw": "2020-08-20T03:08:17.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.812Z",
+        "raw": "2025-04-24T10:33:02.812Z"
+      }
+    },
+    {
+      "id": "canyie-c4fd37ee8da37734ea3e6f88",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2026/03/18/android-security-bulletin-index-2026/",
+      "title": "Android 2026 年每月安全补丁分析索引",
+      "summary": "2024 年度补丁分析： 点我 2025 年度补丁分析： 点我 我是 2025 年 Android VRP 冠军！点这里看我的名字： https://bughunters.google.com/blog/google-vrps-in-review-2025#android-devices 最后更新时间：2026/07/08 更新内容：更新 2026-06-01",
+      "guids": [
+        "https://blog.canyie.top/2026/03/18/android-security-bulletin-index-2026/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-03-18T15:00:00.000Z",
+        "raw": "2026-03-18T15:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-07T04:34:49.297Z",
+        "raw": "2026-08-07T04:34:49.297Z"
+      }
+    },
+    {
+      "id": "canyie-cdcd38d822f06d7f0a085e46",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2024/08/24/CVE-2024-48336/",
+      "title": "MagiskEoP (CVE-2024-48336)： Magisk App Arbitrary Code Execution Vulnerability",
+      "summary": "Magisk App before Canary version 27007 contains a vulnerability CVE-2024-48336, which allows a local untrusted app with no additional privileges to silently execute arbitrary code in the Magisk app and escalate privileges to root via a crafted package without user interaction. The following is copied from my repo https://github.com/canyie/MagiskEoP for backup purposes. For more info such as PoC code, please check the original repo.",
+      "guids": [
+        "https://blog.canyie.top/2024/08/24/CVE-2024-48336/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-08-24T04:00:00.000Z",
+        "raw": "2024-08-24T04:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-04-24T10:33:02.808Z",
+        "raw": "2025-04-24T10:33:02.808Z"
+      }
+    },
+    {
+      "id": "canyie-d301d9ac003edb5405615b94",
+      "sourceId": "canyie",
+      "url": "https://blog.canyie.top/2025/08/24/android-runtime-resources-overlay-sequence/",
+      "title": "Android Runtime Resources Overlay 加载时序分析",
+      "summary": "Fabricated Runtime Resources Overlay （FRRO） 是 Android 12 引入的一项新功能，它让开发者可以用代码或 shell 命令的方式动态操作 Runtime Resources Overlay（RRO） 而不需要像以前一样必须创建一个单独的 overlay app。然而四年后，网络上关于 FRRO 的文章依然少得可怜，所以在这里记录一次我调试 FRRO 问题的过程。",
+      "guids": [
+        "https://blog.canyie.top/2025/08/24/android-runtime-resources-overlay-sequence/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-08-24T14:30:00.000Z",
+        "raw": "2025-08-24T14:30:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-08-25T04:04:07.314Z",
+        "raw": "2025-08-25T04:04:07.314Z"
+      }
+    }
+  ]
+}

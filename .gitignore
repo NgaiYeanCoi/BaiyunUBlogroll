@@ -2,3 +2,12 @@
 
 .idea
 .venv
+
+# Local evidence and dependency caches must never enter Pages or commits.
+.local/
+.cache/
+.superpowers/
+node_modules/
+dist/
+.astro/
+__pycache__/

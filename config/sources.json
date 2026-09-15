@@ -1,0 +1,42 @@
+[
+  {
+    "id": "nyc",
+    "name": "NgaiYeanCoi's blog",
+    "siteUrl": "https://blog.nyc1.xyz/",
+    "feedUrl": "https://blog.nyc1.xyz/atom.xml",
+    "avatarUrl": "https://blog.nyc1.xyz/data/image/icon.jpg",
+    "enabled": true
+  },
+  {
+    "id": "canyie",
+    "name": "残页的小博客",
+    "siteUrl": "https://blog.canyie.top/",
+    "feedUrl": "https://blog.canyie.top/atom.xml",
+    "avatarUrl": "https://blog.canyie.top/data/image/avatar_new.jpg",
+    "enabled": true
+  },
+  {
+    "id": "simuleite",
+    "name": "SMULET's BLOG",
+    "siteUrl": "https://simuleite.github.io/",
+    "feedUrl": "https://simuleite.github.io/atom.xml",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/122980527?v=",
+    "enabled": true
+  },
+  {
+    "id": "toho",
+    "name": "西行妖",
+    "siteUrl": "https://my.toho.red/",
+    "feedUrl": "https://my.toho.red/index.xml",
+    "avatarUrl": "https://s3.ax1x.com/2021/01/31/yEfCCR.png",
+    "enabled": true
+  },
+  {
+    "id": "Lathezero",
+    "name": "Lathezero‘s blog",
+    "siteUrl": "https://Lathezero.github.io",
+    "feedUrl": "https://Lathezero.github.io/atom.xml",
+    "avatarUrl": "https://lathezero.github.io/img/avatar.jpeg",
+    "enabled": true
+  }
+]
