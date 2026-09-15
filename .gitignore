@@ -11,3 +11,8 @@ node_modules/
 dist/
 .astro/
 __pycache__/
+
+# Ignore documentation directories that are not part of the website.
+docs/research/
+docs/superpowers/
+docs/verification/

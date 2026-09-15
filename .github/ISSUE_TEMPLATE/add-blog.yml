@@ -26,6 +26,13 @@ body:
       placeholder: https://example.com/atom.xml
     validations:
       required: true
+  - type: input
+    id: avatar-url
+    attributes: 
+      label: 头像URL（可选）
+      placeholder: https://example.com/avatar.png
+    validations:
+      required: false
   - type: textarea
     id: description
     attributes:
