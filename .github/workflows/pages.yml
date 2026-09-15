@@ -53,7 +53,8 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           REQUESTED_REFRESH: ${{ inputs.refresh }}
         run: |
-          if [[ "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$REQUESTED_REFRESH" == "true" ) ]]; then
+          # Newly added sources need an initial snapshot before their first push deployment.
+          if [[ "$EVENT_NAME" == "push" || "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$REQUESTED_REFRESH" == "true" ) ]]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
           else
             echo "refresh=false" >> "$GITHUB_OUTPUT"
