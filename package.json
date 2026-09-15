@@ -13,6 +13,7 @@
     "check": "astro check",
     "test": "vitest run",
     "refresh": "tsx scripts/refresh.ts",
+    "refresh:all": "tsx scripts/refresh-all.ts",
     "data:promote": "tsx scripts/promote-data.ts",
     "check:dist": "tsx scripts/check-dist.ts",
     "verify": "npm run test && npm run check && npm run build && npm run check:dist",

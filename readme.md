@@ -58,22 +58,15 @@ npm run dev
 
 ## 刷新与验证
 
-`npm run refresh` 只把候选数据写入 `.cache/refresh/feeds/` 和 `.cache/refresh/report.json`，不会修改 `data/feeds/`。在 PowerShell 中按下面顺序验证候选；只有所有命令成功后才执行 promotion：
+日常更新 RSS/Atom 快照只需运行：
 
 ```powershell
-npm run refresh
-$env:BLOGROLL_DATA_DIR = ".cache/refresh/feeds"
-$env:BLOGROLL_REPORT_FILE = ".cache/refresh/report.json"
-$env:SOURCE_SHA = git rev-parse HEAD
-npm test
-npm run check
-npm run build
-npm run check:dist
-npm run data:promote
-Remove-Item Env:BLOGROLL_DATA_DIR, Env:BLOGROLL_REPORT_FILE, Env:SOURCE_SHA
+npm run refresh:all
 ```
 
-promotion 只复制配置中来源对应的候选 JSON。维护者应审阅 `data/feeds/` 的差异后按明确路径提交；不要提交 `.cache/` 或 `dist/`。如果所有启用来源都失败，刷新命令会失败，旧快照和当前部署保持不变。
+该命令按顺序抓取候选数据、使用候选数据构建站点，再检查构建产物并更新 `data/feeds/`。任一步失败都会立即停止，不会提升未通过检查的候选数据。命令成功后，若本地开发服务器已经运行，刷新浏览器即可查看最新内容；否则运行 `npm run dev`。
+
+`npm run refresh` 仍只把候选数据写入 `.cache/refresh/feeds/` 和 `.cache/refresh/report.json`，供 GitHub Actions 和维护者诊断使用，不会修改 `data/feeds/`。promotion 只复制配置中来源对应的候选 JSON。维护者应审阅 `data/feeds/` 的差异后按明确路径提交；不要提交 `.cache/` 或 `dist/`。如果所有启用来源都失败，刷新命令会失败，旧快照和当前部署保持不变。
 
 ## GitHub Pages 发布
 
