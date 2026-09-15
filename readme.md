@@ -22,7 +22,7 @@ npm run dev
 
 ## 来源与撤回配置
 
-在 `config/sources.json` 添加来源。`id` 是长期稳定的 ASCII 标识，改名时不要更换；`enabled: false` 仅暂停后续抓取，已经收录的文章仍会展示。
+在 `config/sources.json` 添加来源。`id` 是长期稳定的 ASCII 标识，改名时不要更换；`enabled: false` 仅暂停后续抓取，已经收录的文章仍会展示。可选的 `avatarUrl` 用于来源头像，必须是绝对 HTTP(S) URL。
 
 ```json
 {
@@ -30,6 +30,7 @@ npm run dev
   "name": "示例博客",
   "siteUrl": "https://example.com/",
   "feedUrl": "https://example.com/atom.xml",
+  "avatarUrl": "https://example.com/avatar.png",
   "enabled": true,
   "description": "可选的博客简介"
 }

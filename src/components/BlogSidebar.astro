@@ -1,11 +1,11 @@
 ---
 import type { Source } from '../lib/types';
 import { withBase } from '../client/paths';
+import SourceAvatar from './SourceAvatar.astro';
 interface Props {
   sources: Source[];
 }
 const { sources } = Astro.props;
-const mark = (name: string) => Array.from(name.trim())[0]?.toUpperCase() ?? '云';
 ---
 
 <aside class="feed-aside" aria-label="博客推荐">
@@ -13,9 +13,7 @@ const mark = (name: string) => Array.from(name.trim())[0]?.toUpperCase() ?? '云
     <h2>在这里，遇见他们</h2>
     {sources.slice(0, 4).map((source) => (
       <a class="mini-blog" href={source.siteUrl} target="_blank" rel="noopener noreferrer">
-        <span class="avatar" aria-hidden="true">
-          {mark(source.name)}
-        </span>
+        <SourceAvatar source={source} />
         <span>{source.name}</span>
       </a>
     ))}

@@ -1,6 +1,8 @@
 ---
 import site from '../../config/site.json';
 import { withBase } from '../client/paths';
+import { Image } from 'astro:assets';
+import universityLogo from '../../images/guangdong-baiyun-university-logo-1024px.png';
 
 interface Props {
   active: 'feed' | 'blogs' | 'join';
@@ -16,7 +18,15 @@ const items = [
 <header class="site-header">
   <a class="brand" href={withBase()} aria-label={`${site.name} 首页`}>
     <span class="brand-logo" aria-hidden="true">
-      云
+      <Image
+        src={universityLogo}
+        alt=""
+        width={40}
+        height={40}
+        densities={[1, 2]}
+        format="webp"
+        loading="eager"
+      />
     </span>
     <span>
       <span class="brand-name">{site.name}</span>

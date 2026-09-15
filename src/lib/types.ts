@@ -5,6 +5,7 @@ export type Source = {
   name: string;
   siteUrl: string;
   feedUrl: string;
+  avatarUrl?: string;
   enabled: boolean;
   description?: string;
 };

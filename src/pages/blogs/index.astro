@@ -2,6 +2,7 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import { loadCatalog } from '../../lib/catalog/index';
 import { displayDate } from '../../lib/catalog/dates';
+import SourceAvatar from '../../components/SourceAvatar.astro';
 
 const catalog = await loadCatalog();
 const articlesBySource = new Map(
@@ -10,7 +11,6 @@ const articlesBySource = new Map(
     catalog.articles.filter((article) => article.sourceId === source.id),
   ]),
 );
-const mark = (name: string) => Array.from(name.trim())[0]?.toUpperCase() ?? '云';
 ---
 
 <PageLayout active="blogs" title="博客目录" canonicalPath="blogs/">
@@ -30,9 +30,7 @@ const mark = (name: string) => Array.from(name.trim())[0]?.toUpperCase() ?? '云
         return (
           <article class="blog-card">
             <div class="blog-card-header">
-              <span class="avatar" aria-hidden="true">
-                {mark(source.name)}
-              </span>
+              <SourceAvatar source={source} />
               <h3>{source.name}</h3>
             </div>
             {source.description && <p>{source.description}</p>}

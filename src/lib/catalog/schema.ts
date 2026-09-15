@@ -22,6 +22,7 @@ export const SourceSchema = z
     name: z.string().trim().min(1),
     siteUrl: httpUrl,
     feedUrl: httpUrl,
+    avatarUrl: httpUrl.optional(),
     enabled: z.boolean(),
     description: z.string().optional(),
   })
