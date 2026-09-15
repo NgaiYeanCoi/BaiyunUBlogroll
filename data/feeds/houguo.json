@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "houguo",
+  "contentChangedAt": "2026-09-15T05:57:28.862Z",
+  "articles": [
+    {
+      "id": "houguo-014459875fcf9cc8ac1a88d7",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2025/12/01/win11%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E5%AE%89%E8%A3%85ensp/",
+      "title": "win11如何使用虚拟机VMware安装ensp",
+      "summary": "描述 我在上周计网实训周发现我的电脑是win11系统，而ensp所需要的其中一个组件VirtualBox在win11只能安装7.x的，而ensp只向下兼容5.x，不向上兼容，所以win11是无法安装ensp的，由此我决定把使用虚拟机安装ensp的流程整理成教程分享给大家",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2025/12/01/win11%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BAVMware%E5%AE%89%E8%A3%85ensp"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-01T22:45:00.000Z",
+        "raw": "2025-12-01T22:45:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-12-01T22:45:00.000Z",
+        "raw": "2025-12-01T22:45:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-114fb1c5e39d9a2ee21a778d",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/04/21/%E5%85%B3%E4%BA%8E%E6%88%91%E4%B8%AA%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86/",
+      "title": "关于我个人的面试经历",
+      "summary": "这个博客用来记录我从第一次面试开始往后所有的面试中的具体情况，以便自己去回顾来时路并巩固相关问题qwq，虽然我现在才大二，但提前攒点经验总是好的",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/04/21/%E5%85%B3%E4%BA%8E%E6%88%91%E4%B8%AA%E4%BA%BA%E7%9A%84%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%8E%86"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-04-21T16:12:00.000Z",
+        "raw": "2026-04-21T16:12:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-21T16:12:00.000Z",
+        "raw": "2026-04-21T16:12:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-40d090994cbc3655df408621",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2025/12/01/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/",
+      "title": "如何创建属于自己的博客",
+      "summary": "描述 我们在网上搜教程、资料时，有时候会搜到一些大佬的博客，里面记录的他们所分享的一些技术和日常，这时候应该也会想拥有一个属于自己的博客，这篇教程就是手把手教你如何制作一个属于自己的博客",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2025/12/01/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-01T10:36:00.000Z",
+        "raw": "2025-12-01T10:36:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-12-01T10:36:00.000Z",
+        "raw": "2025-12-01T10:36:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-5b24beecdcbffb5f706738ce",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/04/04/%E4%B8%80%E6%AC%A1-%E4%BC%98%E5%8C%96-%E5%BC%95%E5%8F%91%E7%9A%84%E7%81%BE%E9%9A%BE-%E6%89%8B%E5%8A%A8%E9%99%90%E5%88%B6%E5%86%85%E5%AD%98%E5%AF%BC%E8%87%B4-ACPI_BIOS_ERROR-%E8%93%9D%E5%B1%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E4%BF%AE%E5%A4%8D%E5%AE%9E%E5%BD%95/",
+      "title": "一次“优化”引发的灾难：手动限制内存导致 ACPI_BIOS_ERROR 蓝屏的完整修复实录",
+      "summary": "问题概述",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/04/04/%E4%B8%80%E6%AC%A1%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D%E5%BC%95%E5%8F%91%E7%9A%84%E7%81%BE%E9%9A%BE%EF%BC%9A%E6%89%8B%E5%8A%A8%E9%99%90%E5%88%B6%E5%86%85%E5%AD%98%E5%AF%BC%E8%87%B4%20ACPI_BIOS_ERROR%20%E8%93%9D%E5%B1%8F%E7%9A%84%E5%AE%8C%E6%95%B4%E4%BF%AE%E5%A4%8D%E5%AE%9E%E5%BD%95"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-04-04T18:41:00.000Z",
+        "raw": "2026-04-04T18:41:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-04T18:41:00.000Z",
+        "raw": "2026-04-04T18:41:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-6f5b3c835a2d49d9199975fc",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/02/03/%E8%99%9A%E6%8B%9F%E6%9C%BALinux%E9%85%8D%E7%BD%AEclash%E4%BB%A3%E7%90%86/",
+      "title": "虚拟机Linux配置clash代理",
+      "summary": "描述 本blog旨在解决虚拟机Linux无法通过clash代理访问外网的问题",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/02/03/%E8%99%9A%E6%8B%9F%E6%9C%BALinux%E9%85%8D%E7%BD%AEclash%E4%BB%A3%E7%90%86"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-02-03T23:40:00.000Z",
+        "raw": "2026-02-03T23:40:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-02-03T23:40:00.000Z",
+        "raw": "2026-02-03T23:40:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-763e8676ef6e8085d938820f",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/02/03/Linux%E5%9F%BA%E7%A1%80/",
+      "title": "Linux基础",
+      "summary": "本文主要讲解 Linux 的基础，涵盖基础命令、权限管控、实用操作等核心知识点，适合初学者快速上手。",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/02/03/Linux%E5%9F%BA%E7%A1%80"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-02-03T20:54:00.000Z",
+        "raw": "2026-02-03T20:54:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-02-03T20:54:00.000Z",
+        "raw": "2026-02-03T20:54:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-a1ab1955c2bafa4583098c92",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/02/03/Vim-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/",
+      "title": "Vim 常用命令速查表",
+      "summary": "",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/02/03/Vim%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-02-03T21:03:00.000Z",
+        "raw": "2026-02-03T21:03:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-02-03T21:03:00.000Z",
+        "raw": "2026-02-03T21:03:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-c19b62de03a484f122433cda",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/skill/2026/03/28/%E4%BB%8E0%E5%88%B01-%E5%9F%BA%E4%BA%8E-GitHub-Actions-%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/",
+      "title": "从0到1：基于 GitHub Actions 的项目部署全流程",
+      "summary": "记录一次完整的项目上线过程",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/skill/2026/03/28/%E4%BB%8E0%E5%88%B01%EF%BC%9A%E5%9F%BA%E4%BA%8E%20GitHub%20Actions%20%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-03-28T21:19:00.000Z",
+        "raw": "2026-03-28T21:19:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-03-28T21:19:00.000Z",
+        "raw": "2026-03-28T21:19:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-d9e9b61dfa4cf5251b995eb3",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2025/12/18/Java%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/",
+      "title": "Java 程序设计课程学习总结",
+      "summary": "姓名 / 学号：王许毅 202402151394",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2025/12/18/Java%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-18T23:02:00.000Z",
+        "raw": "2025-12-18T23:02:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-12-18T23:02:00.000Z",
+        "raw": "2025-12-18T23:02:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-ed038a7a1a96381646edb770",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/02/15/%E5%9C%A8-Windows-%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%B8%80%E9%94%AE%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%84%9A%E6%9C%AC/",
+      "title": "Windows 一键代理开关脚本（proxy-on / proxy-off / proxy-status）",
+      "summary": "在 Windows 中开启 Clash 后浏览器能联网但终端却经常超时，本质原因是大多数开发工具只读取 HTTP_PROXY/HTTPS_PROXY 环境变量而不会使用系统代理。本文通过一个 PowerShell 脚本实现类似 Linux proxy-on / proxy-off 的一键开关，让 pip、git、npm、Python 等终端程序自动走代理。",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/02/15/%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%9E%E7%8E%B0%E4%B8%80%E9%94%AE%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%84%9A%E6%9C%AC"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-02-15T00:50:00.000Z",
+        "raw": "2026-02-15T00:50:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-02-15T00:50:00.000Z",
+        "raw": "2026-02-15T00:50:00+00:00"
+      }
+    }
+  ]
+}
