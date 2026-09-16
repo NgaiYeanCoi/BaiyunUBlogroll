@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "houguo",
-  "contentChangedAt": "2026-09-15T05:57:28.862Z",
+  "contentChangedAt": "2026-09-16T19:39:30.698Z",
   "articles": [
     {
       "id": "houguo-014459875fcf9cc8ac1a88d7",
@@ -133,6 +133,28 @@
         "kind": "instant",
         "value": "2026-02-03T20:54:00.000Z",
         "raw": "2026-02-03T20:54:00+00:00"
+      }
+    },
+    {
+      "id": "houguo-7727cb86951233ed6c74e0f0",
+      "sourceId": "houguo",
+      "url": "https://taciturn-hg.github.io/blog/2026/09/16/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BE%E5%A4%87%E6%89%B9%E9%87%8F%E4%B8%80%E9%94%AE%E5%85%B3%E6%9C%BA/",
+      "title": "如何实现局域网设备批量一键关机",
+      "summary": "[!TIP] 这篇文章的实现方式是有可能出问题的，比如无法在dhcp环境下使用、net use连接不到，所以不建议在客户端较多的情况下使用该方法，针对这情况，已经有了基于C/S架构的方案，后续会加到此文章中",
+      "author": "HouGuo",
+      "guids": [
+        "https://taciturn-hg.github.io/blog/2026/09/16/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BE%E5%A4%87%E6%89%B9%E9%87%8F%E4%B8%80%E9%94%AE%E5%85%B3%E6%9C%BA"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-09-16T20:57:00.000Z",
+        "raw": "2026-09-16T20:57:00+00:00"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-09-16T20:57:00.000Z",
+        "raw": "2026-09-16T20:57:00+00:00"
       }
     },
     {
