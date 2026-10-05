@@ -46,5 +46,13 @@
     "feedUrl": "https://taciturn-hg.github.io/feed.xml",
     "avatarUrl": "https://taciturn-hg.github.io/assets/images/avatar.png",
     "enabled": true
+  },
+  {
+    "id": "binzi",
+    "name": "彬子的Blog",
+    "siteUrl": "https://www.binzi.top/",
+    "feedUrl": "https://www.binzi.top/atom.xml",
+    "enabled": true,
+    "description": "记录与分享"
   }
 ]
