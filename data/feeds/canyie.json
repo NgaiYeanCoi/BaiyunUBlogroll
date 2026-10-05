@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "canyie",
-  "contentChangedAt": "2026-09-14T10:47:25.151Z",
+  "contentChangedAt": "2026-10-05T22:52:02.817Z",
   "articles": [
     {
       "id": "canyie-119641f393c4cc7b4fcb5740",
@@ -146,8 +146,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-08-31T06:28:53.814Z",
-        "raw": "2026-08-31T06:28:53.814Z"
+        "value": "2026-09-21T10:06:40.475Z",
+        "raw": "2026-09-21T10:06:40.475Z"
       }
     },
     {
@@ -335,8 +335,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-05-07T01:49:28.844Z",
-        "raw": "2026-05-07T01:49:28.844Z"
+        "value": "2026-10-05T09:36:11.396Z",
+        "raw": "2026-10-05T09:36:11.396Z"
       }
     },
     {
@@ -365,7 +365,7 @@
       "sourceId": "canyie",
       "url": "https://blog.canyie.top/2026/03/18/android-security-bulletin-index-2026/",
       "title": "Android 2026 年每月安全补丁分析索引",
-      "summary": "2024 年度补丁分析： 点我 2025 年度补丁分析： 点我 我是 2025 年 Android VRP 冠军！点这里看我的名字： https://bughunters.google.com/blog/google-vrps-in-review-2025#android-devices 最后更新时间：2026/07/08 更新内容：更新 2026-06-01",
+      "summary": "2024 年度补丁分析： 点我 2025 年度补丁分析： 点我 我是 2025 年 Android VRP 冠军！点这里看我的名字： https://bughunters.google.com/blog/google-vrps-in-review-2025#android-devices 最后更新时间：2026/10/05 更新内容：更新 2026-09-01",
       "guids": [
         "https://blog.canyie.top/2026/03/18/android-security-bulletin-index-2026/"
       ],
@@ -377,8 +377,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-08-07T04:34:49.297Z",
-        "raw": "2026-08-07T04:34:49.297Z"
+        "value": "2026-10-05T09:34:52.965Z",
+        "raw": "2026-10-05T09:34:52.965Z"
       }
     },
     {
