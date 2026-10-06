@@ -1,0 +1,2405 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "binzi",
+  "contentChangedAt": "2026-10-06T01:18:55.870Z",
+  "articles": [
+    {
+      "id": "binzi-00437f5bee5d6a27d5347dbc",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/15/%E7%AE%97%E6%B3%95/P8195%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P8195",
+      "summary": "P8195 题目 题目描述： 传智专修学院给了小智一个仅包含小写字母的字符串 <math x",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/15/%E7%AE%97%E6%B3%95/P8195%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-15T08:31:26.000Z",
+        "raw": "2025-03-15T08:31:26.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:43.000Z",
+        "raw": "2026-01-24T19:53:43.000Z"
+      }
+    },
+    {
+      "id": "binzi-00a0b07fd9653e6fc1fccd7b",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/15/%E7%AE%97%E6%B3%95/P1115%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1115 最大子段和",
+      "summary": "P1115 最大子段和（ 洛谷题面 ） 题目 题目描述： 给",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/15/%E7%AE%97%E6%B3%95/P1115%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-15T09:35:01.000Z",
+        "raw": "2025-01-15T09:35:01.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:29.000Z",
+        "raw": "2026-01-24T19:53:29.000Z"
+      }
+    },
+    {
+      "id": "binzi-026e05b8f371aa2fa00af8eb",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P5788%E5%8D%95%E8%B0%83%E6%A0%88/",
+      "title": "洛谷 P5788 【模板】单调栈",
+      "summary": "【模板】单调栈（P5788） 题目 题目描述： 给出项数为 <math x",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P5788%E5%8D%95%E8%B0%83%E6%A0%88/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-12T15:03:53.000Z",
+        "raw": "2024-12-12T15:03:53.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:42.000Z",
+        "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-02cf0fed8e86e82828123749",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/07/30/AIO%20BIO%20NIO%E5%8C%BA%E5%88%AB%EF%BC%9F/",
+      "title": "AIO BIO NIO区别？",
+      "summary": "AIO BIO NIO区别？ BIO（同步阻塞 I/O） BIO 是传统的 I/O 模式，全称为 Block",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/07/30/AIO%20BIO%20NIO%E5%8C%BA%E5%88%AB%EF%BC%9F/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-30T09:32:00.000Z",
+        "raw": "2026-07-30T09:32:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-034faab4d42097dd52d3f8ef",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/24/%E7%AE%97%E6%B3%95/P1157%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1157",
+      "summary": "P1157 题目 题目描述： 排列与组合是常用的数学方法，其中组合就是从 <math xml",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/24/%E7%AE%97%E6%B3%95/P1157%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-24T14:14:43.000Z",
+        "raw": "2025-02-24T14:14:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:30.000Z",
+        "raw": "2026-01-24T19:53:30.000Z"
+      }
+    },
+    {
+      "id": "binzi-0f34a291d1f68515a0964d26",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P2947%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2947",
+      "summary": "P2947 题目 题目描述： 约翰的 <math xmlns=\"http://www.w3.",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P2947%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-12T12:10:42.000Z",
+        "raw": "2024-12-12T12:10:42.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:41.000Z",
+        "raw": "2026-01-24T19:53:41.000Z"
+      }
+    },
+    {
+      "id": "binzi-11f0df65054fb628fcf1b8fe",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/06/%E7%AE%97%E6%B3%95/P2629%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2629",
+      "summary": "P2629 题目 题目描述： Uim 在公司里面当秘书，现在有 <math xmlns=\"h",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/06/%E7%AE%97%E6%B3%95/P2629%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-06T11:22:16.000Z",
+        "raw": "2024-12-06T11:22:16.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:40.000Z",
+        "raw": "2026-01-24T19:53:40.000Z"
+      }
+    },
+    {
+      "id": "binzi-17efffd92a0963302ba1d1aa",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/22/%E7%AE%97%E6%B3%95/P1216%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1216 [IOI 1994 / USACO1.5] 数字三角形",
+      "summary": "P1216 [IOI 1994 / USACO1.5] 数字三角形（ 洛谷题面 ）</h",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/22/%E7%AE%97%E6%B3%95/P1216%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-22T10:04:36.000Z",
+        "raw": "2025-03-22T10:04:36.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:30.000Z",
+        "raw": "2026-01-24T19:53:30.000Z"
+      }
+    },
+    {
+      "id": "binzi-1a25ce9269e4d260f8e8cd72",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/09/%E7%AE%97%E6%B3%95/P1886%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1886 【模板】单调队列 / 滑动窗口",
+      "summary": "P1886 【模板】单调队列 / 滑动窗口（ 洛谷题面 ） 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/09/%E7%AE%97%E6%B3%95/P1886%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-09T13:46:07.000Z",
+        "raw": "2024-11-09T13:46:07.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:37.000Z",
+        "raw": "2026-01-24T19:53:37.000Z"
+      }
+    },
+    {
+      "id": "binzi-1d22105415e3298d5476a76f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/13/%E7%AE%97%E6%B3%95/P1419%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1419",
+      "summary": "P1419 题目 题目描述： 给定一个长度为 <math xmlns=\"http://www",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/13/%E7%AE%97%E6%B3%95/P1419%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-13T15:29:07.000Z",
+        "raw": "2025-01-13T15:29:07.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:32.000Z",
+        "raw": "2026-01-24T19:53:32.000Z"
+      }
+    },
+    {
+      "id": "binzi-1f247919e729377cd8141cbb",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/20/%E7%AE%97%E6%B3%95/P1087%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1087",
+      "summary": "P1087（ 洛谷题面 ） 题目 题目描述： 我们可以把由 0 和 1",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/20/%E7%AE%97%E6%B3%95/P1087%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-20T13:04:12.000Z",
+        "raw": "2024-12-20T13:04:12.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:28.000Z",
+        "raw": "2026-01-24T19:53:28.000Z"
+      }
+    },
+    {
+      "id": "binzi-1f40d6d546dd440edfff9ef5",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/10/25/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%EF%BC%8C%E9%9B%AA%E5%B4%A9%EF%BC%8C%E5%87%BB%E7%A9%BF/",
+      "title": "缓存穿透，雪崩，击穿",
+      "summary": "缓存穿透 缓存穿透指的是： 一个缓存和数据库中都不存在的数据 ，由于数据库无法写入缓存，导致频繁请求直接打到数据库，从而造成数据库压力过大甚至被“打穿”。 常见的解决方法包括：",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/10/25/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%EF%BC%8C%E9%9B%AA%E5%B4%A9%EF%BC%8C%E5%87%BB%E7%A9%BF/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-10-25T09:13:00.000Z",
+        "raw": "2025-10-25T09:13:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-28a45e1bba66e783351e070a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/25/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B2%9B%E5%B1%BF%E4%B8%AA%E6%95%B0/",
+      "title": "蓝桥杯 2023 省赛 - 岛屿个数",
+      "summary": "蓝桥杯 2023 岛屿个数 题目描述 给定 组测试数据，",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/25/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B2%9B%E5%B1%BF%E4%B8%AA%E6%95%B0/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-25T01:00:00.000Z",
+        "raw": "2025-02-25T01:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-28eb8cf60319e72714d3b4e9",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/30/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/",
+      "title": "垃圾收集器（CMS-G1-ZGC）与垃圾回收算法",
+      "summary": "垃圾收集器（CMS-G1-ZGC） CMS 垃圾收集器 JDK1.5时引入，JDK9被标记弃用，JDK14被移除",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/30/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-30T15:13:00.000Z",
+        "raw": "2025-12-30T15:13:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-2a7275a169335776ab4664a8",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/02/%E7%AE%97%E6%B3%95/P10426%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10426",
+      "summary": "P10426（ 洛谷题面 ） 题目 题目描述： 在一个神秘的森林里，",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/02/%E7%AE%97%E6%B3%95/P10426%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-02T08:50:38.000Z",
+        "raw": "2025-03-02T08:50:38.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:26.000Z",
+        "raw": "2026-01-24T19:53:26.000Z"
+      }
+    },
+    {
+      "id": "binzi-2bffb289e09cf51ade91d6d2",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/16/%E7%AE%97%E6%B3%95/P10389%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10389",
+      "summary": "P10389（ 洛谷题面 ） 题目 题目描述： 小蓝的班上有 <sp",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/16/%E7%AE%97%E6%B3%95/P10389%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-16T14:17:43.000Z",
+        "raw": "2025-01-16T14:17:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:25.000Z",
+        "raw": "2026-01-24T19:53:25.000Z"
+      }
+    },
+    {
+      "id": "binzi-2c3e3515cd5cbe0a661f3b37",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/18/%E7%AE%97%E6%B3%95/P1028%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1028",
+      "summary": "P1028（ 洛谷题面 ） 题目 题目描述： 给出正整数 <span c",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/18/%E7%AE%97%E6%B3%95/P1028%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-18T12:05:24.000Z",
+        "raw": "2025-01-18T12:05:24.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:24.000Z",
+        "raw": "2026-01-24T19:53:24.000Z"
+      }
+    },
+    {
+      "id": "binzi-2cbbd3b2dc14b0322f0d3b76",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/31/%E7%AE%97%E6%B3%95/P2249%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2249 【深基13.例1】查找",
+      "summary": "P2249 【深基13.例1】查找（ 洛谷题面 ） 题目 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/31/%E7%AE%97%E6%B3%95/P2249%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-31T14:20:33.000Z",
+        "raw": "2024-12-31T14:20:33.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:39.000Z",
+        "raw": "2026-01-24T19:53:39.000Z"
+      }
+    },
+    {
+      "id": "binzi-2d073168a4adc30497f330f5",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/10/27/Redis%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%87%E6%9C%9F%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/",
+      "title": "Redis的数据过期淘汰策略",
+      "summary": "Redis 的数据过期策略 Redis 采用 「惰性删除 + 定期删除」 两种策略相结合的方式，在 CPU 性能开销",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/10/27/Redis%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%87%E6%9C%9F%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-10-27T11:17:00.000Z",
+        "raw": "2025-10-27T11:17:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-325cfa55d7296de54906d614",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/18/%E7%AE%97%E6%B3%95/P1981%E9%A2%98%E8%A7%A3/",
+      "title": "【NOIP 2013 普及组】表达式求值 - 题解",
+      "summary": "【NOIP 2013 普及组】表达式求值（ 洛谷题面 ） 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/18/%E7%AE%97%E6%B3%95/P1981%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-18T02:43:57.000Z",
+        "raw": "2024-12-18T02:43:57.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:38.000Z",
+        "raw": "2026-01-24T19:53:38.000Z"
+      }
+    },
+    {
+      "id": "binzi-33415cfaed83853353e3594e",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/08/04/Pi%20Agent%20loop/",
+      "title": "Pi Agent loop",
+      "summary": "一、引子：大模型的三种用法 在聊 Agent Loop 之前，我们先退一步，看看”使用大模型”这件事本身有几种模式。这对理解”为什么需要循环”至关重要。 <h3 id=\"模式-1：直接调用-——-“模型，回答我",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/08/04/Pi%20Agent%20loop/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-04T15:47:00.000Z",
+        "raw": "2026-08-04T15:47:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-04T15:47:00.000Z",
+        "raw": "2026-08-04T15:47:00.000Z"
+      }
+    },
+    {
+      "id": "binzi-38fd8e3892408611bf2c2728",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1225%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1225",
+      "summary": "P1225 题目 题目描述： 黑白棋游戏的棋盘由 <math xmlns=\"http://w",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1225%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-06T12:51:34.000Z",
+        "raw": "2025-03-06T12:51:34.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:31.000Z",
+        "raw": "2026-01-24T19:53:31.000Z"
+      }
+    },
+    {
+      "id": "binzi-3e1ac47f5b27e5cbc3f880b7",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1217%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1217 [USACO1.5] 回文质数",
+      "summary": "P1217 [USACO1.5] 回文质数（ 洛谷题面 ） 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1217%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-05T16:13:44.000Z",
+        "raw": "2025-03-05T16:13:44.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:31.000Z",
+        "raw": "2026-01-24T19:53:31.000Z"
+      }
+    },
+    {
+      "id": "binzi-40580d02a1fecfcb7e5c5b45",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/27/%E7%AE%97%E6%B3%95/P10904%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10904",
+      "summary": "P10904（ 洛谷题面 ） 题目 题目描述： 小蓝正在数轴上挖矿，",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/27/%E7%AE%97%E6%B3%95/P10904%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-26T17:31:13.000Z",
+        "raw": "2024-11-26T17:31:13.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:29.000Z",
+        "raw": "2026-01-24T19:53:29.000Z"
+      }
+    },
+    {
+      "id": "binzi-40ab1e7004460f4c03fe8a10",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/30/%E7%AE%97%E6%B3%95/P1873%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1873",
+      "summary": "P1873 题目 题目描述： 伐木工人 Mirko 需要砍 <math xmlns=\"htt",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/30/%E7%AE%97%E6%B3%95/P1873%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-30T12:14:57.000Z",
+        "raw": "2024-12-30T12:14:57.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:36.000Z",
+        "raw": "2026-01-24T19:53:36.000Z"
+      }
+    },
+    {
+      "id": "binzi-4334fe9b6b2767478c828d24",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/14/%E7%AE%97%E6%B3%95/P1806%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1806",
+      "summary": "P1806 题目 题目描述： 路人甲准备跑 <math xmlns=\"http://www.",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/14/%E7%AE%97%E6%B3%95/P1806%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-14T12:23:12.000Z",
+        "raw": "2025-01-14T12:23:12.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:36.000Z",
+        "raw": "2026-01-24T19:53:36.000Z"
+      }
+    },
+    {
+      "id": "binzi-4468ac8752b5c22e57f0ec3b",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/28/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E4%B8%8E%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/",
+      "title": "类加载机制与类加载器",
+      "summary": "类加载机制/类加载器 类加载的完整流程（生命周期） <img src=\"/img/covers/image-20251228153154941.png\" class=",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/28/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E4%B8%8E%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-28T11:13:00.000Z",
+        "raw": "2025-12-28T11:13:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-44a9788917b0c778eeff71fd",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/08/02/Pi%20Agent%20%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/",
+      "title": "Pi Agent 上下文工程，模型每一轮到底看到了什么",
+      "summary": "Pi Agent 给人的一个错觉是，它好像记得整个项目。 你让它读文件、跑测试、修改实现，再回头问它为什么这样改，它通常还能接上前面的工作。但打开源码会发现，Pi 并没有给模型一块无限记忆。每次调用模型之前，它都会从会话、工具结果、项目规则和当前输入里，重新裁",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/08/02/Pi%20Agent%20%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-02T04:00:00.000Z",
+        "raw": "2026-08-02T04:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-02T04:00:00.000Z",
+        "raw": "2026-08-02T04:00:00.000Z"
+      }
+    },
+    {
+      "id": "binzi-47e63504954e009b8fe15ae6",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/05/%E7%AE%97%E6%B3%95/P2543%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2543",
+      "summary": "P2543 题目 题目描述： <img src=\"https://cdn.luogu.com.cn/upload/pic/1654.png\" class=\"lazyload\" data-",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/05/%E7%AE%97%E6%B3%95/P2543%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-05T09:11:16.000Z",
+        "raw": "2025-03-05T09:11:16.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-4a365d77917315b533d0241d",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/19/%E7%AE%97%E6%B3%95/P10415%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10415",
+      "summary": "P10415（ 洛谷题面 ） 题目 题目描述： 给定一个 <span",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/19/%E7%AE%97%E6%B3%95/P10415%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-19T06:26:43.000Z",
+        "raw": "2025-03-19T06:26:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:26.000Z",
+        "raw": "2026-01-24T19:53:26.000Z"
+      }
+    },
+    {
+      "id": "binzi-4a6d6fa776d47ddc5ddcef44",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/07/%E7%AE%97%E6%B3%95/P1085%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1085",
+      "summary": "P1085（ 洛谷题面 ） 题目 题目描述： 津津上初中了。妈妈认为津津",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/07/%E7%AE%97%E6%B3%95/P1085%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-07T15:42:18.000Z",
+        "raw": "2024-11-07T15:42:18.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:27.000Z",
+        "raw": "2026-01-24T19:53:27.000Z"
+      }
+    },
+    {
+      "id": "binzi-4da2b93e5c5eb65c16a6e315",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/21/%E7%AE%97%E6%B3%95/P2241%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2241",
+      "summary": "P2241 题目 题目描述： 有一个 <math xmlns=\"http://www.w3.",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/21/%E7%AE%97%E6%B3%95/P2241%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-21T10:34:40.000Z",
+        "raw": "2025-02-21T10:34:40.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:39.000Z",
+        "raw": "2026-01-24T19:53:39.000Z"
+      }
+    },
+    {
+      "id": "binzi-504a112a193527c4bef61d5d",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/11/%E7%AE%97%E6%B3%95/P10903%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10903",
+      "summary": "P10903（ 洛谷题面 ） 题目 题目描述： 在库存管理系统中，跟",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/11/%E7%AE%97%E6%B3%95/P10903%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-11T12:56:29.000Z",
+        "raw": "2025-01-11T12:56:29.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:29.000Z",
+        "raw": "2026-01-24T19:53:29.000Z"
+      }
+    },
+    {
+      "id": "binzi-52e3f7d9a42ef1f63524a40a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/23/%E7%AE%97%E6%B3%95/P1029%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1029",
+      "summary": "P1029（ 洛谷题面 ） 题目 题目描述： 输入两个正整数 <span",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/23/%E7%AE%97%E6%B3%95/P1029%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-23T10:39:13.000Z",
+        "raw": "2025-01-23T10:39:13.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:24.000Z",
+        "raw": "2026-01-24T19:53:24.000Z"
+      }
+    },
+    {
+      "id": "binzi-53c7c5fee32366624a7f8dcf",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/20/%E7%AE%97%E6%B3%95/P3918%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P3918",
+      "summary": "P3918 题目 题目描述： 神犇航空开展了一项载客特技飞行业务。每次飞行长 <math x",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/20/%E7%AE%97%E6%B3%95/P3918%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-19T19:02:28.000Z",
+        "raw": "2025-01-19T19:02:28.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:42.000Z",
+        "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-56cb3b33097f344407f1539c",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/05/%E7%AE%97%E6%B3%95/P1714%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1714",
+      "summary": "P1714 题目 题目描述： 今天是小 Z 的生日，同学们为他带来了一块蛋糕。这块蛋糕是一个长方体，被用不同色彩分成了 <span class=\"",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/05/%E7%AE%97%E6%B3%95/P1714%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-05T13:25:19.000Z",
+        "raw": "2024-12-05T13:25:19.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:35.000Z",
+        "raw": "2026-01-24T19:53:35.000Z"
+      }
+    },
+    {
+      "id": "binzi-5ade46dd5ee2739e128b7d48",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/27/MySQL%E7%9A%84MVCC/",
+      "title": "MySQL的MVCC",
+      "summary": "MVCC多版本并发控制 MVCC 的目标：让读操作尽量不阻塞写操作，写操作也尽量不阻塞读操作。 核心机制： <h4 id=\"MVCC主要依赖",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/27/MySQL%E7%9A%84MVCC/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-26T17:10:00.000Z",
+        "raw": "2025-12-26T17:10:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-5e8f805b13bf34759ed2ae3f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/27/%E7%AE%97%E6%B3%95/P2678%E9%A2%98%E8%A7%A3/",
+      "title": "【NOIP 2015 提高组】跳石头 - 题解",
+      "summary": "【NOIP 2015 提高组】跳石头（ 洛谷题面 ） 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/27/%E7%AE%97%E6%B3%95/P2678%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-27T14:28:17.000Z",
+        "raw": "2024-12-27T14:28:17.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:41.000Z",
+        "raw": "2026-01-24T19:53:41.000Z"
+      }
+    },
+    {
+      "id": "binzi-5ee63db850cc8871d9e22af4",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/21/%E7%AE%97%E6%B3%95/P1030%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1030",
+      "summary": "P1030（ 洛谷题面 ） 题目 题目描述： 给出一棵二叉树的中序与后序",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/21/%E7%AE%97%E6%B3%95/P1030%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-21T15:05:19.000Z",
+        "raw": "2024-12-21T15:05:19.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-5ff5c5d71882d41911853705",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/25/%E7%AE%97%E6%B3%95/P1824%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1824 [USACO05FEB] 进击的奶牛 Aggressive Cows",
+      "summary": "P1824 [USACO05FEB] 进击的奶牛 Aggressive Cows（<a href=\"https://www.luogu.com.cn/problem/P18",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/25/%E7%AE%97%E6%B3%95/P1824%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-25T14:40:54.000Z",
+        "raw": "2024-12-25T14:40:54.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:36.000Z",
+        "raw": "2026-01-24T19:53:36.000Z"
+      }
+    },
+    {
+      "id": "binzi-5fff136a6cf33fdd886b2815",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/14/%E7%AE%97%E6%B3%95/P1271%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1271",
+      "summary": "P1271 题目 题目描述： 学校正在选举学生会成员，有 <math xmlns=\"http",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/14/%E7%AE%97%E6%B3%95/P1271%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-14T14:06:32.000Z",
+        "raw": "2025-01-14T14:06:32.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:31.000Z",
+        "raw": "2026-01-24T19:53:31.000Z"
+      }
+    },
+    {
+      "id": "binzi-602cf26b070802eb795a8e2a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/01/01/MySQL%E9%94%81/",
+      "title": "MySQL的锁",
+      "summary": "MySQL锁 全局锁 ： flush tables with read lock，执行此条命令，整个数据库处于只读状态 unlock tables， 释放全局锁，会话断开时，也会",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/01/01/MySQL%E9%94%81/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-31T17:10:00.000Z",
+        "raw": "2025-12-31T17:10:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-61221a6a9f11b6bea4775940",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/15/%E7%AE%97%E6%B3%95/P8196%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P8196",
+      "summary": "P8196（ 洛谷题面 ） 题目 题目描述： 给定一个长度为 <span",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/15/%E7%AE%97%E6%B3%95/P8196%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-15T08:06:58.000Z",
+        "raw": "2025-03-15T08:06:58.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:43.000Z",
+        "raw": "2026-01-24T19:53:43.000Z"
+      }
+    },
+    {
+      "id": "binzi-61ac866fdc2c5c7f14c4988b",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P1036%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1036 [NOIP 2002 普及组] 选数",
+      "summary": "P1036 [NOIP 2002 普及组] 选数（ 洛谷题面 ） 题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P1036%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-23T14:14:48.000Z",
+        "raw": "2025-02-23T14:14:48.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:25.000Z",
+        "raw": "2026-01-24T19:53:25.000Z"
+      }
+    },
+    {
+      "id": "binzi-6267188343a247244eefceab",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P5709%E9%A2%98%E8%A7%A3/",
+      "title": "【深基2.习6】Apples Prologue / 苹果和虫子 - 题解",
+      "summary": "【深基2.习6】Apples Prologue / 苹果和虫子（ 洛谷题面 ）",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P5709%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-10T13:22:40.000Z",
+        "raw": "2025-02-10T13:22:40.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:42.000Z",
+        "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-6527fca804fbcb1aa23b9522",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/19/HotSpot%20%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/",
+      "title": "HotSpot 垃圾收集器",
+      "summary": "HotSpot 垃圾收集器 HotSpot 虚拟机提供了多种垃圾收集器，每种收集器都有各自的特点，虽然我们要对各个收集器进行比较，但并非为了挑选出一个最好的收集器。我们选择的只是对具体应用最合适的收集器。 <h",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/19/HotSpot%20%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-19T12:43:00.000Z",
+        "raw": "2025-12-19T12:43:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-669b6e9755629e1c8717910a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/09/%E7%AE%97%E6%B3%95/P1540%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1540 [NOIP 2010 提高组] 机器翻译",
+      "summary": "P1540 [NOIP 2010 提高组] 机器翻译（ 洛谷题面 ） <h2 id=\"题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/09/%E7%AE%97%E6%B3%95/P1540%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-09T15:43:55.000Z",
+        "raw": "2024-12-09T15:43:55.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:34.000Z",
+        "raw": "2026-01-24T19:53:34.000Z"
+      }
+    },
+    {
+      "id": "binzi-671a8d7f0ad43a650129911f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/01/%E7%AE%97%E6%B3%95/P10425%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10425",
+      "summary": "P10425（ 洛谷题面 ） 题目 题目描述： 小蓝最近在研究一种浮",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/01/%E7%AE%97%E6%B3%95/P10425%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-01T12:15:02.000Z",
+        "raw": "2025-03-01T12:15:02.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:26.000Z",
+        "raw": "2026-01-24T19:53:26.000Z"
+      }
+    },
+    {
+      "id": "binzi-68e731f331291a8e3b0bda3a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/24/MySqL%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7%EF%BC%8C%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/",
+      "title": "MySqL事务特性，隔离级别",
+      "summary": "MySqL事务隔离级别 事务的特性： 原子性： 事务要么全部提交成功要么全部失败 一致性： 事务操作前和操作后具有",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/24/MySqL%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7%EF%BC%8C%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-24T14:34:00.000Z",
+        "raw": "2025-12-24T14:34:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-6b001ec57d5c55dd4b87d48c",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/04/%E7%AE%97%E6%B3%95/P10442%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10442",
+      "summary": "P10442（ 洛谷题面 ） 题目 题目描述： 给定字符串 <spa",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/04/%E7%AE%97%E6%B3%95/P10442%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-04T10:22:33.000Z",
+        "raw": "2025-02-04T10:22:33.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:27.000Z",
+        "raw": "2026-01-24T19:53:27.000Z"
+      }
+    },
+    {
+      "id": "binzi-6b00acc0721b7b4c58862bc8",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/29/%E7%AE%97%E6%B3%95/P10424%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10424",
+      "summary": "P10424（ 洛谷题面 ） 题目 题目描述： 一个整数如果按从低位",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/29/%E7%AE%97%E6%B3%95/P10424%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-29T14:20:53.000Z",
+        "raw": "2024-12-29T14:20:53.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:26.000Z",
+        "raw": "2026-01-24T19:53:26.000Z"
+      }
+    },
+    {
+      "id": "binzi-6bb5a3badff48154aef80f1a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/18/%E7%AE%97%E6%B3%95/P1601%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1601 高精度加法",
+      "summary": "P1601 高精度加法（ 洛谷题面 ） 题目 题目描述： 给",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/18/%E7%AE%97%E6%B3%95/P1601%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-18T11:28:12.000Z",
+        "raw": "2025-02-18T11:28:12.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:35.000Z",
+        "raw": "2026-01-24T19:53:35.000Z"
+      }
+    },
+    {
+      "id": "binzi-6cb1fbcda1d9cb2c559f05a8",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/06/%E7%AE%97%E6%B3%95/P1996%E9%A2%98%E8%A7%A3/",
+      "title": "约瑟夫问题 - 题解",
+      "summary": "约瑟夫问题（ 洛谷题面 ） 题目 题目描述： <span class=\"",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/06/%E7%AE%97%E6%B3%95/P1996%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-06T13:58:31.000Z",
+        "raw": "2024-11-06T13:58:31.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:38.000Z",
+        "raw": "2026-01-24T19:53:38.000Z"
+      }
+    },
+    {
+      "id": "binzi-71de6baef3616bfc87de4d65",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/05/09/%E7%AE%97%E6%B3%95/P1439%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/",
+      "title": "【模板】P1439 最长公共子序列",
+      "summary": "P1439 【模板】最长公共子序列（ 洛谷题面 ） 题目 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/05/09/%E7%AE%97%E6%B3%95/P1439%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-05-09T15:26:33.000Z",
+        "raw": "2025-05-09T15:26:33.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-730c2603ba4499dae4f8ec48",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P2089%E9%A2%98%E8%A7%A3/",
+      "title": "烤鸡 - 题解",
+      "summary": "烤鸡（ 洛谷题面 ） 题目 题目描述： 猪猪 Hanke 特别喜欢吃烤鸡（本是",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P2089%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-23T08:02:10.000Z",
+        "raw": "2025-02-23T08:02:10.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:38.000Z",
+        "raw": "2026-01-24T19:53:38.000Z"
+      }
+    },
+    {
+      "id": "binzi-73307ea1e4bfdd1b6b5b8602",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/23/HashMap/",
+      "title": "HashMap",
+      "summary": "HashMap JDK 7 中 HashMap 的数据结构是 数组 + 链表 。 JDK 8 中 HashMap 的数据结构是 数组 + 链",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/23/HashMap/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-23T06:19:00.000Z",
+        "raw": "2025-11-23T06:19:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-77cb07ab64d7290d3b60d302",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P5788%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P5788",
+      "summary": "P5788 题目 题目描述： 给出项数为 <math xmlns=\"http://www.w",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/12/%E7%AE%97%E6%B3%95/P5788%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-12T15:03:53.000Z",
+        "raw": "2024-12-12T15:03:53.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:42.000Z",
+        "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-7cacc7848d62088704e56e53",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P1307%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1307",
+      "summary": "P1307 题目 题目描述： 给定一个整数 <math xmlns=\"http://www.",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P1307%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-10T14:27:28.000Z",
+        "raw": "2025-02-10T14:27:28.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:32.000Z",
+        "raw": "2026-01-24T19:53:32.000Z"
+      }
+    },
+    {
+      "id": "binzi-7f0cf471e7624dd9a23a7ac2",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/03/%E7%AE%97%E6%B3%95/P10898%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10898",
+      "summary": "P10898（ 洛谷题面 ） 题目 题目描述： 小蓝正在玩拼图游戏，",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/03/%E7%AE%97%E6%B3%95/P10898%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-03T09:22:29.000Z",
+        "raw": "2025-03-03T09:22:29.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:51:42.000Z",
+        "raw": "2026-01-24T19:51:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-7f5427e4a1a2f14a422d4c6e",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/25/%E7%AE%97%E6%B3%95/P1102%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1102 A-B 数对",
+      "summary": "P1102 A-B 数对（ 洛谷题面 ） 题目 题目描述： <p",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/25/%E7%AE%97%E6%B3%95/P1102%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-25T00:46:21.000Z",
+        "raw": "2024-12-25T00:46:21.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:29.000Z",
+        "raw": "2026-01-24T19:53:29.000Z"
+      }
+    },
+    {
+      "id": "binzi-81596e97ee856428d927f864",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P1567%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1567",
+      "summary": "P1567 题目 题目描述： 炎热的夏日，KC 非常的不爽。他宁可忍受北极的寒冷，也不愿忍受厦门的夏天。最近，他开始研究天气的变化。他希望用研究的结果预测未来的天气。 经历",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/10/%E7%AE%97%E6%B3%95/P1567%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-09T19:06:26.000Z",
+        "raw": "2025-02-09T19:06:26.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:34.000Z",
+        "raw": "2026-01-24T19:53:34.000Z"
+      }
+    },
+    {
+      "id": "binzi-82ee40b70e36728cf23c63e7",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/23/%E7%AE%97%E6%B3%95/P1923%E9%A2%98%E8%A7%A3/",
+      "title": "【深基9.例4】求第 k 小的数 - 题解",
+      "summary": "P1923 【深基9.例4】求第 k 小的数（ 洛谷题面 ） 题目<",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/23/%E7%AE%97%E6%B3%95/P1923%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-23T13:41:45.000Z",
+        "raw": "2025-03-23T13:41:45.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:37.000Z",
+        "raw": "2026-01-24T19:53:37.000Z"
+      }
+    },
+    {
+      "id": "binzi-843bd494419f525a16c9de52",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/21/Redis%E7%9A%84ziplist%E5%88%B0ListPack/",
+      "title": "Redis的ziplist到ListPack",
+      "summary": "Redis的压缩列表ziplist到紧凑列表listpack ziplist 的结构（老版本用的） 大概长这样：</p",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/21/Redis%E7%9A%84ziplist%E5%88%B0ListPack/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-21T14:24:00.000Z",
+        "raw": "2025-12-21T14:24:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-87c7558ac0c03016795a209c",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/07/17/K3%E5%8F%91%E5%B8%83%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%84%9F%E5%8F%97/",
+      "title": "Kimi K3 发布的一些个人感受",
+      "summary": "Kimi K3 的技术博客里，有一个很容易被忽略、但很关键的细节： K3 对「思考历史」极度敏感。harness 如果没有完整传回之前的 thinking 内容，生成质量会严重不稳定。 原文大致写了两个触发条件： har",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/07/17/K3%E5%8F%91%E5%B8%83%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%84%9F%E5%8F%97/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-17T10:33:45.000Z",
+        "raw": "2026-07-17T10:33:45.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-17T15:10:00.000Z",
+        "raw": "2026-07-17T15:10:00.000Z"
+      }
+    },
+    {
+      "id": "binzi-8a044a9f1b3a719747c90bbc",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/09/%E7%AE%97%E6%B3%95/P1506%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1506",
+      "summary": "P1506 题目 题目描述： oibh 被突来的洪水淹没了，还好 oibh 总部有在某些重要的地方起一些围墙。用 * 号表示，而一个四面被围墙围住的区域洪水是进",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/09/%E7%AE%97%E6%B3%95/P1506%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-08T19:34:15.000Z",
+        "raw": "2025-02-08T19:34:15.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:34.000Z",
+        "raw": "2026-01-24T19:53:34.000Z"
+      }
+    },
+    {
+      "id": "binzi-8adb83e55f902765747f0693",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/17/Redis%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/",
+      "title": "Redis网络模型",
+      "summary": "Redis网络模型（io多路复用） 阻塞IO(Blocking IO) 假设服务端只开启一个线程处理请求，第一个请求到来，开始调用内核read函数，然后就会发生阻",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/17/Redis%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-17T13:43:00.000Z",
+        "raw": "2025-12-17T13:43:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-8c531b6d680651d6c2ba9d77",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/24/%E7%AE%97%E6%B3%95/P1051%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1051",
+      "summary": "P1051（ 洛谷题面 ） 题目 题目描述： 某校的惯例是在每学期的期末",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/24/%E7%AE%97%E6%B3%95/P1051%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-24T12:23:23.000Z",
+        "raw": "2025-01-24T12:23:23.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:27.000Z",
+        "raw": "2026-01-24T19:53:27.000Z"
+      }
+    },
+    {
+      "id": "binzi-944d79a9a4e40d977523f840",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P5638%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P5638",
+      "summary": "P5638 题目 题目描述： 小 K 打下的江山一共有 <math xmlns=\"http:",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P5638%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-12T17:55:35.000Z",
+        "raw": "2025-03-12T17:55:35.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:42.000Z",
+        "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-94f780dd983d65861ec86c2e",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/22/%E7%AE%97%E6%B3%95/P1229%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1229",
+      "summary": "P1229 题目 题目描述： 我们都很熟悉二叉树的前序、中序、后序遍历，在数据结构中常提出这样的问题：已知一棵二叉树的前序和中序遍历，求它的后序遍历，相应的，已知一棵二叉树的后序遍历和中",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/22/%E7%AE%97%E6%B3%95/P1229%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-22T12:14:25.000Z",
+        "raw": "2024-12-22T12:14:25.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:31.000Z",
+        "raw": "2026-01-24T19:53:31.000Z"
+      }
+    },
+    {
+      "id": "binzi-9523a6c7f1045c5ae0e30140",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/27/%E7%AE%97%E6%B3%95/P10902%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10902",
+      "summary": "P10902（ 洛谷题面 ） 题目 题目描述： 小蓝在无聊时随机生成",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/27/%E7%AE%97%E6%B3%95/P10902%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-27T09:22:50.000Z",
+        "raw": "2025-02-27T09:22:50.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:28.000Z",
+        "raw": "2026-01-24T19:53:28.000Z"
+      }
+    },
+    {
+      "id": "binzi-9565c05d40f7cd64f579c4d9",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/24/%E7%AE%97%E6%B3%95/P1035%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1035 [NOIP 2002 普及组] 级数求和",
+      "summary": "P1035 [NOIP 2002 普及组] 级数求和（ 洛谷题面 ） <h2 id=\"题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/24/%E7%AE%97%E6%B3%95/P1035%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-24T12:09:15.000Z",
+        "raw": "2025-01-24T12:09:15.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:25.000Z",
+        "raw": "2026-01-24T19:53:25.000Z"
+      }
+    },
+    {
+      "id": "binzi-956ef2210bb82fd54f424b02",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/23/%E7%AE%97%E6%B3%95/P3378%E9%A2%98%E8%A7%A3/",
+      "title": "【模板】堆 - 题解",
+      "summary": "【模板】堆（ 洛谷题面 ） 题目 题目描述： 给定一个数列，初始为空，请",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/23/%E7%AE%97%E6%B3%95/P3378%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-23T14:53:26.000Z",
+        "raw": "2024-12-23T14:53:26.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:41.000Z",
+        "raw": "2026-01-24T19:53:41.000Z"
+      }
+    },
+    {
+      "id": "binzi-9aed8cd66e435929970f441c",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/24/SpringIOC/",
+      "title": "SpringIOC",
+      "summary": "什么是 IoC? IoC （Inversion of Control ）即控制反转/反转控制。它是一种思想不是一个技术实现。描述的是：Java 开发领域对象的创建以及管理的问题。 例如：现有类 A 依赖于类 B</p",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/24/SpringIOC/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-24T10:51:00.000Z",
+        "raw": "2025-11-24T10:51:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-a2127146131fb818c5af4e23",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/04/%E7%AE%97%E6%B3%95/P2032%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2032",
+      "summary": "P2032 题目 题目描述： 有一个 <math xmlns=\"http://www.w3.",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/04/%E7%AE%97%E6%B3%95/P2032%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-04T00:50:42.000Z",
+        "raw": "2024-12-04T00:50:42.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:38.000Z",
+        "raw": "2026-01-24T19:53:38.000Z"
+      }
+    },
+    {
+      "id": "binzi-a3c3c715594a2a1ff29e90de",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/11/leetcode/hot100/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/",
+      "title": "LeetCode Hot 100 - 24. 两两交换链表中的节点",
+      "summary": "LeetCode 24. 两两交换链表中的节点 题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/11/leetcode/hot100/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-11T07:00:00.000Z",
+        "raw": "2025-11-11T07:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-a708c85ecc78b9dce3e99f43",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P1618%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1618 三连击（升级版）",
+      "summary": "P1618 三连击（升级版）（ 洛谷题面 ） 题目 题目描述：</p",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/23/%E7%AE%97%E6%B3%95/P1618%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-23T12:39:30.000Z",
+        "raw": "2025-02-23T12:39:30.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:35.000Z",
+        "raw": "2026-01-24T19:53:35.000Z"
+      }
+    },
+    {
+      "id": "binzi-aae3b2adcb137a957be65764",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/20/P10389%E6%88%90%E7%BB%A9%E7%BB%9F%E8%AE%A1/",
+      "title": "洛谷 P10389 蓝桥杯 2024 省赛成绩统计",
+      "summary": "蓝桥杯 2024 省赛 A：成绩统计 题目描述 有 <span",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/20/P10389%E6%88%90%E7%BB%A9%E7%BB%9F%E8%AE%A1/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-20T02:00:00.000Z",
+        "raw": "2025-01-20T02:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2025-11-11T09:47:28.000Z",
+        "raw": "2025-11-11T09:47:28.000Z"
+      }
+    },
+    {
+      "id": "binzi-ad531704819a7584915f1eb5",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/24/%E7%AE%97%E6%B3%95/P1706%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1706",
+      "summary": "P1706 题目 题目描述： 按照字典序输出自然数 <math xmlns=\"http://",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/24/%E7%AE%97%E6%B3%95/P1706%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-24T15:20:27.000Z",
+        "raw": "2025-02-24T15:20:27.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:35.000Z",
+        "raw": "2026-01-24T19:53:35.000Z"
+      }
+    },
+    {
+      "id": "binzi-b30d671c230ad848b2364121",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/19/%E7%AE%97%E6%B3%95/P3654%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P3654",
+      "summary": "P3654 题目 题目描述： 可是……这个篮球场，好像很久没有使用过的样子啊…… 里面堆满了学校的各种杂物呢…… 我们 Aqours 的成员要怎么在里面列队站",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/19/%E7%AE%97%E6%B3%95/P3654%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-19T14:03:00.000Z",
+        "raw": "2025-03-19T14:03:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:41.000Z",
+        "raw": "2026-01-24T19:53:41.000Z"
+      }
+    },
+    {
+      "id": "binzi-b4c5569b87bd74ebb2c3e516",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/29/%E7%AE%97%E6%B3%95/P8637%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P8637",
+      "summary": "P8637（ 洛谷题面 ） 题目 题目描述： 有 <span class",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/29/%E7%AE%97%E6%B3%95/P8637%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-29T07:20:11.000Z",
+        "raw": "2024-11-29T07:20:11.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:43.000Z",
+        "raw": "2026-01-24T19:53:43.000Z"
+      }
+    },
+    {
+      "id": "binzi-b4e4bb98be84e9e6613e947d",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/11/26/%E7%AE%97%E6%B3%95/P1305%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1305 新二叉树",
+      "summary": "P1305 新二叉树（ 洛谷题面 ） 题目 题目描述： 输入一",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/11/26/%E7%AE%97%E6%B3%95/P1305%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-11-26T15:47:59.000Z",
+        "raw": "2024-11-26T15:47:59.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:32.000Z",
+        "raw": "2026-01-24T19:53:32.000Z"
+      }
+    },
+    {
+      "id": "binzi-b75eb2c143133d9d37dc6899",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1304%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1304 哥德巴赫猜想",
+      "summary": "P1304 哥德巴赫猜想（ 洛谷题面 ） 题目 题目描述： <p",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/06/%E7%AE%97%E6%B3%95/P1304%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-06T07:56:13.000Z",
+        "raw": "2025-03-06T07:56:13.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:32.000Z",
+        "raw": "2026-01-24T19:53:32.000Z"
+      }
+    },
+    {
+      "id": "binzi-bffbff71665a82894960e1c2",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/24/%E7%AE%97%E6%B3%95/P11395%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P11395",
+      "summary": "P11395 题目 题目描述： 喵喵喵群里面，吃喵喵是坏文明。 现在群友有",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/24/%E7%AE%97%E6%B3%95/P11395%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-24T14:02:43.000Z",
+        "raw": "2024-12-24T14:02:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:30.000Z",
+        "raw": "2026-01-24T19:53:30.000Z"
+      }
+    },
+    {
+      "id": "binzi-c0364edc00d880447e695182",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/17/%E7%AE%97%E6%B3%95/P1739%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1739 表达式括号匹配",
+      "summary": "P1739 表达式括号匹配（ 洛谷题面 ） 题目 题目描述：",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/17/%E7%AE%97%E6%B3%95/P1739%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-17T14:26:50.000Z",
+        "raw": "2024-12-17T14:26:50.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:35.000Z",
+        "raw": "2026-01-24T19:53:35.000Z"
+      }
+    },
+    {
+      "id": "binzi-c0548b4c8226e7d4646b796c",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/14/Redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81redisson%E7%9C%8B%E9%97%A8%E7%8B%97%E6%9C%BA%E5%88%B6/",
+      "title": "Redis分布式锁redisson看门狗机制",
+      "summary": "Redis分布式锁方案 使用 Redis 的 SET key value NX EX实现分布式锁时，主要问题是锁过期时间不好设置：如果设置过短，业务未完成锁就过期；设置过长，会降低系统并发度。为此",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/14/Redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81redisson%E7%9C%8B%E9%97%A8%E7%8B%97%E6%9C%BA%E5%88%B6/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-14T12:24:00.000Z",
+        "raw": "2025-11-14T12:24:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-c38a2d3d4bcefac636e05240",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/04/10/%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%BB%E8%A7%89/",
+      "title": "怎么减少大模型幻觉？",
+      "summary": "大模型最麻烦的时刻，不是它说不知道。 而是它给出一个语气笃定、结构完整、甚至带着出处的答案，等你真的去查，才发现内容根本不存在。 这种现象通常被叫作幻觉。 模型不是在主观撒谎。它的核心任务是根据上下文预测接下来最可能出现的内容。当可",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/04/10/%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%BB%E8%A7%89/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-04-10T06:41:35.000Z",
+        "raw": "2026-04-10T06:41:35.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-08T21:11:20.000Z",
+        "raw": "2026-07-08T21:11:20.000Z"
+      }
+    },
+    {
+      "id": "binzi-c412e7ca12273548e5b4b215",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/28/ConcurrentHashMap%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/",
+      "title": "ConcurrentHashMap底层原理",
+      "summary": "ConcurrentHashMap底层原理 jdk1.7是数组加链表，它在对象中保存了一个 Segment数组 。每个Segment元素类似于一个Hashtable；这样，",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/28/ConcurrentHashMap%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-28T05:05:00.000Z",
+        "raw": "2025-11-28T05:05:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-c7b6e0d6795e52de53e49514",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/08/01/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/",
+      "title": "Pi Agent 工具架构设计：三层类型 + 五步管道 + 并行调度 + 错误处理",
+      "summary": "在 Pi Agent 的工具系统中，工具的抽象和执行机制是整个架构的核心。本文系统梳理工具定义的三层类型、调用时的五步管道、并行执行策略，以及错误处理的特殊设计。 一、三层类型：为什么”一个工具”要",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/08/01/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "2026-08-01T09:05:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "2026-08-01T09:05:00.000Z"
+      }
+    },
+    {
+      "id": "binzi-cedb4b2ecb9dca9ac55e3dc8",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/07/%E7%AE%97%E6%B3%95/P2422%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2422",
+      "summary": "P2422 题目 题目描述： kkk 做了一个人体感觉分析器。每一天，人都有一个感受值 <m",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/07/%E7%AE%97%E6%B3%95/P2422%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-07T12:33:10.000Z",
+        "raw": "2024-12-07T12:33:10.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:40.000Z",
+        "raw": "2026-01-24T19:53:40.000Z"
+      }
+    },
+    {
+      "id": "binzi-d41d0470ca3cb132f78efb91",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/04/%E7%AE%97%E6%B3%95/P1440%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1440",
+      "summary": "P1440 题目 题目描述： 一个含有 <math xmlns=\"http://www.w3",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/04/%E7%AE%97%E6%B3%95/P1440%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-03T17:10:54.000Z",
+        "raw": "2024-12-03T17:10:54.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:33.000Z",
+        "raw": "2026-01-24T19:53:33.000Z"
+      }
+    },
+    {
+      "id": "binzi-d5b6474eb304775781ccaaa1",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/22/%E7%AE%97%E6%B3%95/P2196%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2196",
+      "summary": "P2196 题目 题目描述： 在一个地图上有 <math xmlns=\"http://www",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/22/%E7%AE%97%E6%B3%95/P2196%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-22T14:27:43.000Z",
+        "raw": "2025-03-22T14:27:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:39.000Z",
+        "raw": "2026-01-24T19:53:39.000Z"
+      }
+    },
+    {
+      "id": "binzi-d6ab6625a03c66c975962fba",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/01/26/cookie%E3%80%81session%E3%80%81token/",
+      "title": "cookie、session、token",
+      "summary": "cookie、session、token cookie 服务端发给客户端，交给客户端保存的数据，每次请求，客户端带上这些数据，服务端就读取这些数据，鉴别身份。 完全由客户端存储，和域名绑定",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/01/26/cookie%E3%80%81session%E3%80%81token/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-01-26T07:54:15.000Z",
+        "raw": "2026-01-26T07:54:15.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-d7a5684544ffee9106a0ec19",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/18/%E7%AE%97%E6%B3%95/P2347%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P2347",
+      "summary": "P2347（ 洛谷题面 ） 题目 题目描述： 设有 <span clas",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/18/%E7%AE%97%E6%B3%95/P2347%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-18T14:31:37.000Z",
+        "raw": "2025-03-18T14:31:37.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:39.000Z",
+        "raw": "2026-01-24T19:53:39.000Z"
+      }
+    },
+    {
+      "id": "binzi-dba022018af424326b3f1f8d",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/17/%E7%AE%97%E6%B3%95/P1449%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1449 后缀表达式",
+      "summary": "P1449 后缀表达式（ 洛谷题面 ） 题目 题目描述： 所",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/17/%E7%AE%97%E6%B3%95/P1449%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-17T08:48:42.000Z",
+        "raw": "2024-12-17T08:48:42.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:34.000Z",
+        "raw": "2026-01-24T19:53:34.000Z"
+      }
+    },
+    {
+      "id": "binzi-de40705e6466d9a71d410de1",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P10900%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P10900",
+      "summary": "P10900（ 洛谷题面 ） 题目 题目描述： 在诗人的眼中，数字是",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P10900%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-13T07:04:51.000Z",
+        "raw": "2025-03-13T07:04:51.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:28.000Z",
+        "raw": "2026-01-24T19:53:28.000Z"
+      }
+    },
+    {
+      "id": "binzi-e2240db33ee667d2d6064cec",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/08/01/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9AOperations/",
+      "title": "Pi Agent 工具架构设计：Operations 抽象与 Workspace 切换",
+      "summary": "在 Pi Agent 的工具系统中， Operations 抽象 是核心设计之一。它把工具的执行逻辑与具体文件系统实现解耦，让 Agent 可以在本地、SSH、Docker 等不同环境中灵活切换。 本文主要分享工具架构的核心设计",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/08/01/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9AOperations/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "2026-08-01T09:05:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "2026-08-01T09:05:00.000Z"
+      }
+    },
+    {
+      "id": "binzi-e31b2070e962b8b532baead9",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/09/%E7%AE%97%E6%B3%95/P1143%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1143 进制转换",
+      "summary": "P1143 进制转换（ 洛谷题面 ） 题目 题目描述： 请你编",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/09/%E7%AE%97%E6%B3%95/P1143%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-09T11:13:37.000Z",
+        "raw": "2025-03-09T11:13:37.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:30.000Z",
+        "raw": "2026-01-24T19:53:30.000Z"
+      }
+    },
+    {
+      "id": "binzi-e4c2c8a3a5b8fe914e396b30",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/07/09/RRF%E6%8E%92%E5%BA%8F%E8%9E%8D%E5%90%88/",
+      "title": "RRF 排序融合，混合检索如何统一 BM25 和向量搜索",
+      "summary": "做混合检索时，会碰到一个很朴素的问题。 BM25 说某篇文档得了 18.6 分，向量检索说另一篇文档的相似度是 0.83。到底谁应该排在前面？ 18.6 看起来比 0.83 大得多，但这两个数字根本不在同一把尺子上。直接相加没有意义，随手归一化又",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/07/09/RRF%E6%8E%92%E5%BA%8F%E8%9E%8D%E5%90%88/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-08T17:04:11.000Z",
+        "raw": "2026-07-08T17:04:11.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-08T21:11:02.000Z",
+        "raw": "2026-07-08T21:11:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-e5f75291d0975ca23e781354",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/24/%E7%AE%97%E6%B3%95/P1434%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1434 [SHOI2002] 滑雪",
+      "summary": "P1434 [SHOI2002] 滑雪（ 洛谷题面 ） 题目",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/24/%E7%AE%97%E6%B3%95/P1434%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-24T10:30:14.000Z",
+        "raw": "2025-03-24T10:30:14.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:33.000Z",
+        "raw": "2026-01-24T19:53:33.000Z"
+      }
+    },
+    {
+      "id": "binzi-e5fd28c59eaf7bbcccf46795",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/14/redis%E5%81%9A%E4%B8%BA%E7%BC%93%E5%AD%98%EF%BC%8Cmysql%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A6%82%E4%BD%95%E4%B8%8Eredis%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E5%91%A2%EF%BC%9F%EF%BC%88%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%89/",
+      "title": "redis做为缓存，mysql的数据如何与redis进行同步呢？（双写一致性）",
+      "summary": "redis做为缓存，mysql的数据如何与redis进行同步呢？（双写一致性） 在项目中，我们主要通过 Rediss",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/14/redis%E5%81%9A%E4%B8%BA%E7%BC%93%E5%AD%98%EF%BC%8Cmysql%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A6%82%E4%BD%95%E4%B8%8Eredis%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E5%91%A2%EF%BC%9F%EF%BC%88%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%89/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-14T13:27:00.000Z",
+        "raw": "2025-11-14T13:27:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-e8197c57eb19641bfaa81753",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/01/23/Synchronized%20%E4%B8%8E%20ReentrantLock%20%E7%9A%84%E5%8C%BA%E5%88%AB/",
+      "title": "Synchronized 与 ReentrantLock 的区别",
+      "summary": "Synchronized 与 ReentrantLock 的区别 synchronized ： 隐式锁 ，JVM 自动加锁 /",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/01/23/Synchronized%20%E4%B8%8E%20ReentrantLock%20%E7%9A%84%E5%8C%BA%E5%88%AB/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-01-23T13:28:00.000Z",
+        "raw": "2025-01-23T13:28:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-f4631fff5190ccb5c18df870",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/02/26/%E7%AE%97%E6%B3%95/P11041%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P11041",
+      "summary": "P11041（ 洛谷题面 ） 题目 题目描述： 小蓝和朋友们在玩一个",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/02/26/%E7%AE%97%E6%B3%95/P11041%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-02-26T10:11:09.000Z",
+        "raw": "2025-02-26T10:11:09.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:51:43.000Z",
+        "raw": "2026-01-24T19:51:43.000Z"
+      }
+    },
+    {
+      "id": "binzi-f6973ebb089cf88cf4b6f3ab",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/23/Volatile%E5%8E%9F%E7%90%86/",
+      "title": "Volatile原理",
+      "summary": "Volatile原理 <img src=\"/img/covers/image-20251122222435220.png\" class=\"lazyload\" data-srcset=\"/img/covers/image-20251122222435220.pn",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/23/Volatile%E5%8E%9F%E7%90%86/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-22T16:56:00.000Z",
+        "raw": "2025-11-22T16:56:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-f7a342b5ce1e0d55132f5eb9",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P1957%E9%A2%98%E8%A7%A3/",
+      "title": "口算练习题 - 题解",
+      "summary": "口算练习题（ 洛谷题面 ） 题目 题目描述： 王老师正在教简单算术运算。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/13/%E7%AE%97%E6%B3%95/P1957%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-13T08:56:10.000Z",
+        "raw": "2025-03-13T08:56:10.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:37.000Z",
+        "raw": "2026-01-24T19:53:37.000Z"
+      }
+    },
+    {
+      "id": "binzi-f8e0d9bd14a4b52607c49a0a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/12/25/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/",
+      "title": "SpringMVC执行流程",
+      "summary": "SpringMVC执行流程 请求先到 DispatcherServlet（前端控制器） ，它负责调度 HandlerMapping → HandlerAdapter →",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/12/25/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-12-25T13:05:00.000Z",
+        "raw": "2025-12-25T13:05:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-f95f2178e79148eacca7e3a1",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/04/14/MCP%E5%92%8CSkill%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/",
+      "title": "MCP 和 Skill，到底是什么关系？",
+      "summary": "最近看 Agent 相关的项目，经常会同时碰到三个词，Function Calling、MCP 和 Skill。 它们看起来都和「让模型做事」有关，于是很容易混在一起。有人把 MCP 当成更高级的 Function Calling，也有人觉得有了 Skill",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/04/14/MCP%E5%92%8CSkill%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-04-14T07:05:43.000Z",
+        "raw": "2026-04-14T07:05:43.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-07-08T21:10:36.000Z",
+        "raw": "2026-07-08T21:10:36.000Z"
+      }
+    },
+    {
+      "id": "binzi-f989db02fcc23f44670739b1",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2024/12/28/%E7%AE%97%E6%B3%95/P1017%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1017 [NOIP 2000 提高组] 进制转换",
+      "summary": "P1017 [NOIP 2000 提高组] 进制转换（ 洛谷题面 ） <h2 id=\"题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2024/12/28/%E7%AE%97%E6%B3%95/P1017%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2024-12-28T15:14:42.000Z",
+        "raw": "2024-12-28T15:14:42.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:23.000Z",
+        "raw": "2026-01-24T19:53:23.000Z"
+      }
+    },
+    {
+      "id": "binzi-fd1f2cac74a323f2c999e174",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/11/22/MySQL%20%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E7%9A%84%E6%9C%80%E5%B7%A6%E5%8C%B9%E9%85%8D%E5%8E%9F%E5%88%99/",
+      "title": "MySQL 联合索引的最左匹配原则",
+      "summary": "MySQL 联合索引的最左匹配原则 执行计划基础知识 possible_keys ：可能用到的索引",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/11/22/MySQL%20%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E7%9A%84%E6%9C%80%E5%B7%A6%E5%8C%B9%E9%85%8D%E5%8E%9F%E5%88%99/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-11-21T17:25:00.000Z",
+        "raw": "2025-11-21T17:25:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-04-07T14:26:02.000Z",
+        "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-fd60079931859352000dbcac",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2025/03/18/%E7%AE%97%E6%B3%95/P1048%E9%A2%98%E8%A7%A3/",
+      "title": "【题解】P1048 [NOIP 2005 普及组] 采药",
+      "summary": "P1048 [NOIP 2005 普及组] 采药（ 洛谷题面 ） 题",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2025/03/18/%E7%AE%97%E6%B3%95/P1048%E9%A2%98%E8%A7%A3/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2025-03-18T14:41:33.000Z",
+        "raw": "2025-03-18T14:41:33.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-01-24T19:53:27.000Z",
+        "raw": "2026-01-24T19:53:27.000Z"
+      }
+    }
+  ]
+}
