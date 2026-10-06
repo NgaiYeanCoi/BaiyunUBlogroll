@@ -52,6 +52,7 @@
     "name": "彬子的Blog",
     "siteUrl": "https://www.binzi.top/",
     "feedUrl": "https://www.binzi.top/atom.xml",
+    "avatarUrl": "https://www.binzi.top/img/qq.jpg",
     "enabled": true,
     "description": "记录与分享"
   }
