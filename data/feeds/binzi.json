@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "binzi",
-  "contentChangedAt": "2026-10-06T01:18:55.870Z",
+  "contentChangedAt": "2026-10-09T21:08:57.745Z",
   "articles": [
     {
       "id": "binzi-00437f5bee5d6a27d5347dbc",
@@ -991,6 +991,28 @@
         "kind": "instant",
         "value": "2026-01-24T19:53:42.000Z",
         "raw": "2026-01-24T19:53:42.000Z"
+      }
+    },
+    {
+      "id": "binzi-64197b8aa8f69f02b98a580f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/10/Claude%20Code%20Projects%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%20Agent%20Session/",
+      "title": "Claude Code Projects：一个对话框，管理多个 Agent Session",
+      "summary": "今天看到了 Claude 的一篇文章，介绍重新设计后的 Claude Code Projects 。 我觉得这个功能挺有意思：它在 Claude Code Session 之上增加了一个项目级 Coordinator（协调 Ag",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/10/Claude%20Code%20Projects%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%20Agent%20Session/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-10T04:00:00.000Z",
+        "raw": "2026-10-10T04:00:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-10T04:00:00.000Z",
+        "raw": "2026-10-10T04:00:00.000Z"
       }
     },
     {
