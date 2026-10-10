@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "binzi",
-  "contentChangedAt": "2026-10-09T21:08:57.745Z",
+  "contentChangedAt": "2026-10-10T20:15:38.826Z",
   "articles": [
     {
       "id": "binzi-00437f5bee5d6a27d5347dbc",
@@ -2377,6 +2377,28 @@
         "kind": "instant",
         "value": "2026-01-24T19:53:23.000Z",
         "raw": "2026-01-24T19:53:23.000Z"
+      }
+    },
+    {
+      "id": "binzi-fbb1206e1c93fa021d8f6209",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/10/kimi-code-edit-design/",
+      "title": "用了 Kimi Code 后，我又重新看了一遍 Coding Agent 的 Edit 设计",
+      "summary": "最近 GPT-6.1 Sol 实在是有点慢，想着既然要等那么久，不如换 Kimi 试试，刚好搭配 Kimi Code 用了一下。 用的过程中发现，Kimi Code 的 Edit 设计和 Codex 不太一样。 Codex 主要采用 apply_patch ，让模型通过 Patch 描述文件修改；而 Kimi Code 用的是传统的 old_string → new_string 字符串替换。 另外还有一个让我感兴趣的设计： Codex 在 GPT-6 Astra 上就已经使用 Code Mode 编排工具调用，GPT-6.1 Sol 也沿用了这种方式。 这并不是 Sol 才出现的新特性。 我个人感觉，这可能和模型能力的提升有关。模型越来越擅长编写代码和处理复杂的工具调用，Harness 也开始让模型承担更多的编排工作。 当然，Code Mode 和 Patch 并不是互相替代的关系，一个负责工具编排，一个负责文件编辑。 之前设计 Biny-Agent 的 Edit 时，我其实就思考过这些方案。借着这次使用 Kimi Code，重新翻了一遍源码，也顺便整理一下目前几个 Coding Agent 的设计区别。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/10/kimi-code-edit-design/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-09T21:24:48.000Z",
+        "raw": "2026-10-09T21:24:48.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-09T21:31:18.000Z",
+        "raw": "2026-10-09T21:31:18.000Z"
       }
     },
     {
