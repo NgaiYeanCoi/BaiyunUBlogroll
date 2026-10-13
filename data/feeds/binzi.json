@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "binzi",
-  "contentChangedAt": "2026-10-12T23:09:32.158Z",
+  "contentChangedAt": "2026-10-13T21:28:19.165Z",
   "articles": [
     {
       "id": "binzi-00437f5bee5d6a27d5347dbc",
@@ -111,6 +111,28 @@
         "kind": "instant",
         "value": "2026-01-24T19:53:30.000Z",
         "raw": "2026-01-24T19:53:30.000Z"
+      }
+    },
+    {
+      "id": "binzi-0e7ba3551a6ed1accc3e74df",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-loop-runtime/",
+      "title": "Ai Agent概念扫盲：Agent Loop、ReAct、Runtime 与 Harness",
+      "summary": "Agent 怎样根据反馈行动，任务状态存在哪里，断连和恢复有什么区别，以及为什么超时后不能盲目重试。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-loop-runtime/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:37:00.000Z",
+        "raw": "2026-10-12T13:37:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:37:00.000Z",
+        "raw": "2026-10-12T13:37:00.000Z"
       }
     },
     {
@@ -818,6 +840,28 @@
       }
     },
     {
+      "id": "binzi-5c240381b5e72ccc32786fe8",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-safety-evaluation/",
+      "title": "Ai Agent概念扫盲：权限、信任边界、Test、Eval 与工程交付",
+      "summary": "区分认证、授权、单次批准和沙箱，说明外部资料为何不能授予权限，再把任务验收、测试、评测和发布术语串起来。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-safety-evaluation/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:32:00.000Z",
+        "raw": "2026-10-12T13:32:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:32:00.000Z",
+        "raw": "2026-10-12T13:32:00.000Z"
+      }
+    },
+    {
       "id": "binzi-5e8f805b13bf34759ed2ae3f",
       "sourceId": "binzi",
       "url": "https://binzi.top/2024/12/27/%E7%AE%97%E6%B3%95/P2678%E9%A2%98%E8%A7%A3/",
@@ -1236,6 +1280,28 @@
       }
     },
     {
+      "id": "binzi-732fb3d064d9ce57874b19b7",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-concepts/",
+      "title": "Ai Agent概念扫盲",
+      "summary": "按术语逐项解释 Skill、MCP、ACP、Code Mode、RAG、Memory、Harness 等 Agent 概念，每项附对应专题入口。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-concepts/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "2026-10-12T13:40:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "2026-10-12T13:40:00.000Z"
+      }
+    },
+    {
       "id": "binzi-73307ea1e4bfdd1b6b5b8602",
       "sourceId": "binzi",
       "url": "https://binzi.top/2025/11/23/HashMap/",
@@ -1522,6 +1588,28 @@
       }
     },
     {
+      "id": "binzi-946738cb816c17883e09f571",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-cache-observability/",
+      "title": "Ai Agent概念扫盲：Cache Hit、KV Cache、Prompt Cache 与性能",
+      "summary": "区分八类缓存，解释命中与上下文的关系，再用 Logs、Metrics、Trace 和延迟指标找出时间花在哪里。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-cache-observability/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:33:00.000Z",
+        "raw": "2026-10-12T13:33:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:33:00.000Z",
+        "raw": "2026-10-12T13:33:00.000Z"
+      }
+    },
+    {
       "id": "binzi-94f780dd983d65861ec86c2e",
       "sourceId": "binzi",
       "url": "https://binzi.top/2024/12/22/%E7%AE%97%E6%B3%95/P1229%E9%A2%98%E8%A7%A3/",
@@ -1607,6 +1695,28 @@
         "kind": "instant",
         "value": "2026-01-24T19:53:41.000Z",
         "raw": "2026-01-24T19:53:41.000Z"
+      }
+    },
+    {
+      "id": "binzi-9a7bb90ddf5ac966ff1afe98",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-collaboration-computer-use/",
+      "title": "Ai Agent概念扫盲：多 Agent、Handoff、LSP 与 Computer Use",
+      "summary": "多 Agent 怎样分工、交接和汇总，编码工具怎样观察与修改代码，浏览器和电脑操作怎样确认真正成功。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-collaboration-computer-use/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:34:00.000Z",
+        "raw": "2026-10-12T13:34:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:34:00.000Z",
+        "raw": "2026-10-12T13:34:00.000Z"
       }
     },
     {
@@ -1922,7 +2032,7 @@
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/04/10/%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%BB%E8%A7%89/",
       "title": "怎么减少大模型幻觉？",
-      "summary": "大模型最麻烦的时刻，不是它说不知道。 而是它给出一个语气笃定、结构完整、甚至带着出处的答案，等你真的去查，才发现内容根本不存在。 这种现象通常被叫作幻觉。 模型不是在主观撒谎。它的核心任务是根据上下文预测接下来最可能出现的内容。当可",
+      "summary": "本文侧重错误治理。完整的资料准备、分块、Embedding、BM25、重排和 GraphRAG，可以先读 RAG 概念专题 ；整个系列入口是 <a href=\"/2026",
       "author": "彬子",
       "guids": [
         "https://binzi.top/2026/04/10/%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%BB%E8%A7%89/"
@@ -1935,8 +2045,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-07-08T21:11:20.000Z",
-        "raw": "2026-07-08T21:11:20.000Z"
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "2026-10-12T13:40:00.000Z"
       }
     },
     {
@@ -2006,6 +2116,28 @@
       }
     },
     {
+      "id": "binzi-d214303680fb45e3c28ed994",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-context-memory/",
+      "title": "Ai Agent概念扫盲：Prompt、Context、History 与 Memory",
+      "summary": "保存的信息怎样进入模型，历史、状态、记忆和缓存有什么区别，长对话怎样压缩，以及记忆怎样更新和遗忘。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-context-memory/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:36:00.000Z",
+        "raw": "2026-10-12T13:36:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:36:00.000Z",
+        "raw": "2026-10-12T13:36:00.000Z"
+      }
+    },
+    {
       "id": "binzi-d41d0470ca3cb132f78efb91",
       "sourceId": "binzi",
       "url": "https://binzi.top/2024/12/04/%E7%AE%97%E6%B3%95/P1440%E9%A2%98%E8%A7%A3/",
@@ -2047,6 +2179,28 @@
         "kind": "instant",
         "value": "2026-01-24T19:53:39.000Z",
         "raw": "2026-01-24T19:53:39.000Z"
+      }
+    },
+    {
+      "id": "binzi-d5d858e02bf00a3873ede0b9",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-tools-protocols/",
+      "title": "Ai Agent概念扫盲：Tool、Skill、MCP、ACP 与 Code Mode",
+      "summary": "用一次代码审查串起工具调用、结构化输出、Skill、工具发现、MCP、ACP、A2A、LSP 和程序化编排。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-tools-protocols/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:38:00.000Z",
+        "raw": "2026-10-12T13:38:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:38:00.000Z",
+        "raw": "2026-10-12T13:38:00.000Z"
       }
     },
     {
@@ -2199,8 +2353,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-07-08T21:11:02.000Z",
-        "raw": "2026-07-08T21:11:02.000Z"
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "2026-10-12T13:40:00.000Z"
       }
     },
     {
@@ -2245,6 +2399,28 @@
         "kind": "instant",
         "value": "2026-04-07T14:26:02.000Z",
         "raw": "2026-04-07T14:26:02.000Z"
+      }
+    },
+    {
+      "id": "binzi-e6c059664834f7b1dd96248e",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-rag/",
+      "title": "Ai Agent概念扫盲：一篇串起 RAG、Embedding、BM25、RRF 与重排",
+      "summary": "用一次报销文档查询，串起资料解析、分块、索引、召回、融合、重排、证据组织、RAG 进阶与分层评测。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-rag/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:35:00.000Z",
+        "raw": "2026-10-12T13:35:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:35:00.000Z",
+        "raw": "2026-10-12T13:35:00.000Z"
       }
     },
     {
@@ -2336,6 +2512,28 @@
       }
     },
     {
+      "id": "binzi-f8de8cc0a2ac18f35687cf1a",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/2026/10/12/ai-agent-model-basics/",
+      "title": "Ai Agent概念扫盲：Token、推理、采样与模型训练",
+      "summary": "模型是什么，Token 怎么数，Inference 和 Reasoning 为什么都叫推理，以及 Prompt、RAG 和微调分别改变了什么。",
+      "author": "彬子",
+      "guids": [
+        "https://binzi.top/2026/10/12/ai-agent-model-basics/"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:39:00.000Z",
+        "raw": "2026-10-12T13:39:00.000Z"
+      },
+      "updated": {
+        "kind": "instant",
+        "value": "2026-10-12T13:39:00.000Z",
+        "raw": "2026-10-12T13:39:00.000Z"
+      }
+    },
+    {
       "id": "binzi-f8e0d9bd14a4b52607c49a0a",
       "sourceId": "binzi",
       "url": "https://binzi.top/2025/12/25/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/",
@@ -2362,7 +2560,7 @@
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/04/14/MCP%E5%92%8CSkill%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/",
       "title": "MCP 和 Skill，到底是什么关系？",
-      "summary": "最近看 Agent 相关的项目，经常会同时碰到三个词，Function Calling、MCP 和 Skill。 它们看起来都和「让模型做事」有关，于是很容易混在一起。有人把 MCP 当成更高级的 Function Calling，也有人觉得有了 Skill",
+      "summary": "这篇可以接着 Ai Agent概念扫盲 阅读。想把 ACP、A2A、LSP 和 Code Mode 一起弄清楚，可以看 <a href=\"/2026/10/1",
       "author": "彬子",
       "guids": [
         "https://binzi.top/2026/04/14/MCP%E5%92%8CSkill%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/"
@@ -2375,8 +2573,8 @@
       },
       "updated": {
         "kind": "instant",
-        "value": "2026-07-08T21:10:36.000Z",
-        "raw": "2026-07-08T21:10:36.000Z"
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "2026-10-12T13:40:00.000Z"
       }
     },
     {
