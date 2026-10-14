@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceId": "binzi",
-  "contentChangedAt": "2026-10-13T21:28:19.165Z",
+  "contentChangedAt": "2026-10-14T20:18:00.251Z",
   "articles": [
     {
       "id": "binzi-00437f5bee5d6a27d5347dbc",
@@ -114,6 +114,24 @@
       }
     },
     {
+      "id": "binzi-04362baeb56fc58b8e2b9cd0",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/java/AIO%20BIO%20NIO%E5%8C%BA%E5%88%AB%EF%BC%9F",
+      "title": "AIO BIO NIO区别？",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/java/AIO BIO NIO区别？ AIO BIO NIO区别？ BIO（同步阻塞 I/O） BIO 是传统的 I/O 模式，全称为 Block I/O ，也叫同步阻塞 I/O。在 BIO 模式下，当我们执行 I/O 操作时，比如读取文件或者网络请求，程序会 阻塞 ，直到 I/O 操作完成后，才能继续执行后面的代码。也就是说，当一个线程在等待 I/O 完成时，它是处于 阻塞状态 的，不能做其他事情。 NIO（同步非阻塞 I/O） 一个线程管理多个连接 NIO 是对传统 BIO 的改进，它全称是 Non-blocking I/O （非阻塞 I/O）。在 NIO 模式下，I/O 操作不是阻塞的，可以同时处理多个 I/O 请求。与 BIO 不同的是，NIO 使用了 Channel （通道） 和 Buffer （缓冲区） 来进行数据读写，并且它支持 多路复用 ，这意味着多个 I/O 操作可以共享一个线程来处理，从而大大提高了并发性能。 AIO（异步非阻塞 I/O） AIO 是 NIO 的进一步升级，叫做 Asynchronous I/O （异步非阻塞 I/O）。在 AIO 模式下，I/O 操作是完全异步的，不需要线程阻塞等待 I/O 完成。AIO 基于事件和回调机制，当 I/O 操作完成时，系统会通知应用程序，程序就能接收到结果。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/java/AIO BIO NIO区别？"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-30T09:32:00.000Z",
+        "raw": "Thu, 30 Jul 2026 09:32:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-0e7ba3551a6ed1accc3e74df",
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/10/12/ai-agent-loop-runtime/",
@@ -178,6 +196,42 @@
         "value": "2026-01-24T19:53:40.000Z",
         "raw": "2026-01-24T19:53:40.000Z"
       }
+    },
+    {
+      "id": "binzi-121116d2f848c809134f35ed",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-cache-observability",
+      "title": "Ai Agent概念扫盲：Cache Hit、KV Cache、Prompt Cache 与性能",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/ai-agent-cache-observability",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-cache-observability"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:33:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:33:00 GMT"
+      },
+      "updated": null
+    },
+    {
+      "id": "binzi-12793cf34642ab5913df5e75",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/agent/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9AOperations",
+      "title": "Pi Agent 工具架构设计：Operations 抽象与 Workspace 切换",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/agent/Pi Agent 工具架构设计：Operations 在 Pi Agent 的工具系统中， Operations 抽象 是核心设计之一。它把工具的执行逻辑与具体文件系统实现解耦，让 Agent 可以在本地、SSH、Docker 等不同环境中灵活切换。 本文主要分享工具架构的核心设计思路，包括抽象接口、依赖注入、闭包固定实例，以及 Workspace 切换机制。 为什么不直接使用 Node.js fs？ 很多人第一反应是直接调用 fs/promises ： await fs.access(path); const buffer = await fs.readFile(path); 这种写法存在几个明显痛点： 强耦合 ：Tool 与具体文件系统实现绑定（本地磁盘、SSH、Docker 沙箱随便一种都行）。 测试困难 ：单元测试必须创建真实文件，Mock 成本高。 环境切换麻烦 ：一旦需要切换后端，Tool 代码几乎需要全部重写。 直观上可以理解为： Read Tool ↓ Node.js fs ↓ 本地磁盘 工具和具体实现绑定死了，这不是在给 Agent 装手脚，而是把手脚绑死在本地磁盘上了。 Operations 抽象接口 为了解决这个问题，我们定义了一个抽象接口 ReadOperations ： export interface ReadOperations { readFile: (absolutePath: string) => Promise<Buffer>; access: (absolutePath: string) => Promise<void>; } Tool 层只知道调用这个接口，完全不关心下面用的是 fs.readFile 还是 sshClient.readFile 。 调用关系变为： Read Tool │ ▼ ReadOperations（抽象接口） │ ▼ Local / SSH / Docker / Mock 等具体实现 Tool 依赖的是抽象接口，而不是具体实现。 闭包固定实例行为 在创建 Tool 时，我们通常会这样写： function createReadTool(options?: { operations?: ReadOperations; }) { const ops = options?.operations ?? defaultReadOperations; return { execute: async (path: string) => { await ops.access(path); return ops.readFile(path); } }; } 这里用闭包把创建时的 ops 固定在 Tool 实例上，实现了 行为稳定 的目的。 不管后续怎么切换 Workspace，Tool 实例的行为永远是确定的。 Workspace 切换与多环境支持 本地 Agent 用本地 Operations，SSH Agent 用 SSH Operations，切换 Workspace 时不需要修改 Tool 内部代码： const localTool = createReadTool({ operations: localOperations }); const sshTool = createReadTool({ operations: sshOperations }); 两个 Tool 可以同时存在，互不干扰。 工具系统五步管道简述 整个工具系统可大致分为五步： 定义 ：定义 Operations 接口 注册 ：把具体实现注册到工具系统中 拦截 ：可选的预处理/后处理 执行 ：调用 Operations 实例的方法 回收 ：清理资源或重置状态 我们重点强化了第 4 步的抽象和第 5 步的稳定性。 两层错误处理机制 工具执行时推荐采用 两层错误处理 ： 第一层（工具内部主动识别） ：在 execute 方法中主动捕获已知错误类型（如超时、中止、非零退出码），重新包装成具体、可读的错误描述。 第二层（框架兜底被动处理） ：工具内部抛出的错误原样透传给框架。 这种做法能给模型提供更有价值的错误反馈。 总结：工具架构的核心思想 Pi Agent 工具架构的核心在于 先抽象、再注入、最后稳定 。 通过 Operations 抽象 + 依赖注入 + 闭包固定实例的方式，我们实现了： 环境切换的灵活性 测试的简易性 行为稳定性的保证 这样的设计让 Tool 层代码可以在不同 Workspace 间复用，同时保持了清晰的职责边界。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/agent/Pi Agent 工具架构设计：Operations"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "Sat, 01 Aug 2026 09:05:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-17efffd92a0963302ba1d1aa",
@@ -288,6 +342,42 @@
         "value": "2026-04-07T14:26:02.000Z",
         "raw": "2026-04-07T14:26:02.000Z"
       }
+    },
+    {
+      "id": "binzi-235e76f1b12fb6055d74ea15",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-loop-runtime",
+      "title": "Ai Agent概念扫盲：Agent Loop、ReAct、Runtime 与 Harness",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-loop-runtime 返回总览 · 上一篇 工具与协议 。 用户让 Agent 修一个 Bug。它读日志、改代码、跑测试，失败后又继续改。这种过程看起来像模型一直在工作，实际上外围程序在不断组织调用、执行工具和更新状态。 这一篇沿着任务的推进与中断，把「循环」「运行」「恢复」放在一起解释。 Chatbot、Script、Workflow、Agent Chatbot 侧重输入与答复； Script 按程序逻辑执行； Workflow 预先安排步骤与分支； Agent 根据任务和反馈动态选择行动。 「读取文档 → 提取字段 → 校验 → 入库」可以是工作流。校验节点也能使用模型，但整体路径依然预先规定。 「排查登录失败」则可能先读代码，也可能先看日志，拿到新证据后再决定。 Agentic 常用来描述这种参与决策和行动的特征，自主范围可以很小。 这是一种实用划分，实际系统经常混合使用。参考 Anthropic 的工作流与 Agent 讨论 。 Agent Loop，怎样转下一轮 Agent Loop 是围绕模型、行动和观察反复执行的控制过程。 准备上下文 → 调模型 → 检查输出 ↓ 请求行动 校验并执行工具 ↓ 保存结果与更新状态 ↓ 继续下一轮 Policy 在这里指选择行动的机制；安全领域的 Policy 又常指约束规则，要看语境。 Action 是行动； Observation 是得到的观察； Environment 是能观察或影响的环境； Trajectory 是行动和观察形成的轨迹。 Step 是一步，但没有统一边界。有的实现算一次模型调用，有的算工具动作，有的算状态图节点。看到 maxSteps = 10 ，需要继续看它限制哪一种。 结束也有多种原因，完成、失败、取消、预算耗尽，或等待用户。不能把所有「停止」都展示成「任务完成」。 ReAct，观察真的能改变下一步 ReAct 来自 Reasoning 和 Acting，强调推理与行动交替推进。 原始论文 研究了二者结合的方式。 排查登录失败时，Agent 原先怀疑网络，读取日志后发现是数据库权限，再去检查连接配置。这次观察改变了原来的方向。 ReAct 不要求把完整内部思考展示给用户。用户更需要知道采取了哪些行动，得到什么证据，结论怎样形成。 前端开发中的 React 是 UI 库，与这里的 ReAct 分开理解。 CoT、Reflection、Self-consistency、ToT CoT，Chain of Thought，思维链 ，关注多步推理过程。 Reflection 让模型评价自己的产出或行动。 Self-consistency 采样多条推理路径，再利用最终答案的一致性选择结果。 Tree of Thoughts，ToT ，显式探索并评估多个候选思路。 这些研究方法都有具体机制，不是给提示词加一句「认真想想」就完整实现了。可以继续读 CoT 、 Self-consistency 和 ToT 原始论文。 还有一个边界，模型自我评价不能代替独立验证。「这段代码应该正确」是一种判断；测试真正通过、目标业务行为真正出现，是另一种证据。 Planner 拆计划， Executor 执行， Replanner 根据新证据修订， Critic 提出问题， Verifier 检查验收条件。这些角色可以由一个模型在不同阶段承担，也可以由不同组件承担，不必都做成独立 Agent。 Engineering Loop 和 Event Loop Engineering Loop，工程闭环 ，从要求出发，实施变更，取得真实反馈，根据反馈修正，再交付。 修登录 Bug 时，验收条件可以是「正确凭据能登录，错误凭据被拒绝，既有登录方式仍正常」。只改代码没有检查，反馈就不完整。 Event Loop，事件循环 ，是运行时调度异步事件和回调的机制，例如 Node.js 的事件循环 。 for 、 while 是语言中的循环控制结构。 Agent Loop 控制任务，Event Loop 调度异步程序，Engineering Loop 用证据修正实现。一个程序可以同时包含它们。 Runtime、Harness、Framework、SDK Runtime 有几个常见含义。语言 Runtime 是 Node.js、Python 等运行环境；Agent Runtime 承载循环、工具执行、状态和生命周期；与 Build-time 对比时，Runtime 指运行期间。 Harness 是围绕模型建立的执行与反馈机制，可能包含指令、接口、上下文处理、权限、调度、恢复和退出条件。与 Runtime 的范围有重叠，不应把本篇分组当成强制架构标准。 长任务 Harness 的官方案例 讨论了跨上下文窗口保持进展的问题。 Harness Engineering 就是在设计这些外围机制。例如日志太长怎样分页、工具失败怎样反馈、中断后怎样继续、完成怎样判定。 Framework 提供组织应用的方式和可复用组件； SDK 提供接口封装、类型与辅助代码。SDK 可能只封装模型请求，也可能包含 Agent Loop；是否支持权限、持久化和恢复，应分别确认。 工程方向 主要调整什么 Prompt Engineering 任务指令、示例、约束和输出要求 Context Engineering 每次调用看到哪些信息 Tool / Interface Engineering 工具参数、结果和错误表达 Harness Engineering 执行、状态、权限、恢复和完成判定 Agent Engineering 模型、工具、信息、执行和产品的整体配合 Evaluation Engineering 任务集、判分方法和证据 LLMOps / AgentOps 部署、监控、版本、成本和故障管理 Session、Run、Process 不是一个对象 Conversation 是对话记录； Session 是带标识的交互或执行上下文； Turn 是一轮交互，边界依系统定义； Run 是一次运行实例； Task 是有目标和范围的工作； Attempt / Trial 是一次尝试。 Process 是操作系统进程。 Thread 既可能指操作系统线程，也可能指产品里的对话线程。 一个进程可以服务多个 Session，一个 Run 可以启动多个工具进程。界面关了以后任务是否继续，取决于后端生命周期，不取决于界面还保不保留聊天记录。 Worker 是执行单元， Queue 存放待执行任务， Scheduler 决定何时交给谁， Daemon 是后台常驻进程。 IPC 是进程间通信， PTY 是支持终端交互的伪终端。 Concurrency，并发 ，多项工作在同一时间范围内推进； Parallelism，并行 ，强调真正同时执行。界面里出现三个任务，不能单独证明它们正在并行调用模型。 State 和 Source of Truth State 是现在处于什么阶段。Source of Truth 是判断某类事实时应以哪份记录为准。 任务可以处于排队、运行、等待输入、完成、失败或取消。文件是否修改，以工作区内容为准；工单是否创建，以工单系统为准。聊天里一句「已经创建」不能覆盖外部系统事实。 Persistence，持久化 ，让进程退出后数据仍可读取。 Checkpoint，检查点 ，保存从某个边界恢复所需的状态。 Snapshot，快照 ，保存某时刻某范围的状态。 Event Log 按序记录事件； Event Sourcing 以领域事件序列作为状态变化的权威记录。保存一些运行日志，不自动等于采用了 Event Sourcing。 Replay 根据事件或已记录结果重建执行； Resume 从可恢复边界继续； Reconnect 恢复通信连接； Durable Execution 通过持久化、调度和恢复机制跨故障继续工作。 保存聊天历史不等于保存工具进度，检查点也不能保证从任意一行代码继续。 LangGraph 的持久执行文档 说明了恢复边界和副作用处理的重要性。 超时后为什么不能直接再来一次 Timeout 说明在限定时间内没有收到完成结果。它不能证明外部操作没有成功。 比如 Agent 请求创建工单，服务端创建成功，响应途中断线。直接再创建，就可能得到两张工单。 Retry 是重试； Backoff 在重试间增加等待； Jitter 为等待加入随机变化，避免大量请求同时重试。 Cancellation 请求停止，已经发生的外部效果不一定能撤销。 Partial Success 表示一组操作只有部分成功； Compensation 用新的动作抵消已有部分效果，比如取消一条已经创建的预约，补偿本身也可能失败。 Idempotency 和 Reconciliation Idempotency，幂等性 ，指在约定范围内重复同一请求，其预期业务效果与执行一次相同。它不要求每次返回文本完全一样，附带日志也可能增加。 HTTP 规范的幂等性定义 可以作为一个基础例子。 Idempotency Key 帮助服务识别重复请求。需要明确键的作用域、有效期、参数冲突和并发规则。 Reconciliation 是状态核对。响应丢失后，先用业务标识查询工单是否已存在，再决定继续或重试。 交付语义 在约定范围内的含义 At-most-once 至多一次，可能没有发生 At-least-once 在约定故障假设下至少一次，可能重复 Exactly-once 恰好一次，必须说明覆盖哪些系统和边界 只有重试循环，不能自动得到 At-least-once 保证；本地数据库事务，也不能自动回滚已经发出的外部操作。 Lock 互斥访问， Lease 在有效时间内授予执行权， Heartbeat 报告执行者还在活动， Version / CAS 通过版本比较检测并发修改， Transaction 在限定范围内保证一致性， Backpressure 在下游来不及时限制上游。 心跳说明仍有活动，不说明任务一定有进展。 看一个 Agent 运行系统，先找四个答案 谁决定下一步，谁执行真实动作，状态存在哪里，怎样证明目标完成。 这四个答案清楚以后，再看 Runtime、Harness、Checkpoint，名词就能对应到具体代码。想继续沿真实实现读，可以看 Pi Agent Loop ；里面的 Turn 等边界属于该实现，不能直接当成全行业定义。 下一篇：上下文、历史和记忆 · 返回总览 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-loop-runtime"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:37:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:37:00 GMT"
+      },
+      "updated": null
+    },
+    {
+      "id": "binzi-25638557257e5f753c0c2889",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/agent/Pi%20Agent%20%E5%B7%A5%E5%85%B7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1",
+      "title": "Pi Agent 工具架构设计：三层类型 + 五步管道 + 并行调度 + 错误处理",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/agent/Pi Agent 工具架构设计 在 Pi Agent 的工具系统中，工具的抽象和执行机制是整个架构的核心。本文系统梳理工具定义的三层类型、调用时的五步管道、并行执行策略，以及错误处理的特殊设计。 一、三层类型：为什么”一个工具”要分三层来定义？ 在 Pi Agent 里，一个完整的工具定义被拆成了 三层 ，目的是让不同层职责清晰、扩展性强： 第一层：Tool（一张”名片”） 这是最基础的一层，只定义工具的 基本信息 ： toolName description parameters（Schema） 其他元数据 这一层就像工具的 名片 ，告诉 Agent 它能做什么。 export interface Tool { name: string; description: string; parameters: any; // ... } 第二层：AgentTool（加上了”执行能力”） 在 Tool 的基础上，添加了 实际执行逻辑 ： execute 方法 错误处理 资源管理等 interface AgentTool extends Tool { execute: (params: any) => Promise<any>; } 这一层是真正可以调用的工具。 第三层：ToolDefinition（产品层再加东西） 在 AgentTool 之上，添加了 产品层 需要的额外信息： 包装后的执行函数 前置/后置钩子 结果统一格式 interface ToolDefinition extends AgentTool { // 包装后的执行函数 wrappedExecute: (params: any) => Promise<ToolResult>; } 桥接两层：wrapToolDefinition 为了把第二层的执行能力桥接到第三层，Pi 提供了 wrapToolDefinition 工具： function wrapToolDefinition(tool: AgentTool): ToolDefinition { return { ...tool, wrappedExecute: async (params) => { // 执行前置钩子 await beforeToolCall?.(params); try { const result = await tool.execute(params); return { result, isError: false }; } catch (err) { return { result: err, isError: true }; } } }; } 为什么非要分三层？ 职责分离 ：第一层只管描述，第二层管执行，第三层管包装和扩展。 扩展性强 ：想加新特性（日志、限流、缓存）时，只需要在第三层修改。 可组合性好 ：可以用不同的 wrapToolDefinition 实现不同的策略。 二、五步管道 模型调用工具时，不是直接调用一个函数，而是走了一套完整的 五步管道 ： 第 1 步：prepareArguments —— 兼容性垫片 处理不同模型返回的参数格式（比如有些模型返回 camelCase，有些 snake_case）。 第 2 步：validateToolArguments —— Schema 验证 使用 JSON Schema 对参数进行严格验证，防止无效输入。 第 3 步：beforeToolCall —— 前置钩子（可阻止执行） 允许开发者在执行前做一些操作（比如权限检查、限流），也可以通过返回 false 来阻止执行。 第 4 步：tool.execute —— 实际执行 真正调用工具的执行逻辑（通常是第二层的 execute ）。 第 5 步：afterToolCall —— 后置钩子（可修改结果） 允许开发者在执行后修改结果、添加额外信息等。 管道终点 ： ToolResultMessage （统一格式的消息）。 这种五步管道让工具调用更加安全、可控、可扩展。 三、并行 vs 串行：一个批次的工具不是”一起跑就完了” 模型经常一次调用多个工具（比如搜索 + 总结 + 数据库查询），但并行执行不能简单用 Promise.all 。 Pi 的调度策略是 一票否决 ： 并行执行三阶段设计： 准备阶段（prepare） 并行执行阶段（execute in parallel） 收尾阶段（after parallel） 如果任何一个工具执行失败，会触发一票否决，整个批次被取消并返回错误。 四、永不抛出：工具出错也是一条消息 Pi Agent 工具系统 永不抛出异常 到 Agent Loop，而是统一返回 ToolResult ： interface ToolResult { result: any; isError: boolean; errorMessage?: string; } 6 种错误类型 + 1 种产物 工具出错时，会被包装成统一的 ToolResult ，而不是直接抛出错误。 关键代码在 tool.execute 的双重防护： 内部主动捕获异常 外部框架兜底包装成消息 为什么”伪装成消息”是最佳处理方式？ 因为： 模型最擅长处理消息格式的错误 错误描述越具体，模型纠错能力越强 避免了异常穿透到 Agent Loop，保持 Loop 的稳定性 五、【进阶】Operations 抽象：工具执行不等于系统调用 问题：如果工具直接写死系统调用（如 fs.readFile ），那就很难在不同环境中复用。 解法 ：让工具不直接调系统 API，而是通过 最小接口 调用。 每个工具定义自己需要的最小接口（比如 ReadOperations ），然后通过依赖注入的方式传入具体实现。 这样： 工具代码可以跨环境复用 Mock 测试变得容易 不同 Workspace 切换时行为稳定 总结 Pi Agent 的工具架构通过 三层定义 + 五步管道 + 并行调度 + 统一错误消息 + Operations 抽象 ，实现了高度灵活、可测试、可扩展的工具系统。 这套设计真正做到了把 Agent 的手脚管住。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/agent/Pi Agent 工具架构设计"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-01T09:05:00.000Z",
+        "raw": "Sat, 01 Aug 2026 09:05:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-28a45e1bba66e783351e070a",
@@ -532,6 +622,42 @@
       }
     },
     {
+      "id": "binzi-3e7fb0097d78703a705a9264",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/K3%E5%8F%91%E5%B8%83%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%84%9F%E5%8F%97",
+      "title": "Kimi K3 发布的一些个人感受",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/K3发布的一些个人感受 Kimi K3 的技术博客里，有一个很容易被忽略、但很关键的细节： K3 对「思考历史」极度敏感。harness 如果没有完整传回之前的 thinking 内容，生成质量会严重不稳定。 原文大致写了两个触发条件： harness 没有完整回传历史 thinking 内容 会话中途从别的模型切换到 K3 博客对原因也做了解释。大多数 reasoning 模型，比如 Claude 的 extended thinking、OpenAI 的 o 系列，默认假设是：thinking 是一次性草稿纸。生成完就完成使命了，下一轮不一定需要原样保留。有服务商在服务端加密保存，有的直接允许客户端丢弃。模型训练时，就没指望「未来轮次还能看到这段草稿」。 K3 不是这样训练的。 它是在「每一轮都把之前所有轮次的完整 thinking 摆在上下文里」这个条件下训练出来的。thinking 对 K3 不是草稿纸，而是这个模型认知链条里永久的一部分。它的行为模式，建立在「我永远能看到自己之前想了什么」这个假设之上。 为什么 thinking 不能像 tool result 那样裁 这里有个很有意思的对比，可以类比 agent 上下文里的 tool result 裁剪。 tool result 之所以能被相对安全地裁剪，是因为它读完之后，语义会被显式表达进下一轮的可见回复里。原文没了，但结论已经「抄」到别处留下来了。 thinking 不是这样。 thinking block 里的推理过程，大部分时候不会被完整翻译进最终的可见回复。可见回复往往只是 thinking 里那条推理链的一个结论摘要。中间的探索、排除、纠错过程，只存在于 thinking 本身。 裁掉这部分，模型下一轮拿到的不是「浓缩后的知识」，而是真的丢了一段计算过程。它自己也不知道自己之前想过什么、排除过什么、纠正过什么。 这就是为什么后果是 “quality highly unstable”，而不是「效率下降」。 这不是 KV cache miss 那种成本问题，是模型拿到的信息本身就不完整了，是正确性问题。 从别的模型切过来，也不行 第二个触发条件更有意思。 从别的模型切到 K3，即使把 thinking 内容原样传过去，质量也会不稳定。 因为 K3 训练时看到的历史 thinking，全都是它自己生成的、符合自己训练分布的推理风格。换一个模型生成的 thinking，哪怕格式一样，推理模式和措辞习惯都不同。K3 把这段陌生风格的历史当成自己的思考去续写，容易接不上。 对做 harness 的人意味着什么 对做 agent harness 的人来说，这意味着两件事。 一是不能对 K3 用和别的模型一样的上下文压缩策略。thinking 这部分几乎不能裁。 二是模型路由天然跟 K3 冲突。简单任务用便宜模型、复杂步骤再切强模型，这种常见做法在 K3 上会出问题，因为它没有「接手一个陌生会话」的能力。 模型开源了，但用好它，几乎绑死了兼容的官方 harness。 这大概也是为什么官方会特别推荐 Kimi Code，并建议不要在会话中途切到 K3。 不是模型不够强，是它把「完整可见的自我思考历史」写进了训练假设里。这个假设一旦被 harness 破坏，表现就会立刻塌掉。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/K3发布的一些个人感受"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-17T10:33:45.000Z",
+        "raw": "Fri, 17 Jul 2026 10:33:45 GMT"
+      },
+      "updated": null
+    },
+    {
+      "id": "binzi-3f4def503b17254777e708e4",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-collaboration-computer-use",
+      "title": "Ai Agent概念扫盲：多 Agent、Handoff、LSP 与 Computer Use",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-collaboration-computer-use 返回总览 · 上一篇 RAG 。 一个 Agent 修代码，另一个检查是否破坏旧功能，看起来像两个人配合。 但它们是否看到相同资料、是否共享目录、谁最后负责合并结果，都需要程序设计。多 Agent 不会因为数量增加就自动形成团队。 这一篇把协作和观察环境放在一起讲，它们共同影响任务怎样从「安排了」走向「真的完成」。 Multi-agent 和 Subagent Multi-agent 是多个 Agent 协作的系统。Subagent 是被委派子任务的 Agent。 子 Agent 可能拿到自己的目标、上下文和工具，也可能与主 Agent 共享部分环境。它可以使用同一个模型服务，独立 Agent 不等于独立模型或独立进程。 例如主 Agent 把任务拆成「修复」「检查兼容性」「验证回归」。每个子任务应有明确的范围、输入和交付标准。否则几名 Agent 都在读同一份代码、改同一个文件，成本和冲突就会增加。 Agent-as-a-Tool 和 Handoff Agent-as-a-Tool 把另一个 Agent 当成可调用能力。主 Agent 发出请求，收到结果，再决定下一步。 Handoff 把控制权移交给另一个 Agent，例如通用客服把后续退款处理交给退款 Agent。用户接下来主要与接手方交互，具体形式依实现定义。 「让审查 Agent 返回报告」和「让退款 Agent 接管后续对话」是两种交互语义。工具调用返回之后，主 Agent 通常仍保留控制；交接需要明确谁继续负责。 协作模式可参考 LangChain 的多 Agent 文档 。这些是设计模式，不是各家同名功能完全一致的保证。 常见编排方式 Orchestration，编排 ，安排任务依赖、调度、信息传递和汇总。 模式 怎样工作 例子 Supervisor / Worker 主 Agent 分配，Worker 执行 主 Agent 安排修复与审查 Fan-out / Fan-in 分发独立任务，再收集 分析三个模块后汇总 Map / Reduce 对多个对象分别处理，再聚合 分别概括文件，再总结仓库 Debate / Critique 提出或检查不同方案 方案比较与独立审查 Shared Blackboard 通过共享状态交换信息 各参与者更新共同任务板 DAG 用无环依赖图安排任务 编译后才能跑某些测试 State Graph 用状态与转换组织执行，可含循环 测试失败后回到修复 DAG 不包含环，State Graph 可以包含。把任务画成图，只说明依赖被表达出来，持久化和失败恢复仍需要额外实现。 什么工作适合分出去 相对独立的子任务更容易并行。比如一个检查登录逻辑，一个检查文档，两者修改范围不同，最终可以一起汇总。 先读代码才能确定修改点，先修改才能验证，这些步骤有依赖，不能直接同时推进。 交给子 Agent 的输入应保留目标、约束、上下文入口和交付标准。主 Agent 汇总时，还要处理结果冲突，不能把几份报告拼起来就默认成立。 共享工作区时，需要明确文件责任范围。隔离工作区时，也需要合并和重新验证集成结果。各自通过测试，不保证合在一起仍通过。 多 Agent 的收益可能是不同资料范围、独立审查和并行时间；代价包括重复上下文、交接损失、额外调用、取消传播和协调。相似模型看到相似资料时，也可能给出相同错误，投票数量不能自动变成事实证据。 编码 Agent 怎样观察代码 Text Search 查字符串和关键词，适合错误码、配置名或特定文案。 LSP 提供定义、引用、类型和诊断等语言服务。 例如 createOrder 在两个模块里同名，文本搜索都能找出来；语言服务能帮助确定某处引用属于哪一个定义。LSP 能力依语言服务器而定，调用成功也要检查结果是否覆盖当前文件版本。 AST，Abstract Syntax Tree，抽象语法树 ，表达代码的语法结构，适合一些结构化分析和变换。它与简单字符串匹配不同，但具体工具是否理解类型、能否安全重构，要继续看实现。 Diff、Patch、字符串替换和整文件重写 Diff 表示两个版本的差异； Patch 描述要应用的变更； String Replacement 匹配旧文本并替换； Full Rewrite 重写整个文件。 字符串替换直观，但依赖准确匹配；Patch 适合表达局部差异，但需要足够上下文定位；AST 修改适合部分结构变换；整文件重写容易表达完整结果，但改动范围更大。 选择编辑方式之后，还要读回结果。成功返回说明编辑器做完了某次操作，不说明它命中了正确业务位置，也不说明项目仍能运行。 已有的 Kimi Code 与 Coding Agent 的 Edit 设计 比较了具体实现。版本结论以那篇记录的源码范围为准。 ACI，模型与电脑之间的接口 ACI，Agent-Computer Interface，是 Agent 与计算机交互的接口设计。 同样是搜索工具，返回十万行混杂文本，和返回带文件路径、行号、分页入口的结果，对后续判断的帮助不同。 接口还需要说明文件是否截断、错误发生在哪里、修改失败如何恢复、怎样确认操作生效。 SWE-agent 原始论文 把这类接口设计作为自动软件工程的重要部分。 Computer Use，怎样观察和操作界面 Computer Use 让系统通过工具观察和操作电脑。浏览器操作也可以使用类似的观察、行动和反馈链。 方式 提供什么 需要注意什么 业务 API 直接读写业务对象 认证、权限、版本和真实结果 DOM 网页元素结构和内容 结构不等于最终业务状态 Accessibility Tree 可访问性语义，如按钮名称和状态 标注可能缺失，观察可能过期 Screenshot 实际画面 图像识别、坐标和窗口状态 鼠标键盘 点击、输入、快捷键 焦点、目标与后续校验 Accessibility Tree，可访问性树 ，把界面中的语义角色、标签和状态提供给辅助技术，也能用于工具定位。 AX Tree 是一些环境中的相关简称。 截图能显示 DOM 中不容易表达的画面，却需要识别坐标；语义结构能帮助准确找到按钮，却也可能缺失或落后于页面。选哪种观察方式，要看能回答当前问题的证据。 Locator、Selector、Auto-wait Locator 描述怎样找到目标元素，例如名称为「保存」的按钮。 Selector 是某种具体选择表达式，如 CSS 或 XPath。 Actionability 指元素是否适合操作，例如可见、启用、没有被遮挡； Auto-wait 自动等待相关条件满足。它们解决的是操作条件，不替代业务验收。可继续看 Playwright 定位器文档 和 自动等待说明 。 Navigation 是页面跳转， Dialog 是对话框， Download / Upload 是下载与上传；浏览器中的 Session / Cookies 参与保存登录和交互状态，不能和 Agent 的 Session 直接混用。 点击成功之后，再看结果 点保存之后，页面可能出现校验失败；填写成功之后，网络可能未提交；提交成功之后，后台处理可能还没完成。 保存资料应确认成功状态或重新读取对象，下载应确认取得文件，创建工单应确认正确对象存在。界面动作、网络响应和业务结果是不同的观察层。 这与多 Agent 汇总是同一个原则，安排出去的任务，要拿回能够核验的结果。 下一篇：缓存、Trace 与性能 · 返回总览 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-collaboration-computer-use"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:34:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:34:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-40580d02a1fecfcb7e5c5b45",
       "sourceId": "binzi",
       "url": "https://binzi.top/2024/11/27/%E7%AE%97%E6%B3%95/P10904%E9%A2%98%E8%A7%A3/",
@@ -706,6 +832,24 @@
         "value": "2026-01-24T19:53:27.000Z",
         "raw": "2026-01-24T19:53:27.000Z"
       }
+    },
+    {
+      "id": "binzi-4c418fb5ce1758f0528b9541",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/agent/Claude%20Code%20Projects%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%20Agent%20Session",
+      "title": "Claude Code Projects：一个对话框，管理多个 Agent Session",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/agent/Claude Code Projects：一个对话框，管理多个 Agent Session 今天看到了 Claude 的一篇文章，介绍重新设计后的 Claude Code Projects 。 我觉得这个功能挺有意思：它在 Claude Code Session 之上增加了一个项目级 Coordinator（协调 Agent），用统一的项目对话来管理多个独立的 Claude Code Session。 用户只需要在一个对话框里持续提出需求，Coordinator 就可以根据任务情况创建或复用 Thread，完成任务拆分、分发与结果汇总。 一、整体架构 Claude Code Projects 的结构可以简单理解为： Project → Coordinator → Threads（Sessions） Project ：项目级工作空间，关联代码仓库或其他上下文，并保存项目指令与共享记忆。 Coordinator ：负责理解需求、拆分任务、调度 Thread，并跟踪执行进度。 Thread ：独立的 Claude Code 云端 Session，负责具体任务的执行。 例如，用户提出一个需求： 分析当前项目的后端架构，优化运行时性能，并补充必要的测试。 Coordinator 可以按任务依赖关系拆分工作： Thread A：分析架构和性能瓶颈。 Thread B：根据分析结果优化代码。 Thread C：补充测试并验证修改。 每个 Thread 都是完整的 Claude Code Session，而不只是简单的 Subagent。云端 Thread 在独立分支和仓库副本中工作，内部也可以继续使用 Subagent、循环或工作流拆解任务。 Coordinator 可以创建新的 Thread，也可以把后续任务交给已有 Thread 继续执行。多个 Thread 如果改动了同一处代码，仍然需要像处理普通 PR 一样解决冲突。 二、我认为最大的价值是统一交互入口 相比多 Agent 并行，我个人更关注它的交互设计。 对于用户来说，理想的交互方式可能就是 一个 Project 对应一个主要对话框 。 用户不需要频繁创建新的 Session，也不必为了完成相关任务，在多个对话之间来回切换、重复描述项目背景。 例如，今天让 Claude 优化 RuntimeHost，明天让它继续修复相关 Bug，后天再补充测试。这些需求都可以直接发送给同一个 Coordinator，由它决定交给哪个 Thread 执行。 这样用户面对的是一个持续存在的项目，而不是一堆分散的聊天记录。 底层的 Session 并没有消失。Coordinator 依然会管理多个 Thread，只不过用户不再需要手动处理它们的生命周期和任务分配。 必要时，用户仍然可以进入具体 Thread，查看代码修改、工具调用以及执行结果。 统一的是交互入口，而不是所有 Agent 的执行上下文。 我认为这种设计更符合人的使用习惯。用户应该专注于描述目标和检查结果，而不是花费大量精力组织 Agent 的工作过程。 三、那同一个对话框会不会上下文爆炸？ 这是我觉得比较值得研究的地方。 虽然用户始终在一个 Project 对话框里交流，但这并不代表所有 Session 的上下文都被塞进同一个模型窗口。 这里至少可以区分两个层次的上下文。 首先是 Thread Context。 每个 Thread 有自己的上下文窗口，独立进行代码阅读、工具调用、修改和测试。Coordinator 会接收 Thread 返回的进展和结果，不需要把每个 Thread 的完整执行历史都当作自己的对话内容。 因此，多个 Thread 的上下文不会简单累加到 Coordinator 的上下文窗口中。 其次是 Coordinator Context。 Coordinator 本身依然有上下文窗口限制。如果用户持续几个月都在同一个 Project 里对话，消息和任务信息也会不断积累。 Anthropic 公开介绍确认，Project 中的 Thread 会共同写入并读取共享 Memory，帮助后续工作沿用项目细节和决策。官方介绍没有披露 Coordinator 每轮具体加载多少历史消息、采用什么裁剪策略。因此，“结合近期消息、近期 Thread 信息与 Project Memory 来组织上下文”更适合作为一种基于产品描述的理解，而不是已公开确认的实现细节。 即使有共享 Memory，也不代表彻底解决了上下文问题。较早的需求、设计决策或任务约束，如果没有被正确记录下来，仍然可能在后续执行中丢失。 因此， 它解决的主要是上下文的隔离和管理，而不是让模型拥有无限上下文。 四、我的理解 我认为 Claude Code Projects 的核心设计可以概括为： Project 负责长期交互与协调，Session 负责具体执行，Memory 负责跨 Session 保留重要信息。 这几个概念不应该混在一起。 用户看到的是一个统一且持续存在的项目对话框，而底层实际上由多个具有独立生命周期的 Session 组成。 从交互体验来看，它减少了用户管理大量 Session 的负担。 从上下文管理来看，它避免了把所有任务的执行过程集中到同一个模型窗口。 我觉得这是一个挺合理的方向。 尤其对于 Coding Agent 来说， 用户真正需要的可能不是管理 Session 的能力，而是让 Agent 自己管理 Session 的能力。 当然，Coordinator 如何决定创建或复用 Thread、如何维护跨 Session 的任务状态，以及怎样保证长期共享记忆的准确性，仍然是值得继续研究的问题。 参考资料 Claude：Projects redesigned: from folder to conversation Claude Code Projects 官方文档 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/agent/Claude Code Projects：一个对话框，管理多个 Agent Session"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-10T04:00:00.000Z",
+        "raw": "Sat, 10 Oct 2026 04:00:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-4da2b93e5c5eb65c16a6e315",
@@ -1368,6 +1512,24 @@
       }
     },
     {
+      "id": "binzi-7ccc06f663f8ef6f1feb3d1d",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/RRF%E6%8E%92%E5%BA%8F%E8%9E%8D%E5%90%88",
+      "title": "RRF 排序融合，混合检索如何统一 BM25 和向量搜索",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/RRF排序融合 做混合检索时，会碰到一个很朴素的问题。 BM25 说某篇文档得了 18.6 分，向量检索说另一篇文档的相似度是 0.83。到底谁应该排在前面？ 18.6 看起来比 0.83 大得多，但这两个数字根本不在同一把尺子上。直接相加没有意义，随手归一化又会受到查询、模型和数据分布影响。 RRF 提供了一个很省心的思路。 既然各路分数不好比较，那就不比较分数，只比较排名。 为什么混合检索需要结果融合 关键词检索和向量检索擅长的事情并不一样。 BM25 根据词项出现情况计算相关性，遇到错误码、产品型号和专有名词时很有优势。查询里明确出现 ERR_CONNECTION_RESET ，包含同一字符串的文档通常应该优先返回。 向量检索比较的是语义表示。用户问「服务突然连不上了怎么办」，即使文档里没有完全相同的句子，只写了「连接被远端重置」，它也有机会把内容召回。 两路结果放在一起，覆盖面通常比单一路径更好。麻烦在于，它们返回的原始分数没有统一含义。 BM25 分数会受到词频、文档长度和索引语料影响。向量检索还可能使用余弦相似度、点积或距离，不同模型生成的分数分布也不同。 给两路分数直接设置权重，看起来简单，后面却很容易陷入反复调参。数据规模变了，Embedding 模型换了，原来的权重可能就不合适了。 RRF 绕过了这道题。 这篇是 RAG 概念专题 中的排序细节，完整系列见 Ai Agent概念扫盲 。 RRF 怎么计算 RRF 的全称是 Reciprocal Rank Fusion，也就是倒数排名融合。 对于文档 d ，它的融合分数可以写成下面这样。 $$ score(d) = \\sum {i=1}^{n} \\frac{1}{k + rank i(d)} $$ rank_i(d) 表示文档 d 在第 i 路结果中的排名。排名从 1 开始。某篇文档没有出现在一路结果中时，那一路就不给它加分。 k 是平滑常数，常见取值是 60。它会削弱第一名和后面名次之间过于悬殊的差距，让多路都排得靠前的文档得到更稳定的优势。这里的 k 与检索返回数量 Top K 不同；公式和具体参数可参考 Elasticsearch 的 RRF 文档 。 这里最重要的变化是，原始相关性分数消失了。 无论 BM25 返回 18.6，还是向量库返回 0.83，RRF 只问一件事，这篇文档在各自列表里排第几。 手算一个小例子 假设同一个问题得到两组结果。 BM25 的排序是 文档 A、文档 B、文档 C 。 向量检索的排序是 文档 B、文档 C、文档 A 。 为了让数字更容易观察，这里暂时取 k = 0 。真实系统通常会使用更大的平滑常数。 文档 A 在两路中分别排第 1 和第 3，它的分数是 $$ 1/1 + 1/3 = 1.3333 $$ 文档 B 分别排第 2 和第 1，它的分数是 $$ 1/2 + 1/1 = 1.5 $$ 文档 C 分别排第 3 和第 2，它的分数是 $$ 1/3 + 1/2 = 0.8333 $$ 融合后的顺序是 文档 B、文档 A、文档 C 。 文档 B 没有在 BM25 中拿到第一，但它在两路都很靠前，所以最终超过了只在一路占据第一的文档 A。这正是 RRF 想保留的共识。 一个可以直接运行的 Python 实现 RRF 本身并不依赖 LangChain 或向量数据库。只要手里已经有多组排序结果，几十行 Python 就能完成融合。 from collections import defaultdict def reciprocal_rank_fusion( rankings: list[list[str]], k: int = 60, ) -> list[tuple[str, float]]: \"\"\"Fuse ranked document lists using Reciprocal Rank Fusion.\"\"\" if k < 0: raise ValueError(\"k must be greater than or equal to 0\") scores: dict[str, float] = defaultdict(float) for ranking in rankings: seen_in_ranking: set[str] = set() for rank, document_id in enumerate(ranking, start=1): if document_id in seen_in_ranking: continue seen_in_ranking.add(document_id) scores[document_id] += 1 / (k + rank) return sorted(scores.items(), key=lambda item: (-item[1], item[0])) bm25_results = [\"文档A\", \"文档B\", \"文档C\"] vector_results = [\"文档B\", \"文档C\", \"文档A\"] fused_results = reciprocal_rank_fusion( [bm25_results, vector_results], k=0, ) for document_id, score in fused_results: print(f\"{document_id}: {score:.4f}\") 运行后得到 文档B: 1.5000 文档A: 1.3333 文档C: 0.8333 代码里额外处理了同一文档在一路结果中重复出现的情况。正常的检索器通常不会返回重复 ID，但在合并多个分片或自行拼装结果时，去重可以避免同一路对某篇文档重复加分。 在 LangChain 里使用 EnsembleRetriever 下面保留的是旧版 LangChain API 示例，用于理解组合方式，不表示当前版本安装后可直接运行。实际项目应按所用版本核对包名和导入路径；上面的独立 Python 实现不依赖 LangChain。 如果用 LangChain 搭混合检索，RRF 也经常不是自己手写，而是通过 EnsembleRetriever 这类组件完成。 一个典型结构是：先准备一批文档，再分别创建 BM25 检索器和向量检索器，最后把两路检索器交给 EnsembleRetriever 融合。 import jieba from langchain.retrievers import EnsembleRetriever from langchain_community.retrievers import BM25Retriever from langchain.vectorstores import Chroma from langchain_community.embeddings import HuggingFaceEmbeddings doc_list = [ \"人工智能是计算机科学的一个分支，致力于创造能够模拟人类智能的系统。\", \"机器学习是人工智能的一个子领域，专注于开发能从数据中学习的算法。\", \"深度学习是机器学习的一种方法，使用多层神经网络处理复杂数据。\", \"自然语言处理是人工智能的一个分支，研究计算机与人类语言的交互。\", \"智能助手如小度和天猫精灵使用自然语言处理技术理解用户指令。\", \"自动驾驶汽车利用计算机视觉和深度学习技术识别道路情况。\", \"医疗诊断系统使用机器学习分析患者数据，辅助医生做出诊断决策。\", \"大型语言模型如 GPT 和文心一言能够生成类似人类的文本内容。\", \"计算机视觉技术使机器能够理解和处理视觉信息，如图像和视频。\", \"强化学习是一种机器学习方法，通过奖励和惩罚机制让 AI 学会做决策。\", \"人工智能产业在中国快速发展，成为新的经济增长点。\", \"智能手机的普及改变了人们的生活和工作方式。\", ] def chinese_tokenizer(text): return list(jieba.lcut(text)) bm25_retriever = BM25Retriever.from_texts( doc_list, metadatas=[{\"source\": f\"doc_{i}\"} for i in range(len(doc_list))], preprocess_func=chinese_tokenizer, ) bm25_retriever.k = 3 embeddings = HuggingFaceEmbeddings( model_name=\"../bge-large-zh-v1.5\", model_kwargs={\"device\": \"cpu\"}, ) vectorstore = Chroma.from_texts( texts=doc_list, embedding=embeddings, metadatas=[{\"source\": f\"doc_{i}\"} for i in range(len(doc_list))], persist_directory=\"./chroma_db_custom_3\", ) vector_retriever = vectorstore.as_retriever(search_kwargs={\"k\": 3}) ensemble_retriever = EnsembleRetriever( retrievers=[bm25_retriever, vector_retriever], weights=[0.5, 0.5], ) docs = ensemble_retriever.invoke(\"人工智能在医疗领域的应用\") for index, doc in enumerate(docs, start=1): print(index, doc.page_content) 这里 BM25 更擅长直接关键词匹配，比如「深度学习」这种查询。向量检索更擅长语义相关但字面不完全一致的问题，比如「智能系统如何理解人类语言」。混合检索则希望把两者的优势放在一起。 原理上， EnsembleRetriever 会把不同检索器返回的结果做融合。它关心的是文档在各路结果中的排名，再结合权重得到最终排序。上面给 BM25 和向量检索都设置了 0.5 ，意思是先等权看待两路结果。 如果业务里有大量专有名词、编号和错误码，可以适当提高 BM25 的权重；如果查询更偏自然语言表达，可以提高向量检索的权重。但权重最好通过测试集评估，而不是只凭直觉。 测试时可以准备几类问题。 直接关键词匹配：例如「深度学习」 语义相关但没有完全相同关键词：例如「智能系统如何理解人类语言」 混合查询：例如「人工智能在医疗领域的应用」 有歧义的查询：例如「智能产品」 分别观察 BM25、向量检索和混合检索的结果，就能更直观看到 RRF 或加权融合到底改善了什么。 k 到底影响什么 如果 k = 0 ，第一名得到 1 分，第二名得到 0.5 分，第十名只得到 0.1 分。头部名次之间差距很大。 如果 k = 60 ，第一名约为 0.01639，第二名约为 0.01613，第十名约为 0.01429。名次仍然重要，但变化平缓了很多。 较小的 k 更强调头部名次，较大的 k 更重视多路结果共同提供的信号。60 是常见默认值，不是不可修改的定律。更稳妥的做法，是在自己的查询集上用 Recall、MRR 或 NDCG 等指标评估。 多路权重怎么处理 有些场景会更信任其中一路。例如知识库中包含大量编号和术语，BM25 的精确匹配可能比向量语义更重要。 可以给每一路增加权重。 $$ score(d) = \\sum {i=1}^{n} \\frac{w i}{k + rank_i(d)} $$ 这样仍然绕开了原始分数尺度，只调整各路排名信号的重要程度。 不过权重越多，调参成本也会回来。没有离线评估集时，先从等权 RRF 开始，通常比凭感觉设置一堆系数更稳。 RRF 的边界 RRF 简单、鲁棒，但它并不会判断一篇文档是否真的回答了问题。 如果关键词检索和向量检索都召回了错误内容，RRF 只会把这些错误结果重新排序。它也会丢掉原始分数中的置信度信息。某一路的第一名只比第二名高一点，和高出一大截，在 RRF 里没有区别。 所以它更适合做召回结果融合，而不是替代完整的相关性判断。 常见链路会是关键词召回与向量召回并行执行，用 RRF 合并候选，再把靠前的结果交给 Cross-Encoder 或大模型做精排。RRF 负责便宜、稳定地汇总多路意见，Reranker 再仔细判断查询和文档之间的相关性。 检索系统不需要一开始就追求复杂。 当两套评分体系无法直接对话时，先让它们各自投票，再根据名次寻找共识。 这就是 RRF 最实用的地方。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/RRF排序融合"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-07-08T17:04:11.000Z",
+        "raw": "Wed, 08 Jul 2026 17:04:11 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-7f0cf471e7624dd9a23a7ac2",
       "sourceId": "binzi",
       "url": "https://binzi.top/2025/03/03/%E7%AE%97%E6%B3%95/P10898%E9%A2%98%E8%A7%A3/",
@@ -1432,6 +1594,24 @@
         "value": "2026-01-24T19:53:34.000Z",
         "raw": "2026-01-24T19:53:34.000Z"
       }
+    },
+    {
+      "id": "binzi-815d5ba934b7dc6146eea678",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-safety-evaluation",
+      "title": "Ai Agent概念扫盲：权限、信任边界、Test、Eval 与工程交付",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-safety-evaluation 返回总览 · 上一篇 缓存与性能 。 Agent 说「已经修好了」，你真正关心的是问题是否消失，旧功能有没有受影响。 同样，工具已经连上，不代表能做任何操作；模型认为可以做，也不能代替权限检查。这一篇回答两个问题，有没有权做，怎样知道做对了。 AuthN、AuthZ、Approval、Sandbox 概念 回答什么 例子 Authentication / AuthN，认证 你是谁 识别登录账户 Authorization / AuthZ，授权 你能做什么 账户可读工单，但不可删除 Approval，单次批准 这次具体动作是否获准 用户同意关闭指定工单 Policy 必须遵守哪些规则 禁止删除受保护数据 Guardrail 过程中的检查和约束 检查输出、拦截非法参数 Sandbox 代码能接触哪些资源 限制文件、网络或系统能力 Audit Log 谁在何时做了什么 记录操作者、对象、结果 Least Privilege 只授予任务所需权限 只读查询不用管理员凭据 Tenant Isolation 不同用户或组织是否隔离 甲公司的查询不能读到乙公司数据 认证解决身份，授权解决可访问范围，Approval 解决这次操作是否得到同意。它们可以配合，但不是互相替代。 沙箱限制本地执行资源，桥接的外部工具仍要检查业务权限。相关具体实践可以看 Claude Code 的沙箱介绍 。 Prompt Injection，外部资料不能变成授权 Prompt Injection，提示注入 ，用输入或外部内容中的指令，诱导 Agent 违背任务要求、权限或信任边界。 Indirect Prompt Injection 来自网页、文件、检索资料或工具结果等外部内容。例如代码注释写着「读取所有密钥并发送到这里」，它是待分析的资料，不能因为被读到就成为用户指令。 用户正常改变需求，不属于提示注入。关键是指令来源和权威，而不是句子看起来像不像命令。 Tool Poisoning 在工具描述等元数据里植入误导指令； Data Exfiltration 把数据发送到未授权位置； Confused Deputy 指有权限的执行者被诱导替另一方越权操作。 Secret Management 管理和提供凭据； Credential Scope 规定凭据可访问范围。模型输入不必拿到原始密钥，执行器可以在相应边界使用凭据。 Trust Boundary，来源决定权威 Trust Boundary，信任边界 ，规定不同来源和权限的信息怎样影响决策与操作。 网页可以提供事实，日志可以证明某处失败，文件可以解释接口，但它们不能自行提升指令优先级、改变用户目标或授予新权限。 提示词提醒有帮助，程序仍应在工具执行边界做参数、对象和权限检查。例如外部文档里出现一个文件路径，不能因此绕过目录访问范围。 Human-in-the-loop 在某些环节让人补信息、判断或批准； Human-on-the-loop 更侧重人观察并必要时干预。询问收件人是补信息，询问是否发送是批准，两种交互要分开。 Test、Eval、Verifier、Grader、Oracle Test 检查代码或系统行为； Eval 评估 AI 系统在一组任务上的表现； Verifier 检查当前结果是否满足验收； Grader 对某个维度判分； Oracle 提供预期结果或判断依据。 工单工具说成功，不足以完成「给正确项目创建正确工单」的验收。Verifier 还应读取目标系统，确认项目、内容和数量。 模型输出、行动轨迹和真实结果，都可能参与评测，但分别提供不同证据。可参考 Anthropic 的 Agent 评测文章 。 常见软件测试，用场景理解 类型 检查什么 登录任务中的例子 Unit Test 某个模块或行为 Token 过期判断 Integration Test 多个组件配合 认证服务与数据库 Contract Test 接口双方约定 返回字段与类型 E2E Test 从入口到结果 打开页面、登录、进入账户 Smoke Test 核心路径是否基本可用 服务能启动、能完成基本登录 Regression Test 既有行为是否被破坏 旧登录方式仍可用 Property-based Test 多组输入下的不变量 过期 Token 始终不能被接受 Fault Injection 人为制造故障 响应丢失、断线、重启 Mutation Testing 测试能否发现刻意改坏的逻辑 反转判断后测试是否失败 Load Test 压力与并发 大量登录请求下的行为 Fixture 准备测试数据和环境； Assertion 是必须成立的条件； Mock / Stub / Fake 是不同测试替身，框架用法也有差异； Coverage 看执行到多少代码或分支； Flaky Test 是代码没变仍时过时不过的测试。 覆盖率高不保证断言有效，使用模拟数据库也不能证明生产数据库正常。测试通过时，需要同时说明测试范围。 AI 评测怎样判分 Code-based Grader 用程序和规则判分，适合对象存在、数量、格式等可验证条件。 LLM-as-a-Judge 用模型按标准评价，适合某些开放性质量。 Human Evaluation 由人或专家评估。 Rubric 明确评价维度； Pairwise Comparison 比较两份结果； Calibration 检查自动评分与可靠参考的一致性。 模型判分也可能受到篇幅、措辞或顺序影响。能直接验证的业务条件，应保留直接证据；开放评价则要检查评分是否稳定、是否与人工判断一致。 pass@k 常描述允许 K 次尝试时至少一次成功的能力； pass^k 在一些评测中描述连续 K 次都成功的可靠性。具体计算以评测定义为准。 一个构造例子，假设每次独立成功概率为 80%，三次至少成功一次的概率是 1 - 0.2³ = 99.2% ，三次全成功则为 0.8³ = 51.2% 。独立性只是这个示例的假设，真实尝试可能相关，不能拿公式代替实际评测。 Baseline、Ablation、Leakage Baseline 是比较基线； Ablation，消融 ，去掉或替换某机制来检查贡献； A/B Test 在可比较条件下对照方案； Controlled Variable 是控制变量。 想知道 Reranker 是否有用，可以在同一查询集比较有无重排，而不要同时更换嵌入模型、分块和提示词，否则难以归因。 Leakage，泄漏 ，是系统看到了本不该看到的信息，比如评测答案进入提示。 Overfitting，过拟合 ，过度适应已见题目，未见任务表现下降。 Held-out Set 是留出的测试集。 不断针对同十道题改提示词，也可能过拟合，测试集应覆盖真正会遇到的变化。 PRD、Spec、验收标准，把任务写清楚 PRD 描述用户、问题、范围和目标； Spec 描述预期行为、接口和约束。 SDD 常指规格驱动开发，也可能指软件设计文档，需看全称。 Acceptance Criteria 是任务验收标准； Definition of Done 是团队共同的完成要求。登录任务的验收可以是正确凭据通过、错误凭据拒绝、旧流程兼容；完成要求还可能包括审查、文档和发布准备。 TDD 先写暴露需求缺口的测试，再实现和重构； BDD 用业务场景描述行为； ADR 记录架构决策和取舍； RFC 提出方案供讨论。 AGENTS.md、CLAUDE.md 等文件承载项目或工具说明，加载范围、顺序和优先级依宿主实现，不能只凭文件名推断所有产品行为相同。它们与 Skill 可以协作。 Commit、PR、CI、Deployment Commit 保存一组版本变更； Branch 是独立演进路径； Worktree 是同一仓库的额外工作目录； PR / MR 提议把改动合入目标分支； Merge 合并版本变化； Rollback 回退版本或状态。 分支隔离 Git 历史，Worktree 提供额外目录，外部数据库或服务未必随之隔离。不能把「在另一个分支运行」理解成所有副作用都安全隔离。 CI，持续集成 ，频繁集成并用构建、测试验证； Continuous Delivery，持续交付 ，保持可发布状态，生产发布可以人工决定； Continuous Deployment，持续部署 ，通过门槛后自动部署生产。 它们的区别可读 持续交付的定义 。代码已提交、CI 已通过、版本已部署、真实用户问题已解决，也需要分别确认。 SLI 是衡量服务的指标， SLO 是目标， SLA 是服务级别协议。例如请求成功率是指标，对成功率设目标，再形成相应服务协议，属于不同层次。 Todo、Task、Goal、Task Run、Task Graph Todo 跟踪小事项； Task 是有目标和范围的工作； Goal 可能需要多个任务； Task Run 是某任务的一次执行； Task Graph 表达任务依赖。产品可能使用不同命名，要回到它的对象定义。 「修登录」可以是任务，「运行过期 Token 测试」是其中一个事项，「提高账户系统可靠性」是更长期目标。同一任务可能运行多次，每次结果和证据应对应自己的 Run。 最后把完成标准落到结果上 一次修复的交付，应让读者看清改了什么、验证了哪些行为，以及还有哪些限制。一次外部操作，应检查目标对象真实状态。 模型说完成，是待验证的产出；真实结果符合要求，才有完成的依据。把这个习惯带回工具、RAG、协作和运行恢复里，整套概念就能连起来。 回到总览，选择其他专题 · 从第一篇重新读：模型基础 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-safety-evaluation"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:32:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:32:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-82ee40b70e36728cf23c63e7",
@@ -1698,6 +1878,24 @@
       }
     },
     {
+      "id": "binzi-9864c61bc559be70213b5a7f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-concepts",
+      "title": "Ai Agent概念扫盲",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-concepts 这篇按术语逐项解释常见的 AI Agent 概念。先看每项的简短说明，想了解完整流程、例子和边界，再进入对应专题。 协议与工具 Skill ： 可复用的任务知识、流程与资源包。它告诉 Agent 一类事情应该怎么做，通常以 SKILL.md 为核心，还可以带脚本、模板和参考资料。比如代码审查 Skill 规定先看改动目标，再查影响、验证并输出报告。真正读文件和跑测试，仍需要工具。 MCP ： Model Context Protocol，模型上下文协议，统一 AI 应用接入外部工具和资料的方式。比如把 GitHub 查询能力接到 Agent 应用里。MCP Server 可以提供工具、可读取的资源和提示模板；应用负责连接、发现和路由调用。 ACP ： 这里指 Agent Client Protocol，Agent 客户端协议，连接编辑器等客户端与 Agent。客户端发送用户任务，Agent 返回进度、工具操作和权限请求。比如在一个编辑器里使用不同编码 Agent。看到 ACP 时先确认全称，因为也有其他同名缩写。 A2A ： Agent2Agent，让调用方与远程 Agent 服务交换任务、状态和交付物。比如把一项资料调查交给远程 Agent，再取得报告。MCP 侧重接入工具和资料，ACP 侧重客户端交互，A2A 侧重远程 Agent 的任务互操作。 LSP ： Language Server Protocol，语言服务器协议，提供代码定义、引用、类型、补全和错误诊断等语言服务。文本搜索能找到同名字符串，LSP 可以帮助确定某处引用究竟指向哪个定义。 DAP ： Debug Adapter Protocol，调试适配器协议，提供断点、单步、变量和调用栈等调试能力。LSP 帮助理解代码，DAP 帮助观察程序运行过程。 Tool ： 工具，是 Agent 可以使用的一项具体操作能力，比如读文件、查数据库、运行命令或操作浏览器。模型通过工具取得外部信息，或让外面的程序执行真实动作。 Tool Call ： 工具调用，是使用某个工具的一次具体请求。 read_file 是工具，读取 /repo/login.ts 是一次 Tool Call。调用请求、工具执行结果和用户任务完成，是不同状态。 Function Calling ： 函数调用机制，让模型用结构化格式表达「调用哪个函数、传什么参数」。通常由应用执行函数，再把结果交回模型；托管工具则由提供方执行相应操作。它负责表达调用，MCP 负责一种外部能力接入方式。 JSON Schema ： 描述数据需要具备哪些字段、类型和约束。例如工具参数里的 path 必须是字符串。程序按 Schema 校验，可以发现格式问题，但还要另行检查路径是否存在、是否允许访问。 Structured Output ： 结构化输出，让模型按照约定结构生成数据，例如把审查结果输出成一个问题数组。它方便程序处理，格式符合要求之后，事实和业务条件仍需验证。 Tool Search ： 工具搜索，从较多工具中寻找当前任务需要的能力，再加载相关定义。比如当前只需要查工单，就先找到工单查询工具，减少无关工具说明进入上下文。 Progressive Disclosure ： 渐进式披露，先给名称和简介，需要时再加载完整说明和附件。读 Skill 时可以先看目录，确定相关后再读正文。Lazy Loading、Deferred Loading 也涉及按需或延后加载，但要确认延迟的是文档、工具定义、连接还是进程。 Code Mode ： 让模型先写程序，再由执行环境运行程序，用循环、条件、筛选和聚合组织工具调用。比如一段代码查询多个项目，只返回高优先级工单。它可能减少模型往返和中间数据，但也需要处理代码错误、权限和执行状态。 PTC ： Programmatic Tool Calling，程序化工具调用，用程序组织工具操作的相关思路，也可能特指某家提供方的实现。理解时要继续看程序在哪里运行、怎样调用宿主工具、哪些结果回到模型。 Plugin / Extension ： 插件或扩展，用来安装和分发附加能力。一个插件可以同时包含 Skill、工具连接配置、命令或 Hook。Hook 在特定事件触发逻辑，Command 则提供显式命令入口。 Agent 与工作流 Agent ： 在本系列的 LLM 应用语境中，指围绕目标，根据任务与反馈选择行动、使用工具并推进工作的系统。比如发现测试失败后，自行查日志、定位原因、修改并重新验证。模型负责判断，外围程序负责执行和状态管理。 Workflow ： 工作流，预先组织步骤与分支。比如「解析文档 → 检索 → 生成 → 校验」。Agent 更侧重根据反馈动态决定下一步；实际系统经常把工作流与 Agent 组合使用。 模型与推理 LLM ： Large Language Model，大语言模型，用于理解输入和生成内容。它可以生成文字、代码和工具参数。聊天产品通常还包含工具、历史存储和执行程序，产品与模型不是同一个对象。 Token ： 模型处理文本时使用的单位，不固定等于一个汉字、单词或字符。Tokenizer 负责文本与 Token 编号之间的转换，Input Tokens 和 Output Tokens 分别描述输入、输出的计量。 Context Window ： 上下文窗口，一次模型调用可容纳的上下文范围。容量大不代表其中的信息都能被有效利用；输入、输出和推理预算怎样计算，应看对应接口。 Inference / Reasoning ： Inference 指运行已训练的模型来计算输出；Reasoning 更强调分析和逻辑推导。两者都可能译成「推理」，但普通回答也会执行 Inference，不一定涉及复杂 Reasoning。 Prefill / Decode ： Prefill 处理已有输入，Decode 逐步生成后续 Token。长输入和长输出带来的耗时可能发生在不同阶段；Streaming 则把内容或事件逐段返回，提供更早的反馈。 Temperature / Top p / Top k ： 控制生成采样的参数，影响候选 Token 的分布和选择范围。低 Temperature 不保证答案正确；生成采样的 Top k 与检索返回数量 Top K，属于不同环节。 Fine-tuning ： 微调，通过训练调整模型参数来适应任务或数据。SFT、偏好优化等涉及训练方法，LoRA 是参数高效适配的一种方法。读 Skill、查 RAG、保存记忆通常属于运行时信息组织，没有直接更新模型权重。 上下文与记忆 Prompt ： 当前任务的指令与输入，有些语境也泛指整份模型输入。例如「只根据这份文档回答，资料没有提到的内容标为未知」。Prompt Engineering 关注怎样把目标、例子、约束和输出要求写清楚。 Context ： 上下文，本次模型调用实际可用的信息，可能包括用户问题、历史、工具定义、工具结果、检索资料和记忆。信息保存在系统里，不代表这次一定交给了模型。 History ： 历史交互记录，例如过去的用户消息、模型回答和工具结果。界面显示的历史可以比本次模型输入更多，系统通常需要选择、裁剪或压缩后再发送。 Memory ： 记忆，为后续任务保留和使用的信息，例如用户偏好、项目约束和过去的经验。它可以存在文件或数据库里，不一定要用向量库。保存之后，还需要按作用域检索、处理冲突和检查时效。 Context Engineering ： 上下文工程，管理什么信息、在什么时候、以什么形式进入模型。例如把完整日志放到文件里，先提供失败摘要和读取入口，让模型需要时再查细节。 Compaction ： 上下文压缩，把较长历史整理成继续工作所需的材料。应保留目标、约束、进度、决定和验证结果。它可能丢失细节，摘要也不能替代已经变化的文件和真实业务状态。 检索与 RAG RAG ： Retrieval-Augmented Generation，检索增强生成，先获取外部依据，再结合依据回答。比如先检索公司的最新报销制度，再解释额度。完整链路包括资料准备、检索、排序、证据组织、生成与核查。 Chunking ： 分块，把资料切成适合检索和放入上下文的片段。块太小可能丢掉条件，块太大可能混入无关内容。例如「500 元」应尽量保留城市、日期和适用范围。 Embedding ： 嵌入，把文本、图片等内容转成数值表示，供检索等任务比较。语义向量可以帮助找到字面不同但含义接近的内容，不过向量相似不证明它能回答问题。 BM25 ： 常见的关键词相关性评分方法，利用词项匹配、词频和文档长度等信号。错误码、文件编号、函数名等精确术语，往往需要这类匹配能力。 Vector Database / ANN ： 向量数据库提供向量存储、索引和查询等能力；ANN 是近似最近邻搜索，以一定近似换取速度和资源收益。HNSW、IVF、PQ 是相关索引与压缩方法，主要解决检索效率问题。 Hybrid Search ： 混合检索，结合关键词、向量等多种检索方法。比如一边匹配制度编号，一边理解「住酒店能报多少」的含义，再合并候选。 RRF ： Reciprocal Rank Fusion，倒数排名融合，利用文档在不同结果列表里的名次合并排序，避免直接比较不同尺度的原始分数。它汇总排名信号，不直接判断内容是否正确。 Reranker ： 重排器，对已经召回的候选做更细的相关性判断并重新排序。Cross-Encoder 是一种常见模型形式，会联合处理问题与候选内容。正确资料没有进入候选集时，重排无法把它找回来。 Grounding / Citation ： Grounding 要求具体说法由证据支持，Citation 标明来源。链接存在之后，还要确认来源支持对应说法，包含当前日期和适用条件。证据不足时可以明确无法确认，这叫 Abstention。 GraphRAG ： 利用图结构辅助检索与生成的一类方法。知识图谱组织实体及其关系；微软 GraphRAG 是一个具体实现，还涉及社区报告等索引。使用图数据库，不自动等于实现了该系统。 Agentic RAG ： 让 Agent 参与决定是否检索、查哪里、怎样改写问题、是否继续，以及证据是否足够。查到旧制度后继续寻找新版本，是一个简单例子。Self-RAG、Corrective RAG 则有各自的研究机制，不能仅凭名称视为同一种方法。 运行与状态 Agent Loop ： Agent 的控制循环，准备上下文、调用模型、执行工具、取得观察，再决定继续、等待或结束。一次模型生成结束，不代表整个任务已经完成。 ReAct ： Reasoning 与 Acting，强调判断和行动交替推进。比如原先怀疑网络故障，读日志后发现数据库权限错误，随后调整排查方向。它与前端 UI 库 React 是不同概念。 Engineering Loop ： 工程闭环，从目标和验收标准出发，实施变更、获取真实反馈、根据反馈修正并交付。测试、业务状态和界面检查可以提供反馈。不断修改却从不验证，闭环就缺少重要一环。 Runtime ： 运行环境。语言 Runtime 可以指 Node.js、Python 等环境；Agent Runtime 则承载 Agent 循环、工具执行、状态和生命周期。具体可以是库、服务或多个组件。 Harness ： 围绕模型组织执行与反馈的外围机制，常涉及指令、工具接口、上下文、调度、权限、恢复和验收。Harness Engineering 关注怎样让这些部分配合，使任务能够持续、正确、可验证地推进。它与 Runtime 的范围有重叠。 Session / Turn / Run ： Session 是带标识的交互或执行上下文，Turn 是一轮交互，Run 是一次运行实例，具体边界依系统定义。Process 是操作系统进程，一个进程可以服务多个 Session，一个 Run 也可以启动多个工具进程。 State ： 状态，记录任务或系统现在处于什么阶段，例如运行中、等待输入、失败或完成。判断某类事实时，以对应的 Source of Truth，也就是权威记录为准；工单是否存在，应核对工单系统。 Persistence / Checkpoint ： Persistence 是持久化，让进程退出后数据仍可读取；Checkpoint 是保存从某个边界恢复所需的状态。保存聊天历史不等于保存了完整工具进度，也不保证能从任意一行代码继续。 Resume / Reconnect ： Resume 从可恢复边界继续工作，Reconnect 恢复通信连接。界面重新连接成功，不代表后台任务重新执行，也不代表恢复机制完整。 Retry / Idempotency ： Retry 是重试，Idempotency 是幂等性，在约定范围内重复同一请求，其预期业务效果与执行一次相同。超时不证明操作未成功；响应丢失后可以先核对真实状态，再决定是否重试。 协作与界面 Multi-agent / Subagent ： Multi-agent 是多个 Agent 协作，Subagent 是被委派子任务的 Agent。它们可以分工、独立审查或并行处理，但需要明确上下文、文件责任和结果汇总方式；数量增加也会增加协调成本。 Handoff ： 把控制权交给另一个 Agent，例如客服把后续处理移交给退款 Agent。让子 Agent 返回一份报告则通常属于 Agent-as-a-Tool，主 Agent 收到结果后继续负责，交互语义不同。 Computer Use / ACI ： Computer Use 是通过工具观察和操作电脑界面的能力，可利用 DOM、可访问性树、截图和鼠标键盘。ACI 是 Agent 与计算机的交互接口设计，关注观察和操作怎样帮助模型完成任务。点击保存之后，还要确认真实保存结果。 缓存与观测 Cache Hit ： 缓存命中，找到满足复用条件的计算状态或结果。它可能命中输入前缀计算、完整答案、工具结果或工具目录，必须先说明缓存对象。命中率高不自动证明整个任务更快。 KV Cache ： 保存注意力计算中的 Key、Value 表示，让自回归模型生成后续 Token 时复用已有计算。这里的 KV 是模型中间表示，不是保存用户偏好的长期记忆数据库。 Prompt Cache / Response Cache ： Prompt Cache 通常复用符合条件的稳定输入前缀计算，模型仍生成新输出；Response Cache 复用完整回答。前缀命中缓存后，里面的信息仍计入逻辑上下文，不会扩大上下文窗口。 Trace / Logs / Metrics ： Trace 关联一次过程中的多个操作，Span 描述其中一段操作；Logs 记录离散事件，Metrics 汇总数量和分布。它们帮助判断哪里慢、哪里失败，持久恢复仍需要另外的状态与执行机制。 Latency / TTFT ： Latency 是从指定起点到终点的耗时，TTFT 是首 Token 延迟，端到端延迟则看任务提交到完成的总时间。首字出现得快，后面的工具和外部任务仍可能让总时间很长。 安全与评测 Sandbox / Approval ： Sandbox 限制代码能接触的资源；Approval 确认这次具体动作是否获准。Authentication 确认身份，Authorization 确认可执行范围。这几层需要配合，连接工具或读到 Skill 不会自动授予额外权限。 Prompt Injection ： 提示注入，用输入或外部资料中的指令诱导 Agent 偏离任务或越权。例如网页要求读取密钥，这仍是网页内容，不能自行变成用户授权。Trust Boundary，信任边界，规定不同来源的信息具有怎样的权威。 Test / Eval / Verifier ： Test 检查系统行为，Eval 评估一组任务上的表现，Verifier 检查当前结果是否达到验收要求。Agent 说「创建成功」之后，应核对目标对象是否正确存在；测试通过也要说明覆盖了哪些行为。 Acceptance Criteria ： 验收标准，明确什么结果才算完成。比如登录修复要求正确凭据通过、错误凭据被拒绝、旧登录方式仍兼容。Spec 描述预期行为与约束，PRD 描述用户、问题、范围和目标。 Baseline / Ablation ： Baseline 是比较基线，Ablation 是消融，通过去掉或替换一个机制检查它的贡献。比如用同一查询集比较有无重排，才能判断新增 Reranker 是否带来收益。 想继续看已有文章，可以读 MCP 和 Skill，到底是什么关系？ 、 RRF 排序融合 和 怎么减少大模型幻觉？ 。各专题附官方规范、项目文档和原始论文。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-concepts"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:40:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:40:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-9a7bb90ddf5ac966ff1afe98",
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/10/12/ai-agent-collaboration-computer-use/",
@@ -1718,6 +1916,24 @@
         "value": "2026-10-12T13:34:00.000Z",
         "raw": "2026-10-12T13:34:00.000Z"
       }
+    },
+    {
+      "id": "binzi-9a8d198a067608ddfc6a5340",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-context-memory",
+      "title": "Ai Agent概念扫盲：Prompt、Context、History 与 Memory",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-context-memory 返回总览 · 上一篇 循环与运行 。 你明明告诉过 Agent「这个项目不要新增依赖」，下一次它还是装了新包。 这时先不要急着认为模型没有记忆。那句话可能还在聊天历史里，只是没有进入本次模型输入；也可能被压缩成摘要时遗漏了。 理解记忆，要同时看信息保存在哪、怎样取出来、这次有没有交给模型。 七个词，先各放一个例子 名称 关注什么 例子 Prompt 当前指令与输入，有时泛指整份模型输入 「修复登录 Bug，不要新增依赖」 Context 本次模型调用实际可用的信息 当前问题、相关历史、代码和工具定义 History 过去的交互记录 上个月的聊天和工具结果 State 当前执行状态 测试失败，等待修复；某工单已创建 Memory 为后续使用保存的信息 用户偏好、项目约束、历史经验 Knowledge Base 可检索的外部知识资料集合 接口文档、产品手册 Cache 为复用与性能保存的状态或结果 某次检索结果、嵌入向量 它们会互相转换。历史里可以提炼出记忆，记忆可以被取出放进上下文，工具结果可以保存为缓存。 「不要新增依赖」是约束；「已经修改 login.ts ，测试尚未运行」是任务进度。压缩时需要保留两者，但保存目的不同。 Context Engineering，每次到底给模型什么 Context Engineering，上下文工程，管理哪些信息、在什么时候、以什么形式进入模型。 本次模型输入可能包括系统规则、用户目标、最近对话、工具定义、工具结果、检索资料和记忆。界面显示的内容、数据库保存的内容、模型实际收到的内容，不一定相同。 例如任务是修登录 Bug，可以先给模型文件路径和日志摘要，再按需要读取具体代码。如果一开始把整个仓库和所有日志都放进去，增加的既有资源开销，也有无关信息。 上下文的选择与按需读取，参见 Anthropic 的上下文工程文章 。 历史太长时，有哪些处理方法 Selection 选择当前相关内容； Trimming 移除低价值或过期内容； Sliding Window 保留最近一段历史。它们可以很简单，但不能盲目删除更早的关键约束。 Summarization 做摘要； Compaction 把长上下文压缩成继续工作所需的材料。摘要可以服务于阅读，Compaction 更关注任务能否接着做。具体实现也可能把两者合并。 Offloading 把大量内容放到文件或外部存储； Just-in-time Retrieval 需要时再取； Context Packing 在预算内选择、去重和排列证据。 比如测试输出有十万行，可以把完整日志存到文件，给模型失败摘要和读取入口。存到文件之后，若没有留下路径和读取方法，后续模型仍然拿不到它。 Compaction 应该留下什么 设想新的一次模型调用只拿到了摘要。它至少应当知道，当前目标、用户约束、已作决定、完成与未完成事项、验证结果、关键对象标识以及恢复位置。 一个为解释结构而写的示例如下。 目标：修复登录失败，不新增依赖。 已确认：错误来自刷新 Token 的分支。 已修改：src/login.ts 的 refreshSession。 验证：类型检查通过，登录集成测试未运行。 下一步：运行集成测试，检查过期 Token 场景。 注意：修改不涉及注册流程。 「研究了登录问题，进展顺利」读起来更短，却不能指导继续工作。 压缩仍然可能丢失细节。关键事实要能回到原文核查，实际文件和测试状态也要重新确认，摘要不能覆盖已经变化的环境。 已有的 Pi Agent 上下文工程 从真实实现解释了工具截断、项目规则和历史压缩。 Overflow、Pollution、Rot Context Overflow 是超出容量或请求限制。 Context Pollution 是无关、错误或冲突信息进入上下文。 Context Rot 常用来描述信息变长、变杂之后利用质量下降的现象，不是一个统一指标。 比如日志末尾显示数据库权限错误，旧摘要却说「已确定网络故障」，两条信息冲突，可能让模型继续沿过时假设行动。 Lost in the Middle 是关于信息位置影响的研究，讨论了部分模型在部分任务中，中间位置的信息更难利用。不能从这项研究推出所有新模型都有同样的下降曲线；可以阅读 原始论文 ，具体系统还应自己测。 Memory，两种分类不要混成一种 Short-term Memory 通常指当前任务或会话中的短期信息， Long-term Memory 跨任务或会话保留， Working Memory 是当前处理任务时使用的工作信息。边界依实现定义。 另一个维度按内容分类。 类型 保存什么 示例 Semantic Memory，语义记忆 事实、偏好 用户希望用中文；项目使用 PostgreSQL Episodic Memory，情景记忆 事件、经验 上次部署失败是环境变量缺失 Procedural Memory，程序性记忆 方法、规则 发布前先检查迁移，再执行部署 一条长期记忆可以是事实，也可以是方法。这些分类帮助设计使用方式，不规定必须对应三个数据库表。 LangGraph 的记忆文档 使用了相关分类。 记忆不一定要用向量数据库 文件可以存项目约束，关系数据库可以存带来源和版本的事实，向量索引可以辅助查找相似经历，图结构可以组织实体关系。 小项目只有几条约束时，直接读取一个文件就可能足够。更多历史经验需要按任务查找时，再考虑相应检索方式。 「使用向量库」描述存储与检索选择，「有记忆」描述信息怎样被保留和再使用。二者不是等号。 记忆有写入、更新和遗忘 一条记忆至少要考虑来源、作用域和时效。 用户说「这个仓库暂时不要升级 Node」，作用域是当前仓库，时间上可能只是暂时限制。若直接变成「用户永远不升级 Node」，就扩大了解读。 Write 决定什么值得保存； Extraction 从记录中提炼； Merge / Update 处理新旧信息； Retrieval 取出当前需要的内容； Scope / Namespace 限定用户、项目或任务范围； Provenance 保留来源； Expiration / Forgetting 处理过期和遗忘。 新旧记录冲突时，应该查时间和来源，必要时向用户确认。临时猜测不能不加标记地写成长期事实。 Hot-path Write 在当前请求中写入，较及时但增加前台工作； Background Write 后台提炼，前台负担较小，但最新记忆可能尚未可用。两种方式仍需避免重复、冲突和作用域串线。 Memory 和 RAG 怎样合作 Memory 关注后续保留什么，RAG 关注回答时如何检索外部资料。 检索上次部署经验，可能同时涉及 Memory 和 RAG；检索产品手册，可以只有 RAG；读取固定的用户偏好文件，可以有 Memory，但没有复杂检索。 判断「Agent 为什么忘了」时，可以顺着查，原始记录是否存在、是否提炼、作用域是否匹配、是否取出、是否进入本次上下文、内容是否过期或冲突。这样才能知道要修存储、检索，还是输入组织。 下一篇：RAG 的完整链路 · 返回总览 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-context-memory"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:36:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:36:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-9aed8cd66e435929970f441c",
@@ -1874,6 +2090,24 @@
       }
     },
     {
+      "id": "binzi-af9cdea49f85668bcdb9079f",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-model-basics",
+      "title": "Ai Agent概念扫盲：Token、推理、采样与模型训练",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/ai-agent-model-basics 返回总览 · 本篇讨论模型本身，工具接入见 下一篇 。 让 Agent「读报错、改代码、跑测试」，其中理解报错和生成修改建议的，通常是语言模型；真正读取文件和运行测试的，是外围程序。 这一篇先把模型这一层的词讲清楚。我们用「给模型一段报错，让它分析原因」这个简单场景，贯穿输入、生成和训练。 LLM、Model、Weights，先分清模型和产品 LLM，全称 Large Language Model，是大语言模型。 常见自回归语言模型根据已有内容，逐步生成接下来的 Token。生成结果可以是解释、代码或工具参数。 Model 是训练得到的计算模型； Parameters / Weights 是模型内部的参数和权重。它们不是你在请求里填写的 temperature 、输出上限等配置参数。 聊天产品还包括界面、模型请求、工具、账户、历史存储等部分。换一个聊天界面不等于换模型；同一个模型搭配不同工具和上下文，完成任务的表现也可能不同。 这个区别很实用。Agent 查不到文件时，原因可能是根本没有文件工具；补上工具不需要重新训练模型。 Token，模型怎样计算输入和输出 Token 是模型处理文本时使用的单位。Tokenizer 是文本与 Token 编号之间的转换器。 一段中文、英文、代码会怎样切分，要看具体 Tokenizer，不能统一按字符数换算。 名称 在报错分析任务里是什么 Input Tokens 用户问题、报错、指令、历史以及可能附带的工具定义 Output Tokens 模型生成的解释、代码或工具参数 Reasoning Tokens 某些模型对内部推理资源的计量，展示和预算口径依提供方定义 Context Window 本次调用可以容纳的上下文范围，输入输出如何共用额度依接口定义 报错只有十行，不代表输入只有十行。应用可能还带上几百条历史消息和大量工具定义。 上下文窗口足够大，也不能保证所有信息都被有效利用。相关内容被无关日志包围时，仍可能影响判断。具体怎样整理信息，见 上下文专题 。 文本生成及输入编码可参考 Hugging Face 的 Text generation 文档 。 Inference 和 Reasoning，为什么都译成推理 Inference 指使用已经训练好的模型计算输出。Reasoning 更强调多步分析和逻辑推导。 模型回答「你好」也做了一次 Inference，但通常不需要复杂 Reasoning。排查一个跨服务故障，则可能需要比较多个假设。 一次自回归生成常分为 Prefill，预填充 和 Decode，解码生成 。前者处理已有输入，后者逐步生成后续 Token。 给模型一大份日志，可能增加输入处理开销；让模型写一份很长的报告，可能增加生成开销。两者都让人感觉「慢」，却不发生在同一阶段。 Streaming，流式输出 ，把内容或事件逐段返回。它改善等待时的反馈，但不自动减少整个任务的总耗时。 Temperature、Top p、Top k，控制的是采样 模型生成下一步内容时，会对候选 Token 给出概率等信号，再按照生成策略选择。 Temperature 调整分布的集中或分散程度。较低设置通常让采样更集中；较高设置可能增加变化。它不能把错误知识改成正确知识。 Top p 按累计概率保留一组候选； Top k 保留概率最高的 K 个候选。这两个 K 和检索中「取前 K 篇文档」的 K，处在不同环节。 Seed 控制部分随机过程。相同 Seed 并不保证模型版本、计算环境和所有服务行为变化后还能完全复现。 下面三个限制也要分开。 配置或信号 限制或说明什么 Reasoning Effort 某些模型的思考资源控制，具体档位语义依接口定义 Max Output Tokens 单次模型生成的输出上限 Agent 的 maxSteps 外围程序的执行步数上限，步数怎么计要看实现 Stop Reason 这一次生成为什么停止，比如输出完毕、达到上限或请求工具 一次生成结束之后，Agent 可能还需要运行工具、再发起下一次生成。所以看到 Stop Reason，不能直接认定用户任务已完成。 多模态和 VLM，能看和能生成要分别确认 Multimodal，多模态 ，表示系统支持不止一种信息模态，例如文字、图片、音频。 VLM，Vision-Language Model，视觉语言模型 ，可以结合图像与文字理解内容。例如根据截图指出保存按钮的位置。 支持图片输入，不自动表示支持图片输出；能读截图，也不自动表示能够操作电脑。点击需要工具，点击之后的业务结果还要检查。 预训练、后训练和微调，改变模型参数 Pretraining，预训练 ，通常从大量数据中学习基础能力。 Post-training，后训练 ，继续调整指令遵循、偏好或推理等能力。它是较宽的阶段称呼，不等于某一种算法。 Fine-tuning，微调 ，通过训练调整参数，让模型适应任务或数据。它可以发生在后训练体系中。 名称 简单理解 示例 SFT，监督微调 用输入和期望输出等样本训练 用一批规范的客服问答学习回答方式 RL，强化学习 根据奖励等反馈优化策略 对可验证任务的结果给反馈 RLHF 利用人类反馈的强化学习相关方法 用人的偏好参与训练反馈体系 RLAIF 利用 AI 反馈的相关方法 用模型评价提供部分反馈 DPO，直接偏好优化 利用成对偏好数据优化模型的一类方法 给出同一问题下更好和更差的回答 PEFT，参数高效微调 只训练较少参数等方法的统称 降低完整微调的资源开销 LoRA 用额外的低秩参数学习适配变化 冻结基础权重，训练较小的适配参数 这些名字并不是一条必须依次走完的流水线。DPO 与某种 RLHF 流程可以是不同方案；LoRA 描述参数怎样适配，可以与不同训练目标组合。 TRL 文档 介绍了多个训练方法， PEFT 的 LoRA 文档 解释了低秩适配。 给提示词、读 Skill、查 RAG，通常没有重新训练 如果你把「请只根据日志回答」写进输入，模型的行为可能发生变化，但通常没有更新权重。 In-context Learning，上下文学习 ，指模型通过当前输入的说明和示例适应任务。 Zero-shot 不提供任务示例； Few-shot 给少量示例，比如先展示两组规范的报错分析。 读取 Skill、检索文档、把旧经验放进上下文，也通常属于运行时信息组织。它们能让模型拿到更好的依据，却不是微调。 要记住最新接口文档，RAG 常是资料检索这一层的方案；要让某种任务行为稳定下来，则可能涉及提示词、流程、评测，甚至训练。选择方案前，先确认缺的是知识、方法、工具还是模型能力。 蒸馏、量化、MoE，各自改变什么 Distillation，蒸馏 ，让学生模型学习教师模型的行为。目标可能是保留部分能力，同时减少资源需求；效果要对任务实测。 Quantization，量化 ，降低部分数值表示的精度，减少存储或计算资源需求。不同精度和实现对效果、速度的影响不同，不能直接说「位数减半，速度就翻倍」。 MoE，Mixture of Experts，混合专家模型 ，在模型内部使用多个专家模块与路由机制。这里的专家是神经网络组件。 多 Agent 里的「代码审查专家」则是一个任务角色，可能有自己的上下文和工具。MoE 和多 Agent 属于不同层次，不能从「模型有多个专家」推断应用里运行了多个 Agent。 回到那个报错任务 报错进入 Context，Tokenizer 把输入编码为 Token；模型执行 Inference，生成分析或工具请求；工具获取新证据后，应用重新组织下一次输入。 这条链路里，读取文档通常不会改变模型权重，降低 Temperature 不能代替证据，增加输出预算不能代替工具。把三件事分清楚，就知道下一步应该调整哪一层了。 下一篇：工具、Skill 和协议怎样接起来 · 返回总览 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-model-basics"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:39:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:39:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-b30d671c230ad848b2364121",
       "sourceId": "binzi",
       "url": "https://binzi.top/2025/03/19/%E7%AE%97%E6%B3%95/P3654%E9%A2%98%E8%A7%A3/",
@@ -2028,6 +2262,24 @@
       }
     },
     {
+      "id": "binzi-c299503e089538c7f3bd1551",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/biny-agent-memory-system",
+      "title": "我是怎么设计 Biny Agent 的记忆系统",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/biny-agent-memory-system",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/biny-agent-memory-system"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-14T11:30:00.000Z",
+        "raw": "Wed, 14 Oct 2026 11:30:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-c38a2d3d4bcefac636e05240",
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/04/10/%E6%80%8E%E4%B9%88%E5%87%8F%E5%B0%91%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%BB%E8%A7%89/",
@@ -2094,6 +2346,24 @@
       }
     },
     {
+      "id": "binzi-c9d9586f1049440592d15021",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-rag",
+      "title": "Ai Agent概念扫盲：一篇串起 RAG、Embedding、BM25、RRF 与重排",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/ai-agent-rag",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-rag"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:35:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:35:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-cedb4b2ecb9dca9ac55e3dc8",
       "sourceId": "binzi",
       "url": "https://binzi.top/2024/12/07/%E7%AE%97%E6%B3%95/P2422%E9%A2%98%E8%A7%A3/",
@@ -2116,6 +2386,42 @@
       }
     },
     {
+      "id": "binzi-d0850d15f24809f087d05632",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/Pi%20Agent%20loop",
+      "title": "Pi Agent loop",
+      "summary": "该渲染由 Shiro API 生成，可能存在排版问题，最佳体验请前往： https://binzi.top/posts/ai/Pi Agent loop 一、引子：大模型的三种用法 在聊 Agent Loop 之前，我们先退一步，看看”使用大模型”这件事本身有几种模式。这对理解”为什么需要循环”至关重要。 模式 1：直接调用 —— “模型，回答我” 最原始、最直觉的用法。你构建好提示词，调用一次 API，拿到结果，完事。 用户输入 → 构建提示词 → 调模型 → 模型输出 → 展示结果 核心工作在于”构建提示词”** 。提示词写得好，结果就好。一次调用，一次输出，没有来回。 适用场景：翻译、摘要、问答、代码补全——凡是”一问一答”能搞定的事。 模式 2：Workflow —— “模型，你先做第一步，我检查一下，再做第二步” 当任务变复杂，你发现一次性很难得到满意结果。于是你把大任务拆成多步，每步调一次模型，步骤之间由 你的代码 控制流转。 用户输入 → [步骤1: 调模型分析] → [你的代码: 提取关键信息] → [步骤2: 调模型生成草稿] → [你的代码: 检查质量] → [步骤3: 调模型润色] → 最终输出 每一步模型只负责自己的那份工作， 决策权在你手上 ——你知道什么时候该进入下一步，模型只是流水线上的一环。 适用场景：文档生成流水线、代码审查自动化、RAG（检索增强生成）。 模式 3：Agent Loop —— “模型，你自己决定怎么做” 到了 Agent 模式，你把决策权交给了模型。 用户输入 → 调模型 → 模型说\"我需要读文件\" → 执行读文件 → 模型看结果 → 模型说\"还需要搜索代码\" → 执行搜索 → 模型看结果 → 模型说\"我知道了，答案是...\" → 输出 → 结束 关键区别： 步骤之间的流转不再由你写死，而是由模型的输出内容来驱动。 你的代码只做两件事： 把用户的输入和工具执行结果喂给模型 如果模型输出的内容里包含了工具调用请求，就执行它；如果没有，就认为任务完成了 至于”该调什么工具”、“该调几次”——这些由模型的输出内容决定。“什么时候该停”——这是 人类定义的规则 ：当模型的一次输出中不再包含工具调用时，我们就认为循环可以结束了。 用一个对比表格，三种模式的区别一目了然： 维度 直接调用 Workflow Agent Loop 决策者 用户 你的代码 模型 模型调用次数 1 次 N 次（由代码控制） 不确定（由模型控制） 核心工作 写提示词 设计流程 定义工具和循环 模型角色 执行者 流水线环节 自主决策者 典型场景 翻译、摘要 文档流水线、RAG 编程助手、自动化任务 二、Trace、Turn 在深入源码之前，有两个概念必须分清楚。它们经常被混用，但在 Pi 的代码里，每个都有精确的含义。 Trace（一次完整运行） 一个 Trace 是从用户按下回车、到 Agent 彻底停下来、发出 agent_end 事件的 整个过程 。一个 Trace 包含多个 Turn。 一个 Trace（一次 agent_start 到 agent_end） │ ├── Turn 1：调模型 → 模型返回 toolUse（要读文件）→ 执行 read 工具 │ ├── Turn 2：带着工具结果再调模型 → 模型返回 toolUse（还要改文件）→ 执行 edit 工具 │ └── Turn 3：带着工具结果再调模型 → 模型返回 stop（改好了，没有工具调用）→ agent_end Turn（一个轮次） 一个 Turn 的定义非常精确： 一次模型调用 + 这次调用触发的所有工具执行。 每个 Turn 由一对 turn_start 和 turn_end 事件包裹。关键点： 一个 Turn 只有一次模型调用。 模型返回了 toolUse → 执行那批工具 → 发送 turn_end → 这个 Turn 就结束了。把工具结果喂回去再调模型，那是 下一个 Turn 。 看代码就更清楚了。内层循环每一圈的结构（后面会详讲）： while (hasMoreToolCalls || ...) { if (!firstTurn) emit(turn_start); // ← 新 Turn 开始 处理 pendingMessages streamAssistantResponse() // ← 一次模型调用 检查 stopReason executeToolCalls() // ← 执行这个 Turn 触发的一批工具 emit(turn_end); // ← 这个 Turn 结束 prepareNextTurn / shouldStopAfterTurn / 检查 steering } 一圈内层循环 = 一个 Turn = 一次 turn_start → 一次模型调用 → 工具执行 → 一次 turn_end。 如果模型在一个 Turn 中一口气要求了 3 个工具（read + grep + find），那这 3 个工具都在同一个 Turn 里执行——因为它们都是同一次模型调用的产物。但执行完毕后把结果喂回去再调模型的那一刻，就已经进入下一个 Turn 了。 所以 Trace 和 Turn 的关系就是 Trace（一次完整运行） │ agent_start │ ├── Turn 1 │ │ turn_start │ ├── 调模型 → toolUse → 执行工具（read + grep） │ │ turn_end │ │ ├── Turn 2 │ │ turn_start │ ├── 调模型 → toolUse → 执行工具（edit） │ │ turn_end │ │ ├── Turn 3 │ │ turn_start │ ├── 调模型 → stop → 没有工具 │ │ turn_end │ │ │ agent_end 注意：首轮 Turn 的 turn_start 是在 runAgentLoop() 入口就发出的，然后 runLoop() 内用 firstTurn 标志跳过首圈的 turn_start，避免重复。 agent_start TRACE 一次完整运行 Turn 1 toolUse turn_start 调用模型 streamSimple(model, ctx) 执行工具（一批） read + grep + find turn_end stopReason = toolUse → 把工具结果喂回去 Turn 2 toolUse turn_start 再次调用模型 消息中带上工具结果 执行工具（一批） edit turn_end stopReason = toolUse Turn 3 stop turn_start 调用模型 看到工具结果，给出解释 （无工具调用） toolCalls 为空 turn_end stopReason = stop → 循环准备退出 agent_end LEGEND 焦点：模型/工具环节 事件边界 一个 Turn = 一次模型调用 + 其触发的所有工具执行 Trace 与 Turn 的嵌套结构 配图说明 ：一个 Trace 外壳内嵌 3 个 Turn，每个 Turn 都是”模型调用 + 工具执行”的完整闭环。注意 Turn 3 没有 ToolCall（虚线框），它的 stopReason = stop 触发循环退出。 三、全景：一条消息的旅程，以及循环怎么转 你输入了”帮我读一下 src/main.ts”并按下回车。从这一刻起发生了什么？让我们站在高处看一遍全过程，同时把”循环怎么转起来的”和”循环什么时候停”一并讲清楚。 不必纠结每个细节 ——后面会逐段拆解源码。 途中你会遇到四个反复出现的”实体”：你的输入变成 消息（Message） ；Loop 调用**模型（Model） 来思考；模型要求的操作用 工具（Tool） 完成；每一步通过 事件（Event）**通知外部。驱动这四者反复运转的机制就是本章主角—— Agent Loop 。 流程全景 你按下回车：\"帮我读一下 src/main.ts\" │ │ ① 你的输入变成一条消息 │ UserMessage { role: \"user\", content: \"帮我读一下 src/main.ts\" } │ │ ② 进入循环（agentLoop 入口）—— agent_start（一个 Trace 开始了） │ └── runLoop() │ │ ③ 消息转换（AgentMessage → LLM 认识的 Message） │ │ ┌── Turn 1 ──────────────────────────────────────────┐ │ │ turn_start │ │ │ ④ 调用 Model（每 Turn 仅一次模型调用） │ │ │ streamSimple(model, { systemPrompt, messages }) │ │ │ ↓ 逐 token 流式返回 │ │ │ AssistantMessage { │ │ │ content: [ ..., ToolCall { name: \"read\", ... } ],│ │ │ stopReason: \"toolUse\" ← 有工具调用，继续转 │ │ │ } │ │ │ ⑤ 执行 Tool（工具的五步管道，详见第5章） │ │ │ ToolResultMessage { content: [{ text: \"文件内容\" }] }│ │ │ turn_end │ │ └─────────────────────────────────────────────────────┘ │ │ 循环判断：stopReason 是 toolUse → hasMoreToolCalls = true → 继续 │ │ ┌── Turn 2 ──────────────────────────────────────────┐ │ │ turn_start │ │ │ ⑥ 第二次调用 Model（工具结果已追加到消息列表） │ │ │ streamSimple(model, { messages: [..., toolResult] })│ │ │ ↓ 模型看到文件内容，开始解释 │ │ │ AssistantMessage { │ │ │ content: [ TextContent { text: \"这个文件...\" } ],│ │ │ stopReason: \"stop\" ← 没有工具调用，准备停 │ │ │ } │ │ │ turn_end │ │ └─────────────────────────────────────────────────────┘ │ │ 循环判断：hasMoreToolCalls = false，pendingMessages 为空 │ → 内层循环退出 │ → 外层循环检查 followUp → 空 → 外层循环退出 │ └── agent_end（一个 Trace 结束，共 2 个 Turn） 循环怎么转：stopReason —— 唯一的信号灯 整个循环的”油门和刹车”集中在 一个字段 上： stopReason 。模型每次返回的 AssistantMessage 里都带着它。 但在此之前，必须澄清一个关键认知： 模型不会说”我要停了”。 模型只是个 token 预测器——给定上下文，猜下一个 token，如此反复。它不”知道”任务做完了没有。 stopReason 这个字段虽然挂在模型的返回值上，但它的值来自 两个不同的地方 ： 模型 API 真正返回的三种： stopReason 含义 \"toolUse\" 模型输出了工具调用 JSON，API 检测到后返回 \"stop\" 生成自然终止（遇到了结束标记），没有工具调用 \"length\" token 数达到 maxTokens 上限，被截断 框架的流式层注入的两种 （模型 API 本身不会返回这两种值）： stopReason 含义 谁注入的 \"error\" 调用过程异常（网络断了、API 报错等） 流式层的 catch 块： output.stopReason = \"error\" \"aborted\" 用户主动中止（AbortSignal 触发） 流式层的 catch 块： output.stopReason = \"aborted\" 代码证据（ packages/ai/src/ ）：当 streamSimple 内部的 API 调用抛出异常时，catch 块执行 output.stopReason = options?.signal?.aborted ? \"aborted\" : \"error\" 。这不是模型说的，是框架替它”兜底”的。 一条规则驱动整个循环 Loop 实际上只看一件事—— 模型输出里有没有工具调用 。这背后是一条 人类定义的工程约定 ： 如果模型一次输出中没有工具调用，就认为本轮不需要更多操作，循环可以停了。 这不是模型的”智能决策”。换个说法： 不是模型在说”我完成了”，而是我们在说”你没要工具，那就当你完成了”。 代码里最精炼的判断就是这个（伪代码示意，实际见 agent-loop.ts:202-216 ）： // 简化逻辑（实际见 agent-loop.ts:202-216） const toolCalls = message.content.filter(c => c.type === \"toolCall\"); hasMoreToolCalls = false; if (toolCalls.length > 0) { const executedToolBatch = await executeToolCalls(...); hasMoreToolCalls = !executedToolBatch.terminate; // 任何一个工具 terminate 则停止 } 注意 ：实际驱动循环的不是 stopReason === \"toolUse\" ，而是 toolCalls 数组长度 > 0 && !terminate 。这意味着：即使 stopReason === \"length\" （被截断），只要 content 里有 toolCall 块，循环仍会执行工具；反之，即使 stopReason === \"toolUse\" ，如果所有工具结果都设置 terminate: true ，循环也会停。 内层循环的条件是 while (hasMoreToolCalls || pendingMessages.length > 0) ： 模型返回 toolCall 且工具未 terminate → hasMoreToolCalls = true → 继续转 ：执行工具，把结果喂回去再调模型 stopReason === \"stop\" 或 \"length\" 且无 toolCall → hasMoreToolCalls = false → 准备停 （看有没有 pendingMessages） stopReason === \"error\" 或 \"aborted\" → 硬停止 ：立即退出整个循环，不检查 followUp ┌──────────────────────────────────┐ │ │ ▼ │ ┌─────────┐ toolUse ┌──────────┐ │ │ 调模型 │ ─────────→ │ 执行工具 │ │ └─────────┘ └──────────┘ │ │ │ │ │ stop / length │ 结果追加 │ │ ▼ 到消息 │ ▼ 重新调模型 ──────┘ ┌─────────┐ │ 准备停 │ ← 不是模型决定的，是我们的规则 └─────────┘ error / aborted → 直接跳出整个循环（硬停止） 为什么不让代码更智能地判断”任务完成没”？ 因为这正是 Agent 和 Workflow 的本质区别。Workflow 里你知道流程有几步，可以用代码判断进度。但 Agent 模式下，你不知道模型要读几个文件、改几处代码——你唯一能稳定依赖的信号就是： 输出里有没有工具调用。 这既是局限，也是优雅——不需要任何”任务完成度”判断逻辑，代码只做最简单的那层判断。 循环的所有退出路径 模型返回 AssistantMessage message.stopReason 检查 stopReason switch toolUse 继续转 执行这批工具 把结果喂回模型 下一 Turn stop · length 准备停 检查 followUp / pending 队列 两个都空 → 正常退出 agent_end（正常） error · aborted 硬停止（fail fast） 立即退出整个循环 不检查 followUp agent_end（硬停） SOURCE OF stopReason 来自模型 API stop·length·toolUse 框架流式层注入 error·aborted 关键规则：模型不会说\"我完成了\"—— 没有 ToolCall 即视为本轮结束 stopReason 驱动的循环决策流程 配图说明 ：五种 stopReason 分三路处理——toolUse 让循环继续转；stop/length 准备正常停（仍检查 followUp）；error/aborted 硬停止（不检查 followUp）。注意 stopReason 的两个来源：三种来自模型 API，两种是框架流式层注入的兜底。 退出路径 触发条件 原因 正常退出 stop / length + 无 followUp + 无 pendingMessages 最常见。模型没要工具，也没追加任务 硬停止 error / aborted 模型调用本身出了问题，继续跑没意义，不检查 followUp 外部钩子停 shouldStopAfterTurn() 返回 true 上下文快满了、达到最大 Turn 数等 工具终止 一批工具的执行结果全部 terminate: true 所有工具都同意停止（是 every 不是 some ） 四、源码详解：基础 Loop 与 coding-agent 的叠加设计 给了你概念全景：消息怎么流动、stopReason 怎么驱动循环、什么时候停。但那都是” 是什么 ”。这一节走进代码，回答” 怎么做到的 ”。 在看 Pi 的源码之前，先搞清楚一件事： 最简单的 Agent Loop 其实极其简短。 最简 Loop：所有 Agent 的最小公约数 剥掉所有产品特性，一个能用的 Agent Loop 只需要这些： // 最简 Agent Loop（伪代码） async function simpleLoop(messages, model, tools) { while (true) { // ① 调模型 const response = await callModel(model, messages, tools); messages.push(response); // ② 没有工具调用 → 结束 if (response.stopReason !== \"toolUse\") { return messages; } // ③ 有工具调用 → 执行，把结果喂回去 for (const toolCall of response.toolCalls) { const result = await executeTool(toolCall); messages.push(result); } } } 十几行代码。一个 while 循环，调模型、执行工具、再调模型，直到模型不再要求工具。这就是 §三 讲的那套逻辑的最小实现—— 任何 Agent 都需要这个内核 。 Pi 的 coding-agent 在此基础上叠加了什么 Pi 的 coding-agent 是一个 交互式编程助手 ——用户在终端里跟它对话，它可能要读好几个文件、改代码、跑测试。这种产品场景比”最简 Loop”多出了真实的需求： 真实需求 叠加的设计 源码位置 用户在 Agent 工作期间又输入了新指令 steering 消息注入 ：紧急消息可以在 Turn 之间插队 内层循环开头 系统在 Agent 完成后想追加后续任务（如”顺便跑个测试”） 外层 followUp 循环 ：内层停了但外层可以重启内层 外层 while(true) 不同复杂度的任务想用不同档次的模型 prepareNextTurn 钩子 ：每个 Turn 结束时可切换模型/上下文 turn_end 之后 上下文窗口快满了需要触发压缩 shouldStopAfterTurn 钩子 ：外部判断是否该停 prepareNextTurn 之后 关键认知 ：这些叠加设计都是 coding-agent 的 功能选择 ，不是 Agent 的通用法则。如果你做的是一个”一问一答带工具”的简单 Agent，上面这张表全是多余的——你只需要最简 Loop。 但理解 coding-agent 怎么叠加这些设计很有价值——你自己的产品场景很可能也需要类似机制。接下来，我们以 coding-agent 的完整源码为例，逐段走这些设计。跟着那条”帮我读一下 src/main.ts”的消息，走完从入口到结束的整段旅程。 4.1 入口：runAgentLoop() 收到了什么 §三简要展示了流程全景，这里展开看代码细节——同一个过程，更深入的视角。 你按下回车后，调用链是： Agent.prompt() → runPromptMessages() → runAgentLoop() 。停在入口： // agent-loop.ts:95-118 async function runAgentLoop( prompts: AgentMessage[], // 你的消息 context: AgentContext, // 当前对话上下文（快照副本） config: AgentLoopConfig, // 循环配置（模型、钩子、队列回调） emit: AgentEventSink, // 事件发射器 signal?: AbortSignal, // 中止信号 streamFn?: StreamFn, // 流式函数（可替换） ): Promise<AgentMessage[]> 六个参数中最重要的三个： prompts — 你的消息已经被包装成了标准格式： [{ role: \"user\", content: [{ type: \"text\", text: \"帮我读一下 src/main.ts\" }], timestamp: 1748000000000 }] context — 对话上下文快照。注意是 副本 （ agent.ts:414-420 的 createContextSnapshot() 创建），Loop 运行期间对 context 的修改不会影响 Agent 类的原始状态： { systemPrompt: \"You are a helpful coding assistant...\", messages: [ /* 之前的对话历史 */ ], tools: [ { name: \"read\", description: \"...\", parameters: Type.Object({...}), execute: ... }, { name: \"bash\", description: \"...\", parameters: Type.Object({...}), execute: ... }, ] } config — Loop 的行为配置。这里有一组关键钩子（都是函数，不是数据）： { model: Model, // 用哪个 LLM convertToLlm: Function, // AgentMessage[] → Message[] 转换 transformContext?: Function, // 调 LLM 前的上下文预处理（如压缩） getSteeringMessages?: Function, // 获取\"紧急插队\"消息 getFollowUpMessages?: Function, // 获取\"追加任务\"消息 shouldStopAfterTurn?: Function, // 每轮结束后是否该停 beforeToolCall?: Function, // 工具执行前钩子 afterToolCall?: Function, // 工具执行后钩子 toolExecution: \"parallel\", // 工具执行模式 } 这些钩子都是 函数 而非数据——Loop 在运行时调用它们来”拉取”最新状态。这让 Loop 和外部消息来源彻底解耦。 入口函数只做了三步准备： Step 1: 创建 newMessages 数组 → 收集本轮 Trace 产生的所有新消息 Step 2: 把 prompts 追加到 context.messages → context.messages = [...context.messages, ...prompts] Step 3: 发初始事件 → emit(\"agent_start\") ← Trace 开始 → emit(\"turn_start\") ← 首轮 Turn 开始（入口就发，后续 Turn 在内层循环里发） → 对每条 prompt：emit(\"message_start\") + emit(\"message_end\") → 调用 runLoop() 数据变化： 入口前： context.messages = [user1, asst1, toolResult1] ← 之前的对话 newMessages = [] 入口后： context.messages = [user1, asst1, toolResult1, user2] ← 你的消息被追加 newMessages = [user2] ← 收集器开始记录 4.2 runLoop() 的骨架：先看内核，再看叠加 现在进入 runLoop() ——整个系统最核心的代码。别被它的长度吓到，我们先看 内核 ，再看 叠加 。 内核：内层循环 如果只保留最简 Loop 的逻辑， runLoop 长这样： // 只保留内核的 runLoop（伪代码） while (hasMoreToolCalls) { // 步骤 B：调 LLM // 步骤 C：检查 stopReason → error/aborted 就退出 // 步骤 D：执行工具 // 步骤 E：emit turn_end } // 结束 → emit agent_end 这就是最简 Loop——调模型、执行工具、turn_end，循环往复。内层循环的退出条件 hasMoreToolCalls 由 toolCalls 数组长度 > 0 && !terminate 驱动（§三讲过）。 这段是所有 Agent 都需要的内核。 叠加：coding-agent 加了两层外壳 但 coding-agent 作为交互式编程助手，需要在内核外面加两样东西： 叠加 1：steering 消息注入 （内层循环开头 + 每圈结尾各检查一次）。用户在 Agent 工作时输入了新指令——这些消息不能等当前任务跑完，得在下一圈开头紧急注入。所以内层循环条件多了一个 || pendingMessages.length > 0 。 叠加 2：外层 followUp 循环 （包在整个内层循环外面）。Agent 自然停了之后，系统可能还想追加任务（比如”顺便跑个测试”）。外层循环让这些追加任务在 同一个 Trace 内 继续跑，不需要重新启动一个新的 Loop。 把内核和两层叠加拼起来，才是完整的 runLoop 骨架： async function runLoop(currentContext, newMessages, config, signal, emit, streamFn) { // ① 首次 steering 检查（在进入内层循环之前！） let pendingMessages = (await config.getSteeringMessages?.()) || []; // ========== 叠加2：外层循环（followUp 续命）========== while (true) { let hasMoreToolCalls = true; let firstTurn = true; // 首轮跳过 turn_start（入口已发） // ========== 内核 + 叠加1：内层循环 ========== while (hasMoreToolCalls || pendingMessages.length > 0) { // ↑ 叠加1：steering 消息也驱动循环 if (!firstTurn) { emit({ type: \"turn_start\" }); } firstTurn = false; // 步骤 A：注入 pendingMessages（steering 消息）← 叠加1 // 步骤 B：调 LLM → streamAssistantResponse() ← 内核 // 步骤 C：检查 stopReason ← 内核 // 步骤 D：执行工具 ← 内核 // 步骤 E：emit turn_end ← 内核 // 步骤 F：prepareNextTurn → shouldStopAfterTurn ← 叠加（钩子） // → 再次检查 steering ← 叠加1 } // ========== 内层循环结束 ========== // 叠加2：检查 followUp 队列 const followUpMessages = (await config.getFollowUpMessages?.()) || []; if (followUpMessages.length > 0) { pendingMessages = followUpMessages; continue; // 回到外层循环顶部，内层循环重开 } break; // 两个队列都空，真正退出 } } 现在我们逐步骤展开。每个步骤会标注”内核”还是”叠加”，方便你区分。 4.3 【叠加1 · 步骤A】steering 消息注入 什么是 steering？ 这是 coding-agent 的一个交互功能。想象你让 Agent 帮你修一个 bug，Agent 正在读文件、分析代码。这时候你突然想到一个补充：“也检查一下测试文件”——你希望这条指令能 插队 ，而不是等 Agent 把当前任务做完再说。 steering 就是这个”插队”机制。用户在 Agent 工作期间输入的新指令，会被放进 steering 队列。每圈内层循环开头，Loop 先检查这个队列，把紧急消息注入到当前对话中： if (pendingMessages.length > 0) { for (const message of pendingMessages) { await emit({ type: \"message_start\", message }); await emit({ type: \"message_end\", message }); currentContext.messages.push(message); newMessages.push(message); } pendingMessages = []; // 消费完毕，清空 } 这段代码就是把紧急消息逐条注入到上下文和消息收集器中。 pendingMessages 的第一个来源是 runLoop 一进来就执行的首次 steering 检查（ agent-loop.ts:167 ）。为什么要在进入循环 之前 就检查？因为用户在等待 LLM 首次响应时可能又输入了内容——这时候消息已经从外部排队了，但循环还没开始，如果不提前取出来，这批消息就漏掉了。 4.4 【内核 · 步骤B】streamAssistantResponse() — 调 LLM 这是整个 Loop 最重的一步——把消息发给模型、拿回流式响应。分为四个阶段。 阶段 A：上下文预处理（可选） let messages = context.messages; if (config.transformContext) { messages = await config.transformContext(messages, signal); } 如果配置了 transformContext （如压缩算法），在此预处理消息。不配置就跳过。 阶段 B：AgentMessage → Message 转换（两层消息的边界） const llmMessages = await config.convertToLlm(messages); 这一行站在 Agent 内核和 LLM 的 边界 上。要理解它为什么存在，得先知道”两层消息”的设计。 Agent 内部维护对话历史时，需要记录的不只是”用户说了什么、AI 回了什么”——它还需要记录 自己的内部状态 。比如 coding-agent 会记录：上下文被压缩过（ CompactionSummaryMessage ）、Bash 命令的执行详情（ BashExecutionMessage ）、分支切换的记录（ BranchSummaryMessage ）。这些是 Agent 自己用的”内部语言”， LLM 根本不认识这些消息类型 ——它只认三种标准消息： UserMessage 、 AssistantMessage 、 ToolResultMessage 。 convertToLlm 就是站在这个边界上的 翻译官 ：把 Agent 的内部语言翻译成 LLM 能理解的协议。默认实现就是一个 .filter() ——只保留三种标准消息： function defaultConvertToLlm(messages: AgentMessage[]): Message[] { return messages.filter( (message) => message.role === \"user\" || message.role === \"assistant\" || message.role === \"toolResult\", ); } 数据变换： 转换前（AgentMessage[]）： [ { role: \"user\", content: \"帮我读一下 src/main.ts\", ... }, ← 保留 { role: \"assistant\", content: [...], ... }, ← 保留 { role: \"compactionSummary\", summary: \"之前的对话摘要...\" }, ← 过滤掉 { role: \"toolResult\", content: [...], ... }, ← 保留 ] 转换后（Message[]）： [ { role: \"user\", content: \"帮我读一下 src/main.ts\", ... }, { role: \"assistant\", content: [...], ... }, { role: \"toolResult\", content: [...], ... }, ] 两层消息的完整设计，详见《第6章：消息系统》。 阶段 C：构建 Context 并调用模型 const llmContext: Context = { systemPrompt: context.systemPrompt, messages: llmMessages, tools: context.tools, }; const streamFunction = streamFn || streamSimple; const resolvedApiKey = (config.getApiKey ? await config.getApiKey(config.model.provider) : undefined) || config.apiKey; const response = await streamFunction(config.model, llmContext, { ...config, apiKey: resolvedApiKey, signal, }); 构建 Context 是这一步的主线。 注意 llmContext 是一个 全新对象 ，每圈内层循环都重建一次。它由三部分组成： systemPrompt —— 直接复用 Agent 上下文里的系统提示词，告诉模型”你是谁、该遵守什么规则” messages —— 就是上一步 convertToLlm 过滤后的 llmMessages ，只含 LLM 认识的三种标准消息 tools —— 工具列表（带 schema 定义），让模型知道”这次有哪些工具可以调” 注意一个细节： llmContext.tools = context.tools 是 引用赋值 ——每圈虽然包了个新的 wrapper 对象，但 tools 数组本身是同一份引用，内容字节级稳定。 systemPrompt 同理。只有 messages 真的在长（每圈追加新的 ToolResultMessage）。 那为什么还要每圈重建 llmContext 这个 wrapper？因为有的 Turn 确实会改这三者里的某一个： prepareNextTurn 钩子（§4.7）可能换过模型或改过 systemPrompt，扩展系统（§5）可能动态注册新工具。重建 wrapper 的成本可以忽略（一个 JS 对象），但能保证不会因为共享引用导致难以追踪的状态污染。 这会不会破坏 prompt cache？ 不会。Anthropic 的 prompt cache 是 内容寻址 的——它看的是发过去的字节，不是请求的 identity。每次发的是新对象还是旧对象无所谓，只要 system + tools 的字节不变，cache 就命中。Pi 在 anthropic-messages.ts 里显式在 三个位置 打 cache_control: { type: \"ephemeral\" } 标记： 位置 源码行 作用 System prompt 末尾 L922/929/938 系统提示词整体作为可缓存前缀 最后一个 tool L1208 整个 tools 列表作为可缓存前缀 最后一条 user message L1157-1178 rolling cache ——每 Turn 把 cache 推进到最新消息 第三条尤其精妙：cache breakpoint 不是固定在第一条消息上，而是 跟着最新 user message 走 。这样旧前缀继续命中、新追加的内容被写入，整个对话历史都享受 cache 收益。命中链路大致是： Turn 1: 写入 [system + tools] → 写入 [messages §1] Turn 2: 命中 [system + tools] → 命中 [messages §1] → 写入 [messages §2] Turn 3: 命中 [system + tools] → 命中 [messages §1+§2] → 写入 [messages §3] 还有个容易误解的点： tools 不是被塞到 messages 末尾 。Anthropic API 协议里 tools 是独立的顶层字段（位置在 messages 之前），这个协议设计本身就考虑了 cache——稳定的 tools 在前、变动的 messages 在后，prefix 越长越省。 OpenAI 体系走的是另一条路（ openai-completions.ts:554 ）： prompt_cache_key: sessionId ，OpenAI 后端按 session 自动匹配前缀。DeepSeek、Qwen 等通过 cacheControlFormat: \"anthropic\" 兼容字段，也能复用 Anthropic 风格的 cache_control 标记（ L593 的 applyAnthropicCacheControl ）。 阶段 D：流式处理响应 —— 原地替换的妙用 streamFunction 返回的是 AssistantMessageEventStream ——一个异步迭代器。这步有一个很精巧的设计： for await (const event of response) { switch (event.type) { case \"start\": // 拿到一个\"空壳\"消息，直接 push 到 context partialMessage = event.partial; context.messages.push(partialMessage); emit({ type: \"message_start\", ... }); break; case \"text_delta\": // 文本增量 case \"toolcall_delta\": // 工具调用增量 case \"thinking_delta\": // 思考增量 partialMessage = event.partial; // 更新后的部分消息 context.messages[last] = partialMessage; // ★ 原地替换！ emit({ type: \"message_update\", ... }); // UI 收到增量更新 break; case \"done\": case \"error\": finalMessage = await response.result(); context.messages[last] = finalMessage; // ★ 用最终完整消息替换 emit({ type: \"message_end\", ... }); return finalMessage; } } 为什么要先 push 空壳再原地替换？注意”原地替换”的意思——不是往 context.messages 数组里 push 新条目，而是 用新内容覆盖最后一条 （ context.messages[last] = partialMessage ）。这样 context 的消息数量不变，但最后一条消息的内容在”长大”。 为了 UI 能实时展示 。如果等全部响应完成才 push 到 context，用户在 LLM 思考的几秒里盯着空白屏幕。通过”先放空壳、逐 token 替换”，UI 通过 message_update 事件拿到最新部分消息，能做到逐字渲染。 EVENT context.messages[last] 内容 UI 显示 start push 空壳 { role: \"assistant\", content: [] ← 空壳 } （空白） text_delta 原地替换 { content: [ { type:\"text\", text:\"好的...\" } ] } 好的... toolcall_delta 再次原地替换 { content: [ text:\"好的...\", { type:\"toolCall\", name:\"read\" } ] } 好的... + 工具调用 done 最终完整消息替换 { content:[...], stopReason:\"toolUse\", usage:{...} } 完整渲染 ✓ WHY 为什么先 push 空壳再原地替换？ · 等全部响应完成才 push → 用户在 LLM 思考的几秒里盯着空白屏幕 · 先放空壳、逐 token 替换 → UI 通过 message_update 事件拿到最新部分消息，能做到逐字渲染 流式响应原地替换的时间线 配图说明 ：四个时间点的 context.messages[last] 演变——start 时空壳、text_delta 时文字在长、toolcall_delta 时工具调用出现、done 时最终完整消息替换。每一步同步展示 UI 显示状态。 数据在流式响应期间， context.messages[last] 的演变： start → { role: \"assistant\", content: [] } ← 空壳 push text_delta → { content: [{ type:\"text\", text:\"好的...\" }] } ← 文字在长 toolcall → { content: [{ text:\"好的...\" }, ← 工具调用出现 { type:\"toolCall\", name:\"read\", arguments:{file_path:\"src/main.ts\"} }] } done → { content: [...], stopReason:\"toolUse\", usage:{...} } ← 最终完整消息替换 4.5 【内核 · 步骤C】检查 stopReason §三详细讲了 stopReason 的来源和含义。这里看代码怎么处理它。拿到 AssistantMessage 后，立即做一次硬停止判断： // agent-loop.ts:196-200 if (message.stopReason === \"error\" || message.stopReason === \"aborted\") { await emit({ type: \"turn_end\", message, toolResults: [] }); await emit({ type: \"agent_end\", messages: newMessages }); return; // ← 直接退出整个 runLoop，不检查 followUp } error 和 aborted 是”硬停止”——立即发 turn_end + agent_end，直接 return。连工具都不执行，连 followUp 都不检查。这是一种 快速失败 （fail fast）策略：既然模型调用本身就失败了（网络异常或用户中止），继续跑没有任何意义。 而 stop 、 toolUse 、 length 这三种，代码继续往下走——进入工具执行逻辑。区别在于： stop 和 length 时， toolCalls 数组为空，所以工具执行步骤什么也不干。 4.6 【内核 · 步骤D】executeToolCalls() — 执行工具 模型返回的 AssistantMessage.content 里，可能有多个 type === \"toolCall\" 的块（模型一口气要求了多个操作）。先过滤出来： const toolCalls = message.content.filter((c) => c.type === \"toolCall\"); 然后决定这批工具 并行还是串行 执行： if (config.toolExecution === \"sequential\" || hasSequentialToolCall) { return executeToolCallsSequential(...); // 串行 } return executeToolCallsParallel(...); // 并行 “一票否决”策略 ：只要这批工具中有 任何一个 声明了 executionMode: \"sequential\" ，整批都串行。为什么这么保守？因为判断”哪些工具会冲突”很难——edit 和 edit 操作不同文件就安全吗？万一它们编辑的文件有依赖关系呢？所以 Pi 选择了”宁可多等，不可出错”。而 edit 工具内部还有第二道防线（ withFileMutationQueue ，对同一文件的编辑串行化），确保即使外层判断为并行，也不会互相覆盖。 两种执行模式的内部结构： 串行模式： ToolCall A: 准备 → 验证 → beforeHook → 执行 → afterHook → emit end ToolCall B: 准备 → 验证 → beforeHook → 执行 → afterHook → emit end （一个完全结束，才开始下一个） 并行模式（三阶段设计）： 阶段1 - 准备（顺序）： A 准备 → B 准备 → C 准备 ↑ prepareToolCall 含验证和 beforeHook，必须顺序执行 阶段2 - 执行（并行）： A、B、C 同时执行（Promise.all） ↑ 只有 tool.execute 并行，省时间 阶段3 - 事件（有序）： end 按完成顺序发；result 按调用顺序发 ↑ result 消息保持和 ToolCall 一致的顺序，LLM 收到的上下文才是正确的 注意并行模式的精妙之处： 准备阶段始终顺序 （因为验证和权限检查不能并行——万一 B 被拦截了，C 就不应该执行）， 只有实际执行并行 。 每个工具的结果被包装成 ToolResultMessage ，追加到 context 和 newMessages ： 工具执行后： context.messages = [..., user2, assistantMessage, { role: \"toolResult\", toolCallId: \"toolu_01\", toolName: \"read\", content: [{ text: \"文件内容...\" }], isError: false }] terminate 机制 ：工具可以在返回结果中设置 terminate: true ，表示”我觉得不该继续了”。但 Loop 不会因为某一个工具喊停就停——它用的是 every 而非 some ： 必须这批工具的全部结果都设置了 terminate 才真正退出 。这是保守策略：只要有一个工具还在正常工作，Loop 就不中断。 工具执行的完整五步管道（prepareArguments → Schema 验证 → beforeToolCall → execute → afterToolCall）详见《第5章：工具系统》。 4.7 【内核+叠加 · 步骤E~F】turn_end + 钩子 + 再次检查 steering Turn 的核心工作做完了（调模型 + 执行工具），接下来是收尾。收尾分四步，其中前两步是内核，后两步是 coding-agent 叠加的扩展点： // ① emit turn_end —— 通知外部\"这一轮结束了\"（内核） await emit({ type: \"turn_end\", message, toolResults }); // ② prepareNextTurn —— 给外部一个机会\"改装\"下一轮（叠加） // 返回值可包含 context / model / thinkingLevel 三者之一的覆盖 const nextTurnSnapshot = await config.prepareNextTurn?.({...}); if (nextTurnSnapshot) { currentContext = nextTurnSnapshot.context ?? currentContext; config.model = nextTurnSnapshot.model ?? config.model; // thinkingLevel 也在此处覆盖（详见 agent-loop.ts 中 prepareNextTurn 处理逻辑） } // ③ shouldStopAfterTurn —— 外部判断是否该停了（叠加） if (await config.shouldStopAfterTurn?.({...})) { await emit({ type: \"agent_end\", messages: newMessages }); return; } // ④ 再次检查 steering —— 有没有新的紧急消息？（叠加1） pendingMessages = (await config.getSteeringMessages?.()) || []; prepareNextTurn —— 这是个容易被忽略但很强大的扩展点。它在每个 turn_end 之后、下一轮开始前被调用，允许外部 动态切换下一轮的配置 。具体例子： 场景：按任务复杂度切换模型 Turn 1: 用户问了一个简单问题 → 模型用 Haiku（快、便宜） turn_end → prepareNextTurn 检查到问题很简单 → 返回 { model: haiku } → 下一轮继续用 Haiku 场景：中途发现任务变复杂了 Turn 1: 用户让\"重构这个模块\" → Haiku 开始读文件 turn_end → prepareNextTurn 发现要改的文件很多 → 返回 { model: opus } → 下一轮自动切到 Opus（强、贵） 除了换模型，它还能换 context （比如注入新的上下文信息）和 thinkingLevel （思考强度）。返回 undefined 表示”什么都不换，按原配置继续”。 shouldStopAfterTurn —— 外部注入的停止判断。coding-agent 层会用它来检查上下文窗口是否快满了（快满了就停下来触发压缩），或者是否达到了最大 Turn 数限制。这是产品层的”安全阀”，最简 Loop 不需要它。 ④再次检查 steering —— 一圈内层循环结束，再看看 steering 队列有没有新积攒的紧急消息。如果有，下一圈继续跑。 4.8 回到循环顶部 工具执行完且收尾结束，代码回到内层 while 循环的条件判断。§三已经详细讲了 hasMoreToolCalls 由 toolCalls 数组长度 > 0 && !terminate 驱动——这里只看代码： while (hasMoreToolCalls || pendingMessages.length > 0) 两个条件任一为 true 就继续。 hasMoreToolCalls 由模型输出里有没有 toolCall 块（且未全部 terminate）决定（内核）， pendingMessages 由 steering 队列决定（叠加1）。两个都为 false 时，内层循环退出。 4.9 【叠加2 · 步骤G】外层循环：followUp 的续命机制 内层循环退出了——没有工具要执行，也没有紧急消息。但 coding-agent 的设计是：此时检查一下 getFollowUpMessages() ，看看系统有没有追加任务： const followUpMessages = (await config.getFollowUpMessages?.()) || []; if (followUpMessages.length > 0) { pendingMessages = followUpMessages; // 塞进 pending，触发新 Turn continue; // 回到外层循环顶部 } break; // 两个队列都空了，真正退出 如果有 followUp 消息，它们被塞进 pendingMessages ， continue 回到外层循环顶部，内层循环检测到 pendingMessages 不为空， 在同一个 Trace 内 继续跑。这比重新启动一个新的 runAgentLoop() 好在哪？——连续性：同一个 newMessages 数组、同一个事件序列，不需要额外合并。 §四开头已经说过：如果你做的是简单 Agent，外层循环是多余的——内层循环退出后直接 break + emit agent_end 就行了。 4.10 steering vs followUp：一张表看清两种干预 本章出现了两种”外部消息注入”机制。虽然 §四开头已经分别介绍过，但放在一起对比更能看清它们的差异： 维度 steering（叠加1） followUp（叠加2） 检查时机 runLoop 开始前 + 内层循环 每圈 结尾 内层循环 全部结束 后 语义 ”紧急插队”——在工具执行间隙中插入 ”排队等叫号”——等当前任务全部完成 典型场景 用户在 Agent 工作时输入了新指令 系统在 Agent 完成后追加”顺便跑个测试” 生活类比：steering 是你正在开会，有人敲门递了张纸条——“紧急，先看这个”。followUp 是开完会翻了翻信箱——“不急，但需要处理”。 STEERING · 紧急插队 生活类比：开会时有人敲门递纸条 循环时间线 Turn 1 Turn 2 Turn 3 steering 入队 每圈检查 → 在 Turn 3 开头注入 （当前 Turn 正常完成后注入，不打断执行） CHARACTERISTICS 时机：每圈内层循环开头 + 结尾 来源：用户实时输入的新指令 影响：会驱动循环继续（不等当前完成） getSteeringMessages() 用户让 Agent 修 bug，中途想起\"也检查测试文件\" FOLLOWUP · 排队等叫号 生活类比：开完会翻信箱 循环时间线 Turn 1 Turn 2 Turn 3 (停) 内层循环结束 检查 followUp 队列 新 Turn（续命） → 在同一个 Trace 内继续跑 CHARACTERISTICS 时机：内层循环全部结束后 来源：系统追加（如\"顺便跑测试\"） 影响：触发外层循环，内层循环重开 getFollowUpMessages() Agent 完成任务后，系统追加\"顺便跑个测试\" steering vs followUp 对比 配图说明 ：左红右绿对照——steering 在每圈内层循环开头+结尾检查、紧急插队；followUp 在内层循环全部结束后检查、续命重启。底部列出各自时机/来源/影响/典型场景。 五、总结：Loop 的四条核心设计 回顾从按下回车到 Agent 完成的整段旅程： 1. ReAct 循环模式 Loop 的本质是 Reason（模型思考）→ Act（执行工具）→ Observe（观察结果）→ Reason（再次思考）的循环。模型的输出内容决定”该调什么工具”——这是 Agent 区别于 Workflow 的核心。但”什么时候停”不是模型的决策，而是我们人类定义的规则： 模型不再输出工具调用时，就认为本轮结束。 2. stopReason 驱动机制 整个循环由一个字段驱动： stopReason 。但实际驱动循环的不是 stopReason 本身，而是模型输出里有没有 toolCall 块且未全部 terminate—— \"有 toolCall\" = 继续转；没有 toolCall 或全部 terminate = 准备停（或立即停）。 “是否继续”不靠代码的复杂判断，只靠一条简单规则：模型的输出中有没有工具调用。 这是 Agent 架构的核心设计原则——把决策外包给模型输出模式，代码只做最简单的信号判断。 3. 内核 + 叠加的架构思路 Agent Loop 的内核极其简短——十几行代码就能实现一个能用的循环。Pi 的 coding-agent 在内核上叠加了 steering（紧急插队）、followUp（任务追加）、prepareNextTurn（动态切模型）、shouldStopAfterTurn（安全阀）等设计。 内核是所有 Agent 的通用法则，叠加是产品功能的按需选择。 做自己的 Agent 时，先搭内核，再按场景加叠加。 + 钩子（产品功能） + followUp（任务追加） + steering（紧急插队） KERNEL 最简 Loop（~10 行） while (hasMoreToolCalls) 调模型 → 检查 stopReason → 执行工具 → 再调模型 所有 Agent 都需要的内核 内核 最简 Loop：调模型 + 执行工具 + stopReason 通用法则，所有 Agent 都需要 + steering 紧急消息插队， 用户在工作中补充指令 交互式产品的真实需求 + followUp 任务追加续命， Agent 完成后顺势追加 同一个 Trace 内继续跑 + 钩子 prepareNextTurn（切模型） shouldStopAfterTurn（安全阀） 外部扩展点，按需注入 INSIGHT 剥掉所有叠加层，最简 Loop 仍能正常工作。这是判断\"内核是否被污染\"的试金石。 Agent Loop 内核与叠加设计 配图说明 ：从里到外的四层洋葱——最内核是最简 Loop（~10 行通用法则）；外层依次叠加 steering（紧急插队）、followUp（任务追加）、钩子（切模型/安全阀）。剥掉任何一层，里层仍能运行。 看完了？说点什么呢",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/Pi Agent loop"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-04T15:47:00.000Z",
+        "raw": "Tue, 04 Aug 2026 15:47:00 GMT"
+      },
+      "updated": null
+    },
+    {
+      "id": "binzi-d10f9925e72fce03353c48f0",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/ai-agent-tools-protocols",
+      "title": "Ai Agent概念扫盲：Tool、Skill、MCP、ACP 与 Code Mode",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/ai-agent-tools-protocols",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/ai-agent-tools-protocols"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-12T13:38:00.000Z",
+        "raw": "Mon, 12 Oct 2026 13:38:00 GMT"
+      },
+      "updated": null
+    },
+    {
       "id": "binzi-d214303680fb45e3c28ed994",
       "sourceId": "binzi",
       "url": "https://binzi.top/2026/10/12/ai-agent-context-memory/",
@@ -2136,6 +2442,24 @@
         "value": "2026-10-12T13:36:00.000Z",
         "raw": "2026-10-12T13:36:00.000Z"
       }
+    },
+    {
+      "id": "binzi-d301c6b4c4103c3b15dad149",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/agent/Pi%20Agent%20%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B",
+      "title": "Pi Agent 上下文工程，模型每一轮到底看到了什么",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/agent/Pi Agent 上下文工程",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/agent/Pi Agent 上下文工程"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-08-02T04:00:00.000Z",
+        "raw": "Sun, 02 Aug 2026 04:00:00 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-d41d0470ca3cb132f78efb91",
@@ -2356,6 +2680,24 @@
         "value": "2026-10-12T13:40:00.000Z",
         "raw": "2026-10-12T13:40:00.000Z"
       }
+    },
+    {
+      "id": "binzi-e50b93f27a4a46fed58f116e",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/kimi-code-edit-design",
+      "title": "用了 Kimi Code 后，我又重新看了一遍 Coding Agent 的 Edit 设计",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/kimi-code-edit-design",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/kimi-code-edit-design"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-09T21:24:48.000Z",
+        "raw": "Fri, 09 Oct 2026 21:24:48 GMT"
+      },
+      "updated": null
     },
     {
       "id": "binzi-e5f75291d0975ca23e781354",
@@ -2664,6 +3006,24 @@
         "value": "2026-01-24T19:53:27.000Z",
         "raw": "2026-01-24T19:53:27.000Z"
       }
+    },
+    {
+      "id": "binzi-fd67df7b3dd5296be163a578",
+      "sourceId": "binzi",
+      "url": "https://binzi.top/posts/ai/biny-agent-tool-system",
+      "title": "我是怎么设计 Biny Agent 工具系统的",
+      "summary": "当前内容无法在 RSS 阅读器中正确渲染，请前往： https://binzi.top/posts/ai/biny-agent-tool-system",
+      "author": "biny",
+      "guids": [
+        "https://binzi.top/posts/ai/biny-agent-tool-system"
+      ],
+      "urlAliases": [],
+      "published": {
+        "kind": "instant",
+        "value": "2026-10-11T18:49:34.000Z",
+        "raw": "Sun, 11 Oct 2026 18:49:34 GMT"
+      },
+      "updated": null
     }
   ]
 }
